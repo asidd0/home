@@ -213,6 +213,10 @@ li {
     max-width: 264px;
   }
 
+  .publication-list > li > a {
+    display: inline;
+  }
+
   h1 {
     font-size: 34px;
   }
