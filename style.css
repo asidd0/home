@@ -77,6 +77,27 @@ main {
   font-size: 18px;
 }
 
+.profile-links {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  align-items: center;
+  display: inline-flex;
+  height: 18px;
+  justify-content: center;
+  width: 18px;
+}
+
+.social-icon svg {
+  display: block;
+  fill: currentColor;
+  height: 15px;
+  width: 15px;
+}
+
 .hero-bio {
   grid-column: 1 / -1;
   max-width: 800px;
