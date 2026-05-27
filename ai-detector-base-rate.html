@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>AI Detector Base Rate Fallacy | Auyon Siddiq</title>
+    <meta name="description" content="A simple base rate fallacy tool for AI-writing detectors.">
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .tool-header {
+        max-width: 760px;
+      }
+
+      .tool-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        margin-bottom: 22px;
+      }
+
+      .tool-links a {
+        font-size: 14px;
+      }
+
+      .tool-header h1 {
+        margin-bottom: 14px;
+      }
+
+      .tool-header p {
+        color: var(--ink);
+        font-size: 17px;
+        margin: 0 0 16px;
+      }
+
+      .calculator {
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 28px;
+        grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+        margin-top: 30px;
+        padding-top: 28px;
+      }
+
+      .calculator-controls {
+        align-content: start;
+        display: grid;
+        gap: 18px;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .field label,
+      .slider-row label {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .input-row {
+        align-items: center;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      input[type="number"] {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        color: var(--ink);
+        font: inherit;
+        min-height: 42px;
+        padding: 8px 10px;
+        width: 100%;
+      }
+
+      input[type="number"]:focus,
+      input[type="range"]:focus-visible {
+        border-color: var(--blue);
+        outline: 2px solid rgba(39, 116, 174, 0.18);
+        outline-offset: 2px;
+      }
+
+      .input-suffix {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .helper {
+        color: #303134;
+        font-size: 13px;
+        margin: 0;
+      }
+
+      .slider-row {
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 9px;
+        margin-top: 4px;
+        padding-top: 18px;
+      }
+
+      .slider-heading {
+        align-items: baseline;
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      output {
+        color: var(--blue);
+        font-weight: 700;
+      }
+
+      input[type="range"] {
+        accent-color: var(--blue);
+        width: 100%;
+      }
+
+      .result-panel {
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 12px;
+        padding-top: 18px;
+      }
+
+      .result-number {
+        color: #0b5a45;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .result-label {
+        color: #303134;
+        margin: 0;
+      }
+
+      .chart-area {
+        min-width: 0;
+      }
+
+      .chart-shell {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 16px 16px 8px;
+      }
+
+      canvas {
+        display: block;
+        height: 420px;
+        width: 100%;
+      }
+
+      .formula {
+        color: #303134;
+        font-size: 13px;
+        margin: 12px 0 0;
+      }
+
+      .formula code {
+        color: var(--ink);
+        white-space: normal;
+      }
+
+      @media (max-width: 760px) {
+        .calculator {
+          grid-template-columns: 1fr;
+        }
+
+        canvas {
+          height: 340px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="tool-header">
+        <div class="tool-links" aria-label="Author links">
+          <a href="https://x.com/auyonomous" target="_blank" rel="noopener">@auyonomous</a>
+          <a href="https://auyonsiddiq.com">auyonsiddiq.com</a>
+        </div>
+        <h1>Base Rate Fallacy</h1>
+        <p>Detection methods (e.g., those used in medical screening) are often described by their <strong>true positive rate</strong> and <strong>false positive rate</strong>. This is also the case for tools that detect AI writing. But what we usually want to know is something different: after the detector flags a piece of writing, how likely is it to actually be AI-generated?</p>
+        <p>That answer depends heavily on the <strong>base rate</strong>: the overall probability that a piece of writing is AI-generated in the first place. When the base rate is low, even a detector with a small false positive rate can produce many false positives among flagged texts.</p>
+      </section>
+
+      <section class="calculator" aria-label="AI detector base rate fallacy tool">
+        <form class="calculator-controls">
+          <div class="field">
+            <label for="true-positive-rate">True positive rate of detector</label>
+            <div class="input-row">
+              <input id="true-positive-rate" name="true-positive-rate" type="number" min="0" max="100" step="0.1" value="90" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+            <p class="helper">Probability the detector correctly says AI when the text is AI-generated.</p>
+          </div>
+
+          <div class="field">
+            <label for="false-positive-rate">False positive rate of detector</label>
+            <div class="input-row">
+              <input id="false-positive-rate" name="false-positive-rate" type="number" min="0" max="100" step="0.1" value="5" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+            <p class="helper">Probability the detector incorrectly says AI when the text is human-written.</p>
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-heading">
+              <label for="base-rate">Base rate</label>
+              <output id="base-rate-output" for="base-rate">10%</output>
+            </div>
+            <input id="base-rate" name="base-rate" type="range" min="0" max="100" step="0.1" value="10">
+            <p class="helper">Probability a piece of text is AI-generated before seeing the detector result.</p>
+          </div>
+
+          <div class="result-panel" aria-live="polite">
+            <div class="result-number" id="precision-output">66.7%</div>
+            <p class="result-label">Probability the text is AI-generated after the detector says AI.</p>
+          </div>
+        </form>
+
+        <div class="chart-area">
+          <div class="chart-shell">
+            <canvas id="base-rate-chart" aria-label="Line chart showing probability text is AI-generated after detector flags it as AI across possible base rates.">
+              The chart shows the probability the text is AI-generated after the detector says AI for base rates from 0% to 100%.
+            </canvas>
+          </div>
+          <p class="formula"><code>Precision = (TPR * b) / ((TPR * b) + (FPR * (1 - b))), where b is the base rate.</code></p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const tprInput = document.getElementById("true-positive-rate");
+        const fprInput = document.getElementById("false-positive-rate");
+        const baseRateInput = document.getElementById("base-rate");
+        const baseRateOutput = document.getElementById("base-rate-output");
+        const precisionOutput = document.getElementById("precision-output");
+        const canvas = document.getElementById("base-rate-chart");
+        const ctx = canvas.getContext("2d");
+
+        const clampPercent = (value) => {
+          const parsed = Number.parseFloat(value);
+          if (!Number.isFinite(parsed)) return 0;
+          return Math.min(100, Math.max(0, parsed));
+        };
+
+        const formatPercent = (value, digits = 1) => {
+          if (!Number.isFinite(value)) return "N/A";
+          return `${(value * 100).toFixed(digits)}%`;
+        };
+
+        const precision = (baseRate, truePositiveRate, falsePositiveRate) => {
+          const trueFlags = truePositiveRate * baseRate;
+          const falseFlags = falsePositiveRate * (1 - baseRate);
+          const denominator = trueFlags + falseFlags;
+          return denominator === 0 ? Number.NaN : trueFlags / denominator;
+        };
+
+        const drawChart = (truePositiveRate, falsePositiveRate, selectedBaseRate) => {
+          const rect = canvas.getBoundingClientRect();
+          const ratio = window.devicePixelRatio || 1;
+          canvas.width = Math.round(rect.width * ratio);
+          canvas.height = Math.round(rect.height * ratio);
+          ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+          ctx.clearRect(0, 0, rect.width, rect.height);
+
+          const width = rect.width;
+          const height = rect.height;
+          const margin = { top: 24, right: 20, bottom: 76, left: 84 };
+          const plotWidth = width - margin.left - margin.right;
+          const plotHeight = height - margin.top - margin.bottom;
+
+          const x = (value) => margin.left + value * plotWidth;
+          const y = (value) => margin.top + (1 - value) * plotHeight;
+
+          ctx.font = "12px Helvetica Neue, Arial, sans-serif";
+          ctx.lineWidth = 1;
+          ctx.strokeStyle = "#d5d7da";
+          ctx.fillStyle = "#303134";
+          ctx.textAlign = "right";
+          ctx.textBaseline = "middle";
+
+          for (let tick = 0; tick <= 4; tick += 1) {
+            const value = tick / 4;
+            const yPos = y(value);
+            ctx.beginPath();
+            ctx.moveTo(margin.left, yPos);
+            ctx.lineTo(width - margin.right, yPos);
+            ctx.stroke();
+            ctx.fillText(`${Math.round(value * 100)}%`, margin.left - 10, yPos);
+          }
+
+          ctx.textAlign = "center";
+          ctx.textBaseline = "top";
+          for (let tick = 0; tick <= 4; tick += 1) {
+            const value = tick / 4;
+            const xPos = x(value);
+            ctx.beginPath();
+            ctx.moveTo(xPos, margin.top);
+            ctx.lineTo(xPos, height - margin.bottom);
+            ctx.stroke();
+            ctx.fillText(`${Math.round(value * 100)}%`, xPos, height - margin.bottom + 12);
+          }
+
+          ctx.strokeStyle = "#202124";
+          ctx.lineWidth = 1.25;
+          ctx.beginPath();
+          ctx.moveTo(margin.left, margin.top);
+          ctx.lineTo(margin.left, height - margin.bottom);
+          ctx.lineTo(width - margin.right, height - margin.bottom);
+          ctx.stroke();
+
+          ctx.save();
+          ctx.translate(22, margin.top + plotHeight / 2);
+          ctx.rotate(-Math.PI / 2);
+          ctx.fillStyle = "#202124";
+          ctx.font = "700 14px Helvetica Neue, Arial, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText("Probability text is AI after flag", 0, 0);
+          ctx.restore();
+
+          ctx.fillStyle = "#202124";
+          ctx.font = "700 14px Helvetica Neue, Arial, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "top";
+          ctx.fillText("Base rate: probability text is AI-generated", margin.left + plotWidth / 2, height - 30);
+
+          ctx.strokeStyle = "#2774ae";
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          let hasPoint = false;
+
+          for (let step = 0; step <= 300; step += 1) {
+            const baseRate = step / 300;
+            const value = precision(baseRate, truePositiveRate, falsePositiveRate);
+            if (!Number.isFinite(value)) continue;
+            if (!hasPoint) {
+              ctx.moveTo(x(baseRate), y(value));
+              hasPoint = true;
+            } else {
+              ctx.lineTo(x(baseRate), y(value));
+            }
+          }
+
+          if (hasPoint) {
+            ctx.stroke();
+          } else {
+            ctx.fillStyle = "#5f6368";
+            ctx.font = "14px Helvetica Neue, Arial, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("Detector never flags text as AI.", margin.left + plotWidth / 2, margin.top + plotHeight / 2);
+            return;
+          }
+
+          const selectedPrecision = precision(selectedBaseRate, truePositiveRate, falsePositiveRate);
+          if (Number.isFinite(selectedPrecision)) {
+            const markerX = x(selectedBaseRate);
+            const markerY = y(selectedPrecision);
+
+            ctx.strokeStyle = "#0b5a45";
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([4, 5]);
+            ctx.beginPath();
+            ctx.moveTo(markerX, markerY);
+            ctx.lineTo(markerX, height - margin.bottom);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            ctx.fillStyle = "#ffffff";
+            ctx.strokeStyle = "#0b5a45";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.arc(markerX, markerY, 5.5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+          }
+        };
+
+        const update = () => {
+          const truePositiveRate = clampPercent(tprInput.value) / 100;
+          const falsePositiveRate = clampPercent(fprInput.value) / 100;
+          const selectedBaseRate = clampPercent(baseRateInput.value) / 100;
+          const selectedPrecision = precision(selectedBaseRate, truePositiveRate, falsePositiveRate);
+
+          baseRateOutput.value = formatPercent(selectedBaseRate);
+          precisionOutput.textContent = formatPercent(selectedPrecision);
+
+          drawChart(truePositiveRate, falsePositiveRate, selectedBaseRate);
+        };
+
+        [tprInput, fprInput, baseRateInput].forEach((input) => {
+          input.addEventListener("input", update);
+          input.addEventListener("change", () => {
+            input.value = clampPercent(input.value);
+            update();
+          });
+        });
+
+        window.addEventListener("resize", update);
+        update();
+      })();
+    </script>
+  </body>
+</html>
