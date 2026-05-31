@@ -34,6 +34,11 @@
         margin: 0 0 16px;
       }
 
+      .tool-header .tool-note {
+        color: var(--blue);
+        font-weight: 700;
+      }
+
       .calculator {
         border-top: 1px solid var(--line);
         display: grid;
@@ -186,8 +191,9 @@
         </div>
         <h1>AI-Writing Detection and Base Rate Fallacy</h1>
         <p>Detection methods (e.g., those used in medical screening) are often described by their <strong>false negative rate</strong> and <strong>false positive rate</strong>. This is also the case for tools that detect AI writing. But what we usually want to know is something different: after the detector flags a piece of writing, how likely is it to actually be AI-generated?</p>
-        <p>That answer depends heavily on the <strong>base rate</strong>: the overall probability that a piece of writing is AI-generated in the first place. The <strong>base rate fallacy</strong> is the mistake of focusing only on the detector's error rates while ignoring how common AI-generated writing is in the setting you care about. When the base rate is low, even a detector with a small false positive rate can produce many false positives among flagged texts.</p>
+        <p>That answer depends heavily on the <strong>base rate</strong>: the overall probability that a piece of writing is AI-generated in the first place. The <strong>base rate fallacy</strong> is the mistake of focusing only on the detector's error rates while ignoring how common AI-generated writing is in the setting you care about. When the base rate is low, even a detector with a small false positive rate can produce many false positives among flagged texts; conversely, when the base rate is high, a positive flag can still be fairly reliable even with a higher false positive rate.</p>
         <p>The takeaway is that, for a positively flagged observation, the base rate should shape how confident we are that the detector was correct.</p>
+        <p class="tool-note">Try different detector error rates, then move the base rate slider to see how the probability changes.</p>
       </section>
 
       <section class="calculator" aria-label="AI detector base rate fallacy tool">
