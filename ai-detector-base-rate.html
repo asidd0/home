@@ -226,7 +226,7 @@
           </div>
 
           <div class="result-panel" aria-live="polite">
-            <div class="result-number" id="precision-output">91.7%</div>
+            <div class="result-number" id="precision-output">91.67%</div>
             <p class="result-label">Probability the text is AI-generated after the detector says AI.</p>
           </div>
         </form>
@@ -398,7 +398,7 @@
           const selectedPrecision = probabilityAfterPositiveFlag(selectedBaseRate, falseNegativeRate, falsePositiveRate);
 
           baseRateOutput.value = formatPercent(selectedBaseRate);
-          precisionOutput.textContent = formatPercent(selectedPrecision);
+          precisionOutput.textContent = formatPercent(selectedPrecision, 2);
 
           drawChart(falseNegativeRate, falsePositiveRate, selectedBaseRate);
         };
