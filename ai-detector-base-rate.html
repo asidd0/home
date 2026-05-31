@@ -185,7 +185,7 @@
           <a href="https://auyonsiddiq.com">auyonsiddiq.com</a>
         </div>
         <h1>AI-Writing Detection and Base Rate Fallacy</h1>
-        <p>Detection methods (e.g., those used in medical screening) are often described by their <strong>true positive rate</strong> and <strong>false positive rate</strong>. This is also the case for tools that detect AI writing. But what we usually want to know is something different: after the detector flags a piece of writing, how likely is it to actually be AI-generated?</p>
+        <p>Detection methods (e.g., those used in medical screening) are often described by their <strong>false negative rate</strong> and <strong>false positive rate</strong>. This is also the case for tools that detect AI writing. But what we usually want to know is something different: after the detector flags a piece of writing, how likely is it to actually be AI-generated?</p>
         <p>That answer depends heavily on the <strong>base rate</strong>: the overall probability that a piece of writing is AI-generated in the first place. When the base rate is low, even a detector with a small false positive rate can produce many false positives among flagged texts.</p>
         <p>The takeaway is that, for a positively flagged observation, the base rate should shape how confident we are that the detector was correct.</p>
       </section>
@@ -193,18 +193,18 @@
       <section class="calculator" aria-label="AI detector base rate fallacy tool">
         <form class="calculator-controls">
           <div class="field">
-            <label for="true-positive-rate">True positive rate of detector</label>
+            <label for="false-negative-rate">False negative rate of detector</label>
             <div class="input-row">
-              <input id="true-positive-rate" name="true-positive-rate" type="number" min="0" max="100" step="0.1" value="90" inputmode="decimal">
+              <input id="false-negative-rate" name="false-negative-rate" type="number" min="0" max="100" step="0.1" value="1" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
-            <p class="helper">Probability the detector correctly says AI when the text is AI-generated.</p>
+            <p class="helper">Probability the detector misses AI writing when the text is AI-generated.</p>
           </div>
 
           <div class="field">
             <label for="false-positive-rate">False positive rate of detector</label>
             <div class="input-row">
-              <input id="false-positive-rate" name="false-positive-rate" type="number" min="0" max="100" step="0.1" value="5" inputmode="decimal">
+              <input id="false-positive-rate" name="false-positive-rate" type="number" min="0" max="100" step="0.1" value="1" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
             <p class="helper">Probability the detector incorrectly says AI when the text is human-written.</p>
@@ -220,7 +220,7 @@
           </div>
 
           <div class="result-panel" aria-live="polite">
-            <div class="result-number" id="precision-output">66.7%</div>
+            <div class="result-number" id="precision-output">91.7%</div>
             <p class="result-label">Probability the text is AI-generated after the detector says AI.</p>
           </div>
         </form>
@@ -237,7 +237,7 @@
 
     <script>
       (() => {
-        const tprInput = document.getElementById("true-positive-rate");
+        const fnrInput = document.getElementById("false-negative-rate");
         const fprInput = document.getElementById("false-positive-rate");
         const baseRateInput = document.getElementById("base-rate");
         const baseRateOutput = document.getElementById("base-rate-output");
@@ -256,14 +256,15 @@
           return `${(value * 100).toFixed(digits)}%`;
         };
 
-        const precision = (baseRate, truePositiveRate, falsePositiveRate) => {
-          const trueFlags = truePositiveRate * baseRate;
+        const probabilityAfterPositiveFlag = (baseRate, falseNegativeRate, falsePositiveRate) => {
+          const detectionRate = 1 - falseNegativeRate;
+          const trueFlags = detectionRate * baseRate;
           const falseFlags = falsePositiveRate * (1 - baseRate);
           const denominator = trueFlags + falseFlags;
           return denominator === 0 ? Number.NaN : trueFlags / denominator;
         };
 
-        const drawChart = (truePositiveRate, falsePositiveRate, selectedBaseRate) => {
+        const drawChart = (falseNegativeRate, falsePositiveRate, selectedBaseRate) => {
           const rect = canvas.getBoundingClientRect();
           const ratio = window.devicePixelRatio || 1;
           canvas.width = Math.round(rect.width * ratio);
@@ -340,7 +341,7 @@
 
           for (let step = 0; step <= 300; step += 1) {
             const baseRate = step / 300;
-            const value = precision(baseRate, truePositiveRate, falsePositiveRate);
+            const value = probabilityAfterPositiveFlag(baseRate, falseNegativeRate, falsePositiveRate);
             if (!Number.isFinite(value)) continue;
             if (!hasPoint) {
               ctx.moveTo(x(baseRate), y(value));
@@ -360,7 +361,7 @@
             return;
           }
 
-          const selectedPrecision = precision(selectedBaseRate, truePositiveRate, falsePositiveRate);
+          const selectedPrecision = probabilityAfterPositiveFlag(selectedBaseRate, falseNegativeRate, falsePositiveRate);
           if (Number.isFinite(selectedPrecision)) {
             const markerX = x(selectedBaseRate);
             const markerY = y(selectedPrecision);
@@ -385,18 +386,18 @@
         };
 
         const update = () => {
-          const truePositiveRate = clampPercent(tprInput.value) / 100;
+          const falseNegativeRate = clampPercent(fnrInput.value) / 100;
           const falsePositiveRate = clampPercent(fprInput.value) / 100;
           const selectedBaseRate = clampPercent(baseRateInput.value) / 100;
-          const selectedPrecision = precision(selectedBaseRate, truePositiveRate, falsePositiveRate);
+          const selectedPrecision = probabilityAfterPositiveFlag(selectedBaseRate, falseNegativeRate, falsePositiveRate);
 
           baseRateOutput.value = formatPercent(selectedBaseRate);
           precisionOutput.textContent = formatPercent(selectedPrecision);
 
-          drawChart(truePositiveRate, falsePositiveRate, selectedBaseRate);
+          drawChart(falseNegativeRate, falsePositiveRate, selectedBaseRate);
         };
 
-        [tprInput, fprInput, baseRateInput].forEach((input) => {
+        [fnrInput, fprInput, baseRateInput].forEach((input) => {
           input.addEventListener("input", update);
           input.addEventListener("change", () => {
             input.value = clampPercent(input.value);
