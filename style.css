@@ -80,7 +80,15 @@ main {
 .profile-links {
   align-items: center;
   display: flex;
+  font-size: 15px;
   gap: 10px;
+}
+
+.x-link {
+  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .social-icon {
