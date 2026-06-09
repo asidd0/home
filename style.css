@@ -6,8 +6,8 @@
   --background: #ffffff;
   --display: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --body: "Helvetica Neue", Arial, sans-serif;
-  --photo-position: 50% 50%;
-  --photo-scale: 1;
+  --photo-position: 50% 0%;
+  --photo-scale: 1.16;
 }
 
 * {
