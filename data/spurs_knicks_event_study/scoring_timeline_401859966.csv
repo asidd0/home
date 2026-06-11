@@ -1,0 +1,110 @@
+sequence,period,clock,game_time,elapsed_minutes,event_team,score_value,spurs_points,knicks_points,spurs_lead,description
+9,1,11:42,1Q 11:42,0.3000000000000007,Spurs,1,1,0,1,De'Aaron Fox makes free throw 1 of 2
+10,1,11:42,1Q 11:42,0.3000000000000007,Spurs,1,2,0,2,De'Aaron Fox makes free throw 2 of 2
+11,1,11:21,1Q 11:21,0.6500000000000004,Knicks,2,2,2,0,Karl-Anthony Towns makes 6-foot driving floating jump shot (Josh Hart assists)
+13,1,11:09,1Q 11:09,0.8499999999999996,Spurs,3,5,2,3,Devin Vassell makes 26-foot three point jumper (Stephon Castle assists)
+23,1,10:42,1Q 10:42,1.3000000000000007,Spurs,2,7,2,5,Victor Wembanyama makes 5-foot turnaround jump shot
+35,1,9:34,1Q 9:34,2.4333333333333336,Spurs,3,10,2,8,Devin Vassell makes 23-foot three point jumper (Victor Wembanyama assists)
+39,1,9:17,1Q 9:17,2.716666666666667,Spurs,2,12,2,10,Julian Champagnie makes running dunk
+48,1,8:52,1Q 8:52,3.133333333333333,Knicks,3,12,5,7,OG Anunoby makes 23-foot three point jumper (Jalen Brunson assists)
+50,1,8:33,1Q 8:33,3.4499999999999993,Spurs,2,14,5,9,Victor Wembanyama makes 2-foot two point shot
+53,1,8:26,1Q 8:26,3.5666666666666664,Knicks,1,14,6,8,OG Anunoby makes free throw 1 of 2
+54,1,8:26,1Q 8:26,3.5666666666666664,Knicks,1,14,7,7,OG Anunoby makes free throw 2 of 2
+57,1,8:02,1Q 8:02,3.966666666666667,Knicks,2,14,9,5,Josh Hart makes running layup (Jalen Brunson assists)
+63,1,8:02,1Q 8:02,3.966666666666667,Knicks,1,14,10,4,Josh Hart makes free throw 1 of 1
+66,1,7:37,1Q 7:37,4.383333333333333,Spurs,2,16,10,6,Stephon Castle makes 13-foot fade away jump shot (Julian Champagnie assists)
+70,1,6:59,1Q 6:59,5.016666666666667,Spurs,3,19,10,9,Stephon Castle makes 26-foot three point jumper (Devin Vassell assists)
+74,1,6:21,1Q 6:21,5.65,Spurs,3,22,10,12,Devin Vassell makes 25-foot running jump shot (Dylan Harper assists)
+78,1,6:05,1Q 6:05,5.916666666666667,Knicks,1,22,11,11,Jalen Brunson makes free throw 1 of 2
+87,1,6:05,1Q 6:05,5.916666666666667,Knicks,1,22,12,10,Jalen Brunson makes free throw 2 of 2
+88,1,5:51,1Q 5:51,6.15,Spurs,3,25,12,13,Victor Wembanyama makes 25-foot three point jumper (Dylan Harper assists)
+90,1,5:27,1Q 5:27,6.55,Knicks,2,25,14,11,Mikal Bridges makes 20-foot step back jumpshot
+96,1,4:53,1Q 4:53,7.116666666666667,Spurs,2,27,14,13,Keldon Johnson makes running layup (De'Aaron Fox assists)
+98,1,4:40,1Q 4:40,7.333333333333333,Knicks,3,27,17,10,Mikal Bridges makes 23-foot three point jumper (Jalen Brunson assists)
+111,1,4:15,1Q 4:15,7.75,Spurs,3,30,17,13,De'Aaron Fox makes 25-foot three pointer (Devin Vassell assists)
+135,1,3:17,1Q 3:17,8.716666666666667,Spurs,2,32,17,15,Victor Wembanyama makes tip in dunk
+138,1,2:53,1Q 2:53,9.116666666666667,Knicks,1,32,18,14,OG Anunoby makes free throw 1 of 2
+141,1,2:53,1Q 2:53,9.116666666666667,Knicks,1,32,19,13,OG Anunoby makes free throw 2 of 2
+142,1,2:29,1Q 2:29,9.516666666666666,Spurs,2,34,19,15,Dylan Harper makes 16-foot pullup jump shot
+144,1,2:15,1Q 2:15,9.75,Knicks,1,34,20,14,Karl-Anthony Towns makes technical free throw
+152,1,1:50,1Q 1:50,10.166666666666666,Spurs,1,35,20,15,Devin Vassell makes technical free throw
+169,1,45.9,1Q 0:45.9,11.235,Spurs,2,37,20,17,Victor Wembanyama makes 4-foot two point shot
+174,1,41.7,1Q 0:41.7,11.305,Spurs,1,38,20,18,Victor Wembanyama makes free throw flagrant 1 of 2
+177,1,41.7,1Q 0:41.7,11.305,Spurs,1,39,20,19,Victor Wembanyama makes free throw flagrant 2 of 2
+179,1,27.7,1Q 0:27.7,11.538333333333334,Spurs,2,41,20,21,Devin Vassell makes 15-foot jumper (Stephon Castle assists)
+183,1,19.7,1Q 0:19.7,11.671666666666667,Knicks,1,41,21,20,Jalen Brunson makes free throw 1 of 2
+186,1,19.7,1Q 0:19.7,11.671666666666667,Knicks,1,41,22,19,Jalen Brunson makes free throw 2 of 2
+197,2,11:36,2Q 11:36,12.4,Knicks,3,41,25,16,OG Anunoby makes 23-foot three point jumper (Landry Shamet assists)
+199,2,11:21,2Q 11:21,12.65,Spurs,3,44,25,19,De'Aaron Fox makes 23-foot three point jumper (Julian Champagnie assists)
+203,2,10:45,2Q 10:45,13.25,Spurs,3,47,25,22,De'Aaron Fox makes 23-foot three point step back jumpshot
+208,2,10:45,2Q 10:45,13.25,Spurs,1,48,25,23,Victor Wembanyama makes free throw 1 of 1
+216,2,10:25,2Q 10:25,13.583333333333334,Knicks,2,48,27,21,Karl-Anthony Towns makes two point shot
+219,2,10:25,2Q 10:25,13.583333333333334,Knicks,1,48,28,20,Karl-Anthony Towns makes free throw 1 of 1
+223,2,9:58,2Q 9:58,14.033333333333333,Knicks,2,48,30,18,Jalen Brunson makes running layup
+224,2,9:42,2Q 9:42,14.3,Spurs,3,51,30,21,Dylan Harper makes 23-foot three point jumper (De'Aaron Fox assists)
+228,2,9:16,2Q 9:16,14.733333333333333,Spurs,3,54,30,24,Carter Bryant makes 22-foot three point jumper (Dylan Harper assists)
+230,2,8:56,2Q 8:56,15.066666666666666,Knicks,2,54,32,22,Jalen Brunson makes 12-foot driving floating jump shot
+231,2,8:43,2Q 8:43,15.283333333333333,Spurs,3,57,32,25,Julian Champagnie makes 25-foot three point jumper (De'Aaron Fox assists)
+251,2,7:59,2Q 7:59,16.016666666666666,Knicks,2,57,34,23,Jordan Clarkson makes running layup (Josh Hart assists)
+253,2,7:53,2Q 7:53,16.116666666666667,Spurs,2,59,34,25,Carter Bryant makes 1-foot alley oop dunk (Stephon Castle assists)
+290,2,6:35,2Q 6:35,17.416666666666668,Knicks,2,59,36,23,Jalen Brunson makes two point shot
+293,2,6:11,2Q 6:11,17.816666666666666,Knicks,2,59,38,21,Jalen Brunson makes two point shot
+305,2,5:46,2Q 5:46,18.233333333333334,Spurs,3,62,38,24,Devin Vassell makes 22-foot three point jumper (Keldon Johnson assists)
+313,2,5:09,2Q 5:09,18.85,Knicks,1,62,39,23,OG Anunoby makes free throw 1 of 2
+316,2,5:09,2Q 5:09,18.85,Knicks,1,62,40,22,OG Anunoby makes free throw 2 of 2
+317,2,4:59,2Q 4:59,19.016666666666666,Spurs,2,64,40,24,De'Aaron Fox makes 8-foot turnaround jump shot
+322,2,4:19,2Q 4:19,19.683333333333334,Spurs,2,66,40,26,Dylan Harper makes driving layup
+323,2,4:06,2Q 4:06,19.9,Knicks,2,66,42,24,OG Anunoby makes 15-foot turnaround jump shot
+325,2,3:47,2Q 3:47,20.21666666666667,Spurs,3,69,42,27,Dylan Harper makes 25-foot three point jumper (De'Aaron Fox assists)
+332,2,3:06,2Q 3:06,20.9,Spurs,2,71,42,29,Dylan Harper makes running layup
+335,2,2:51,2Q 2:51,21.15,Knicks,1,71,43,28,Jalen Brunson makes free throw 1 of 2
+356,2,2:21,2Q 2:21,21.65,Knicks,3,71,46,25,Jalen Brunson makes 24-foot three point jumper (Josh Hart assists)
+370,2,1:45,2Q 1:45,22.25,Knicks,1,71,47,24,Jalen Brunson makes free throw 2 of 2
+371,2,1:25,2Q 1:25,22.583333333333336,Spurs,2,73,47,26,Victor Wembanyama makes 1-foot layup (De'Aaron Fox assists)
+372,2,1:16,2Q 1:16,22.733333333333334,Knicks,2,73,49,24,Jalen Brunson makes 7-foot pullup jump shot
+373,2,57.8,2Q 0:57.8,23.03666666666667,Spurs,3,76,49,27,Dylan Harper makes 22-foot three point jumper (De'Aaron Fox assists)
+396,3,11:04,3Q 11:04,24.933333333333334,Knicks,3,76,52,24,OG Anunoby makes 25-foot three point jumper (Josh Hart assists)
+402,3,10:37,3Q 10:37,25.383333333333333,Spurs,3,79,52,27,Victor Wembanyama makes 22-foot running jump shot (Stephon Castle assists)
+413,3,9:40,3Q 9:40,26.333333333333336,Spurs,2,81,52,29,De'Aaron Fox makes 16-foot pullup jump shot (Devin Vassell assists)
+418,3,9:27,3Q 9:27,26.55,Knicks,1,81,53,28,Karl-Anthony Towns makes free throw flagrant 1 of 2
+419,3,9:27,3Q 9:27,26.55,Knicks,1,81,54,27,Karl-Anthony Towns makes free throw flagrant 2 of 2
+428,3,8:46,3Q 8:46,27.233333333333334,Knicks,2,81,56,25,OG Anunoby makes dunk (Josh Hart assists)
+432,3,8:23,3Q 8:23,27.616666666666667,Knicks,3,81,59,22,Jalen Brunson makes 25-foot three pointer (Mikal Bridges assists)
+448,3,6:50,3Q 6:50,29.166666666666668,Knicks,3,81,62,19,OG Anunoby makes 23-foot three point jumper (Karl-Anthony Towns assists)
+470,3,5:31,3Q 5:31,30.483333333333334,Knicks,3,81,65,16,Josh Hart makes 25-foot three point jumper (Jalen Brunson assists)
+483,3,4:35,3Q 4:35,31.416666666666668,Spurs,1,82,65,17,Stephon Castle makes free throw 1 of 2
+486,3,4:35,3Q 4:35,31.416666666666668,Spurs,1,83,65,18,Stephon Castle makes free throw 2 of 2
+491,3,4:10,3Q 4:10,31.833333333333332,Spurs,1,84,65,19,Dylan Harper makes free throw 1 of 2
+496,3,4:10,3Q 4:10,31.833333333333332,Spurs,1,85,65,20,Dylan Harper makes free throw 2 of 2
+497,3,3:52,3Q 3:52,32.13333333333333,Knicks,2,85,67,18,Jalen Brunson makes 21-foot driving floating jump shot
+500,3,3:52,3Q 3:52,32.13333333333333,Knicks,1,85,68,17,Jalen Brunson makes free throw 1 of 1
+501,3,3:36,3Q 3:36,32.4,Spurs,2,87,68,19,Dylan Harper makes 10-foot turnaround jump shot (Julian Champagnie assists)
+504,3,3:13,3Q 3:13,32.78333333333333,Knicks,2,87,70,17,Jalen Brunson makes 18-foot step back jumpshot
+513,3,2:43,3Q 2:43,33.28333333333333,Knicks,2,87,72,15,Mitchell Robinson makes alley oop dunk (Jalen Brunson assists)
+527,3,1:46,3Q 1:46,34.233333333333334,Spurs,3,90,72,18,Devin Vassell makes 24-foot three point jumper (Stephon Castle assists)
+532,3,53.2,3Q 0:53.2,35.11333333333333,Knicks,3,90,75,15,OG Anunoby makes 25-foot three point step back jumpshot (Mitchell Robinson assists)
+565,4,11:10,4Q 11:10,36.833333333333336,Spurs,2,92,75,17,Dylan Harper makes driving layup
+574,4,10:37,4Q 10:37,37.38333333333333,Spurs,1,93,75,18,Victor Wembanyama makes free throw 1 of 2
+597,4,9:33,4Q 9:33,38.45,Spurs,2,95,75,20,Victor Wembanyama makes two point shot
+598,4,9:16,4Q 9:16,38.733333333333334,Knicks,3,95,78,17,Jose Alvarado makes 22-foot three point jumper (Mikal Bridges assists)
+606,4,8:44,4Q 8:44,39.266666666666666,Knicks,2,95,80,15,Mikal Bridges makes running layup (Josh Hart assists)
+622,4,7:28,4Q 7:28,40.53333333333333,Knicks,3,95,83,12,Karl-Anthony Towns makes 24-foot three point step back jumpshot (Jose Alvarado assists)
+626,4,7:14,4Q 7:14,40.766666666666666,Spurs,1,96,83,13,Stephon Castle makes free throw 1 of 2
+631,4,7:14,4Q 7:14,40.766666666666666,Spurs,1,97,83,14,Stephon Castle makes free throw 2 of 2
+632,4,7:03,4Q 7:03,40.95,Knicks,3,97,86,11,OG Anunoby makes 23-foot three point jumper (Jalen Brunson assists)
+636,4,6:35,4Q 6:35,41.416666666666664,Knicks,2,97,88,9,Karl-Anthony Towns makes driving layup (OG Anunoby assists)
+639,4,6:24,4Q 6:24,41.6,Spurs,1,98,88,10,Stephon Castle makes free throw 1 of 2
+642,4,6:24,4Q 6:24,41.6,Spurs,1,99,88,11,Stephon Castle makes free throw 2 of 2
+645,4,6:09,4Q 6:09,41.85,Knicks,1,99,89,10,Jalen Brunson makes free throw 1 of 2
+646,4,6:09,4Q 6:09,41.85,Knicks,1,99,90,9,Jalen Brunson makes free throw 2 of 2
+653,4,5:20,4Q 5:20,42.666666666666664,Knicks,2,99,92,7,Jalen Brunson makes 1-foot two point shot (Karl-Anthony Towns assists)
+658,4,4:34,4Q 4:34,43.43333333333334,Knicks,3,99,95,4,OG Anunoby makes 23-foot three point jumper (Jose Alvarado assists)
+664,4,4:11,4Q 4:11,43.81666666666666,Spurs,3,102,95,7,De'Aaron Fox makes 25-foot three point jumper (Devin Vassell assists)
+666,4,3:49,4Q 3:49,44.18333333333334,Knicks,2,102,97,5,Jose Alvarado makes 1-foot two point shot
+667,4,3:31,4Q 3:31,44.483333333333334,Spurs,2,104,97,7,Victor Wembanyama makes 17-foot jumper (De'Aaron Fox assists)
+669,4,3:07,4Q 3:07,44.88333333333333,Knicks,3,104,100,4,Jose Alvarado makes 25-foot three point jumper (Jalen Brunson assists)
+676,4,2:21,4Q 2:21,45.65,Knicks,3,104,103,1,Jalen Brunson makes 26-foot three pointer (Jose Alvarado assists)
+687,4,1:22,4Q 1:22,46.63333333333333,Knicks,2,104,105,-1,Jalen Brunson makes 5-foot driving floating jump shot
+702,4,30.3,4Q 0:30.3,47.495,Spurs,1,105,105,0,Stephon Castle makes free throw 1 of 2
+706,4,30.3,4Q 0:30.3,47.495,Spurs,1,106,105,1,Stephon Castle makes free throw 2 of 2
+727,4,2.1,4Q 0:02.1,47.965,Knicks,2,106,107,-1,OG Anunoby makes tip shot
