@@ -1,0 +1,2421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Capital, AI, and Labor Commoditization</title>
+  <style>
+    :root {
+      --text: #0f1115;
+      --muted: #30353b;
+      --soft: #eef1f4;
+      --accent: #4F7A94;
+      --pre: #9AA6AF;
+      --demand: #5F9B8F;
+      --human-capital: #4F7A94;
+      --price: #A65E63;
+      --embedding-highlight: #3F8FB5;
+      --duration: 5.8s;
+      --quarters: 21;
+      --display-font: Georgia, "Times New Roman", Times, serif;
+      --sans-font: Arial, Helvetica, sans-serif;
+      --nav-safe: 96px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
+      font-family: var(--sans-font);
+    }
+
+    body {
+      overflow: hidden;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+    }
+
+    .deck {
+      width: min(100vw, calc(100svh * 16 / 9));
+      height: min(100svh, calc(100vw * 9 / 16));
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      container-type: size;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 5.4cqh 7cqw max(7cqh, var(--nav-safe));
+      background: #ffffff;
+    }
+
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3.2cqh;
+    }
+
+    .slide.profile-slide.active {
+      gap: 2cqh;
+    }
+
+    .profile-slide h2 {
+      font-size: clamp(38px, 4.4cqw, 70px);
+    }
+
+    .profile-data-slide.active {
+      gap: 2.6cqh;
+    }
+
+    .profile-data-intro {
+      max-width: 1080px;
+      color: #252a31;
+      font-size: clamp(22px, 1.8cqw, 30px);
+      line-height: 1.25;
+      font-family: var(--display-font);
+    }
+
+    .profile-block-highlight {
+      color: inherit;
+      font-weight: 700;
+    }
+
+    .profile-block-list {
+      display: grid;
+      gap: 0;
+      width: min(1120px, 100%);
+      border-top: 2px solid #171a1f;
+      border-bottom: 2px solid #171a1f;
+    }
+
+    .profile-block-row {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.32fr) minmax(0, 1fr);
+      column-gap: 3cqw;
+      padding: 22px 0;
+      border-top: 1px solid #d6dbe0;
+      align-items: center;
+    }
+
+    .profile-block-row:first-child {
+      border-top: 0;
+    }
+
+    .profile-block-name {
+      color: #15191f;
+      font-family: var(--display-font);
+      font-size: clamp(25px, 2.05cqw, 34px);
+      line-height: 1.05;
+      font-weight: 800;
+    }
+
+    .profile-block-name.human-capital {
+      color: var(--human-capital);
+    }
+
+    .profile-block-name.price {
+      color: var(--price);
+    }
+
+    .profile-block-examples {
+      color: #252a31;
+      font-size: clamp(22px, 1.75cqw, 30px);
+      line-height: 1.22;
+      font-family: var(--display-font);
+    }
+
+    .equation-slide h2 {
+      max-width: 1180px;
+      font-size: clamp(34px, 3.75cqw, 58px);
+      line-height: 1.05;
+    }
+
+    .equation-slide {
+      position: relative;
+    }
+
+    .topline {
+      color: var(--accent);
+      font-size: clamp(18px, 1.7cqw, 26px);
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 1080px;
+      font-size: clamp(56px, 7.4cqw, 112px);
+      line-height: 0.98;
+      font-weight: 700;
+      font-family: var(--display-font);
+    }
+
+    .paper-title {
+      max-width: 1180px;
+      font-size: clamp(38px, 4.8cqw, 68px);
+      line-height: 1.03;
+      color: var(--human-capital);
+    }
+
+    .title-human {
+      color: var(--human-capital);
+    }
+
+    .title-ai {
+      color: var(--human-capital);
+    }
+
+    .title-price {
+      color: var(--human-capital);
+    }
+
+    h2 {
+      max-width: 1120px;
+      font-size: clamp(40px, 4.55cqw, 72px);
+      line-height: 1.02;
+      font-weight: 700;
+      font-family: var(--display-font);
+    }
+
+    h2 .accent-human {
+      color: var(--human-capital);
+    }
+
+    h2 .accent-price {
+      color: var(--price);
+    }
+
+    .lede {
+      max-width: 980px;
+      font-size: clamp(25px, 2.4cqw, 38px);
+      line-height: 1.24;
+      color: #171a1f;
+      font-family: var(--display-font);
+    }
+
+    .authors {
+      max-width: 1050px;
+      font-size: clamp(24px, 2.1cqw, 34px);
+      line-height: 1.25;
+      color: #171a1f;
+      font-family: var(--display-font);
+    }
+
+    .title-question {
+      margin-top: 1cqh;
+      color: #171a1f;
+      max-width: 1180px;
+      font-weight: 800;
+      font-size: clamp(22px, 2.05cqw, 33px);
+    }
+
+    .narrow {
+      max-width: 900px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 4cqw;
+      align-items: start;
+      margin-top: 1cqh;
+      width: min(1060px, 100%);
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .metric strong {
+      font-size: clamp(46px, 5.8cqw, 90px);
+      line-height: 0.95;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: var(--sans-font);
+    }
+
+    .metric strong.date-metric {
+      font-size: clamp(42px, 4.9cqw, 76px);
+      white-space: nowrap;
+    }
+
+    .metric span {
+      font-size: clamp(20px, 1.9cqw, 31px);
+      line-height: 1.2;
+      color: #181c22;
+      font-family: var(--sans-font);
+    }
+
+    .bullets {
+      display: grid;
+      gap: 1.15rem;
+      max-width: 1040px;
+      font-size: clamp(24px, 2.25cqw, 36px);
+      line-height: 1.2;
+      color: #111418;
+      font-family: var(--display-font);
+    }
+
+    .bullet {
+      position: relative;
+      display: block;
+      padding-left: 1.2em;
+    }
+
+    .bullet::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.42em;
+      width: 0.34em;
+      height: 0.34em;
+      border-radius: 999px;
+      background: #111111;
+    }
+
+    .citation-inline {
+      color: var(--human-capital);
+      font-weight: 400;
+      white-space: normal;
+    }
+
+    .commoditization-slide.active {
+      gap: 4.2cqh;
+    }
+
+    .conclusion-slide.active {
+      gap: 4.2cqh;
+    }
+
+    .commoditization-slide h2 {
+      max-width: 1180px;
+    }
+
+    .conclusion-slide h2 {
+      max-width: 1180px;
+    }
+
+    .commoditization-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3.4cqh 4.2cqw;
+      margin-top: 5.2cqh;
+      width: min(1180px, 100%);
+    }
+
+    .commoditization-block {
+      padding-top: 0;
+      min-height: 138px;
+      display: grid;
+      align-content: start;
+    }
+
+    .claim-label {
+      font-weight: 800;
+    }
+
+    .commoditization-copy {
+      margin: 0;
+      color: #111418;
+      font-family: var(--display-font);
+      font-size: clamp(21px, 1.78cqw, 29px);
+      line-height: 1.22;
+    }
+
+    .commoditization-copy .citation-inline {
+      font-size: 0.78em;
+      color: #5b7da0;
+    }
+
+    .conclusion-grid {
+      margin-top: 4.6cqh;
+    }
+
+    figure {
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 72cqh;
+      object-fit: contain;
+      border: 0;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .figure-large img {
+      max-height: 76cqh;
+    }
+
+    .figure-medium img {
+      width: min(1180px, 100%);
+      max-height: 67cqh;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 4cqw;
+      align-items: center;
+      min-height: 0;
+    }
+
+    .split figure img {
+      max-height: 68cqh;
+    }
+
+    .event-figure {
+      align-items: flex-start;
+    }
+
+    .event-chart {
+      width: min(1240px, 100%);
+      height: min(63cqh, 660px);
+    }
+
+    .event-chart.components {
+      width: min(1420px, 100%);
+      height: min(62cqh, 670px);
+    }
+
+    .plot-slide.active {
+      justify-content: flex-start;
+      gap: 2.1cqh;
+    }
+
+    .plot-slide {
+      padding-top: 4.4cqh;
+    }
+
+    .demand-slide h2,
+    .mechanism-ddd-slide h2 {
+      font-size: clamp(38px, 4.15cqw, 66px);
+      max-width: 1180px;
+    }
+
+    .demand-slide .event-chart {
+      width: min(1320px, 100%);
+      height: min(50cqh, 520px);
+    }
+
+    .component-slide .event-chart.components {
+      width: 100%;
+      height: min(70cqh, 700px);
+      min-height: 470px;
+    }
+
+    .component-slide.active {
+      justify-content: center;
+    }
+
+    .component-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
+      gap: 2.2cqw;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      min-height: 0;
+    }
+
+    .component-copy {
+      display: grid;
+      gap: 2.2cqh;
+      align-content: center;
+      min-width: 0;
+    }
+
+    .component-copy h2 {
+      max-width: 520px;
+      font-size: clamp(34px, 3.55cqw, 58px);
+      line-height: 1.03;
+    }
+
+    .component-copy .result-line.compact {
+      max-width: 535px;
+      font-size: clamp(21px, 1.72cqw, 29px);
+      line-height: 1.2;
+    }
+
+    .component-layout .event-figure {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+    }
+
+    .mechanism-raw-slide .figure-medium img {
+      width: min(1260px, 100%);
+      max-height: 56cqh;
+    }
+
+    .mechanism-ddd-slide .figure-large img {
+      width: min(1260px, 100%);
+      max-height: 55cqh;
+    }
+
+    .event-chart svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      font-family: var(--sans-font);
+    }
+
+    .event-axis path,
+    .event-axis line {
+      stroke: #6f747c;
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+    }
+
+    .event-grid line {
+      stroke: #e3e6e8;
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+    }
+
+    .event-zero {
+      stroke: #9ca1a8;
+      stroke-width: 1.1;
+    }
+
+    .event-post-line {
+      stroke: #111111;
+      stroke-width: 1.85;
+      stroke-dasharray: 5 5;
+    }
+
+    .event-post-callout {
+      fill: #111111;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .event-post-arrow {
+      stroke: #111111;
+      stroke-width: 1.1;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .event-label,
+    .event-tick {
+      fill: #424750;
+      font-size: 23px;
+    }
+
+    .event-panel-title {
+      fill: #171a1f;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .event-row-note {
+      fill: #171a1f;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .event-y-title {
+      fill: #424750;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .event-interval {
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      opacity: 0.48;
+    }
+
+    .component-event-svg .event-label,
+    .component-event-svg .event-tick {
+      font-size: 18px;
+    }
+
+    .component-event-svg .event-panel-title {
+      font-size: 22px;
+    }
+
+    .component-event-svg .event-y-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .component-event-svg .event-post-callout {
+      font-size: 12px;
+    }
+
+    .component-event-svg .event-interval {
+      stroke-width: 1.55;
+      opacity: 0.44;
+    }
+
+    .event-interval.event-reveal {
+      opacity: 0;
+    }
+
+    .event-reveal {
+      opacity: 0;
+    }
+
+    .event-dot {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: translateY(4px) scale(0.95);
+    }
+
+    .slide.active .event-chart.run .event-interval {
+      animation: evidence-fade 660ms ease-out forwards;
+    }
+
+    .slide.active .event-chart.run .event-dot {
+      animation: dot-fade 660ms ease-out forwards;
+    }
+
+    .slide.active .event-chart.components.run .event-interval {
+      animation-duration: 594ms;
+    }
+
+    .slide.active .event-chart.components.run .event-dot {
+      animation-duration: 594ms;
+    }
+
+    @keyframes evidence-fade {
+      to {
+        opacity: 0.58;
+      }
+    }
+
+    @keyframes dot-fade {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .embedding-stage {
+      display: grid;
+      grid-template-columns: minmax(250px, 0.68fr) minmax(0, 1.32fr);
+      gap: 2.8cqw;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+    }
+
+    .embedding-copy {
+      max-width: 395px;
+    }
+
+    .embedding-stage h2 {
+      max-width: 420px;
+      font-size: clamp(31px, 3.4cqw, 54px);
+      line-height: 1.02;
+    }
+
+    .embedding-stage .lede {
+      max-width: 420px;
+      margin-top: 1rem;
+      font-size: clamp(18px, 1.55cqw, 24px);
+      line-height: 1.24;
+    }
+
+    .embedding-visual {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(124px, 0.18fr);
+      gap: 1.25cqw;
+      width: 100%;
+      height: min(70cqh, 650px);
+      min-height: 350px;
+      min-width: 0;
+    }
+
+    .embedding-canvas-wrap {
+      position: relative;
+      width: 100%;
+      min-height: 0;
+      cursor: grab;
+      background: #ffffff;
+    }
+
+    .embedding-canvas-wrap:active {
+      cursor: grabbing;
+    }
+
+    #embedding-3d {
+      width: 100%;
+      height: 100%;
+      display: block;
+      touch-action: none;
+    }
+
+    .drag-hint {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      color: #252a30;
+      font-size: clamp(16px, 1.25cqw, 20px);
+      background: rgba(255, 255, 255, 0.88);
+      padding: 6px 8px;
+    }
+
+    .embedding-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+      align-self: center;
+      color: #424750;
+      font-family: var(--sans-font);
+      font-size: clamp(12px, 0.96cqw, 15px);
+      line-height: 1.05;
+    }
+
+    .legend-item {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: #5c626b;
+      display: inline-block;
+      width: max-content;
+      max-width: 100%;
+      padding: 2px 0;
+      font: inherit;
+      text-align: left;
+      white-space: normal;
+      cursor: pointer;
+      transition: color 150ms ease, font-weight 150ms ease, transform 150ms ease;
+    }
+
+    .legend-item:hover,
+    .legend-item:focus-visible,
+    .legend-item.active {
+      color: var(--embedding-highlight);
+      font-weight: 700;
+      outline: none;
+      transform: translateX(2px);
+    }
+
+    .decomp-wrap {
+      display: grid;
+      grid-template-columns: 0.72fr auto 1.22fr;
+      gap: 2.2cqw;
+      align-items: center;
+      width: min(1180px, 100%);
+    }
+
+    .lhs-demand {
+      border-left: 8px solid var(--demand);
+      padding-left: 24px;
+    }
+
+    .lhs-demand strong {
+      display: block;
+      font-size: clamp(46px, 5cqw, 78px);
+      line-height: 0.98;
+      color: #171a1f;
+    }
+
+    .lhs-demand span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: clamp(22px, 2cqw, 32px);
+      line-height: 1.15;
+    }
+
+    .decomp-equals {
+      color: #30343a;
+      font-size: clamp(56px, 6cqw, 96px);
+      font-weight: 800;
+      line-height: 1;
+      transform: translateY(-0.05em);
+    }
+
+    .rhs-blocks {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .decomp-block {
+      border-top: 6px solid var(--human-capital);
+      background: #f7f9fa;
+      padding: 22px 24px;
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .decomp-block.price {
+      border-top-color: var(--price);
+    }
+
+    .decomp-block .block-name {
+      font-size: clamp(25px, 2.25cqw, 36px);
+      font-weight: 800;
+      line-height: 1;
+      color: #161a1f;
+    }
+
+    .decomp-block .block-detail {
+      font-size: clamp(16px, 1.25cqw, 21px);
+      line-height: 1.25;
+      color: #555d66;
+    }
+
+    .mock-profile-wrap {
+      display: grid;
+      grid-template-columns: 0.58fr 1.42fr;
+      gap: 3cqw;
+      align-items: center;
+      width: min(1180px, 100%);
+    }
+
+    .profile-note {
+      color: #343941;
+      font-size: clamp(24px, 2.25cqw, 36px);
+      line-height: 1.18;
+      font-family: var(--display-font);
+    }
+
+    .mock-profile {
+      border: 1px solid #d8dee4;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 8px 26px rgba(30, 38, 46, 0.08);
+    }
+
+    .mock-profile-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 22px 16px;
+      border-bottom: 1px solid #d9dee3;
+      background: #fbfcfd;
+    }
+
+    .mock-person {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .mock-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--soft);
+      display: grid;
+      place-items: center;
+      color: #2b2f36;
+      font-size: 24px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .mock-name {
+      font-size: clamp(26px, 2.35cqw, 38px);
+      font-weight: 800;
+      line-height: 1.05;
+      color: #161a1f;
+    }
+
+    .mock-subtitle {
+      margin-top: 6px;
+      font-size: clamp(16px, 1.2cqw, 21px);
+      color: var(--muted);
+    }
+
+    .mock-rate {
+      color: var(--price);
+      font-size: clamp(28px, 2.8cqw, 44px);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .mock-profile-tabs {
+      display: flex;
+      gap: 18px;
+      padding: 10px 22px;
+      border-bottom: 1px solid #e3e7eb;
+      color: #5f6872;
+      font-size: clamp(13px, 1cqw, 16px);
+      font-weight: 700;
+    }
+
+    .mock-profile-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      gap: 14px;
+      padding: 16px 20px 18px;
+    }
+
+    .profile-column {
+      display: grid;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .side-column {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      min-width: 0;
+    }
+
+    .profile-section-title {
+      color: #15191f;
+      font-size: clamp(18px, 1.35cqw, 23px);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .profile-copy {
+      margin-top: 7px;
+      color: #434b55;
+      font-size: clamp(14px, 1.05cqw, 18px);
+      line-height: 1.32;
+    }
+
+    .profile-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 9px;
+    }
+
+    .profile-pill {
+      background: rgba(79, 122, 148, 0.15);
+      color: #24485f;
+      border: 1px solid rgba(79, 122, 148, 0.28);
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: clamp(12px, 0.95cqw, 15px);
+      font-weight: 700;
+    }
+
+    .signal-box {
+      position: relative;
+      border: 2px solid rgba(79, 122, 148, 0.72);
+      background: rgba(79, 122, 148, 0.045);
+      padding: 19px 16px 13px;
+    }
+
+    .signal-box.price {
+      border-color: rgba(166, 94, 99, 0.78);
+      background: rgba(166, 94, 99, 0.055);
+    }
+
+    .signal-tag {
+      position: absolute;
+      top: -13px;
+      left: 14px;
+      background: var(--human-capital);
+      color: #ffffff;
+      padding: 4px 9px;
+      font-size: clamp(12px, 0.95cqw, 15px);
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .signal-box.price .signal-tag {
+      background: var(--price);
+    }
+
+    .credential-line,
+    .review-line {
+      color: #323942;
+      font-size: clamp(14px, 1.05cqw, 17px);
+      line-height: 1.26;
+      margin-top: 7px;
+    }
+
+    .credential-line span,
+    .review-line span {
+      color: var(--muted);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .stat-cell {
+      background: #f3f6f8;
+      padding: 8px 10px;
+      color: #303943;
+      font-size: clamp(12px, 0.95cqw, 15px);
+      line-height: 1.1;
+    }
+
+    .stat-cell strong {
+      display: block;
+      color: #171a1f;
+      font-size: clamp(18px, 1.35cqw, 25px);
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .price-main {
+      color: var(--price);
+      font-size: clamp(34px, 3cqw, 52px);
+      font-weight: 800;
+      line-height: 0.96;
+      margin-top: 4px;
+    }
+
+    .price-subcopy {
+      color: #4a525c;
+      font-size: clamp(13px, 1cqw, 16px);
+      line-height: 1.25;
+      margin-top: 8px;
+    }
+
+    .equation-wrap {
+      display: grid;
+      gap: 18px;
+      width: min(1210px, 100%);
+    }
+
+    .equation {
+      font-size: clamp(40px, 4.2cqw, 68px);
+      line-height: 1.25;
+      font-weight: 800;
+      color: #14171b;
+      padding: 26px 0;
+      text-align: center;
+      font-family: var(--display-font);
+    }
+
+    .equation .mean {
+      color: #5d646d;
+    }
+
+    .equation .hc {
+      color: var(--human-capital);
+    }
+
+    .equation .price {
+      color: var(--price);
+    }
+
+    .equation sub,
+    .equation sup {
+      font-size: 0.42em;
+      line-height: 0;
+    }
+
+    .equation-note {
+      position: absolute;
+      right: 7cqw;
+      bottom: calc(var(--nav-safe) + 1.2cqh);
+      color: #4a525c;
+      font-size: clamp(13px, 0.88cqw, 16px);
+      line-height: 1.25;
+      font-family: var(--sans-font);
+      text-align: left;
+    }
+
+    .equation-legend {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .equation-term {
+      border-top: 7px solid #87909a;
+      background: #f7f9fa;
+      padding: 16px 15px;
+      min-height: 104px;
+    }
+
+    .equation-term.hc {
+      border-top-color: var(--human-capital);
+    }
+
+    .equation-term.price {
+      border-top-color: var(--price);
+    }
+
+    .equation-term strong {
+      display: block;
+      font-size: clamp(19px, 1.45cqw, 25px);
+      line-height: 1.04;
+      color: #15191f;
+    }
+
+    .equation-term span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: clamp(14px, 1cqw, 17px);
+      line-height: 1.2;
+    }
+
+    .result-line {
+      max-width: 1180px;
+      font-size: clamp(24px, 2.15cqw, 34px);
+      line-height: 1.18;
+      color: #111418;
+      font-family: var(--display-font);
+    }
+
+    .result-line.compact {
+      max-width: 1120px;
+      font-size: clamp(23px, 2cqw, 31px);
+    }
+
+    .result-line strong {
+      color: #111418;
+    }
+
+    .result-line .demand {
+      color: var(--demand);
+      font-weight: 800;
+    }
+
+    .result-line .hc {
+      color: var(--human-capital);
+      font-weight: 800;
+    }
+
+    .result-line .price {
+      color: var(--price);
+      font-weight: 800;
+    }
+
+    .footnote-marker {
+      color: var(--human-capital);
+      font-family: var(--sans-font);
+      font-size: 0.55em;
+      font-weight: 800;
+      margin-left: 1px;
+      vertical-align: super;
+    }
+
+    .slide-footnote {
+      width: min(1180px, 100%);
+      color: #58616b;
+      font-family: var(--sans-font);
+      font-size: clamp(14px, 1cqw, 18px);
+      line-height: 1.25;
+      margin-top: -1.2cqh;
+    }
+
+    .slide-footnote .footnote-marker {
+      font-size: 0.82em;
+      margin-left: 0;
+      margin-right: 4px;
+    }
+
+    .text-human {
+      color: var(--human-capital);
+      font-weight: 800;
+    }
+
+    .text-price {
+      color: var(--price);
+      font-weight: 800;
+    }
+
+    .caption {
+      max-width: 1180px;
+      color: var(--muted);
+      font-size: clamp(18px, 1.5cqw, 24px);
+      line-height: 1.3;
+      font-family: var(--display-font);
+    }
+
+    .definition-line {
+      max-width: 1180px;
+      color: #242932;
+      font-size: clamp(20px, 1.65cqw, 27px);
+      line-height: 1.22;
+      font-family: var(--display-font);
+    }
+
+    .mechanism-headlines {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3.2cqw;
+      width: min(1160px, 100%);
+      color: #171a1f;
+      font-family: var(--display-font);
+      font-size: clamp(18px, 1.45cqw, 24px);
+      line-height: 1.15;
+      font-weight: 400;
+    }
+
+    .transition-prompt {
+      width: min(1160px, 100%);
+      color: #15191f;
+      font-family: var(--display-font);
+      font-size: clamp(22px, 1.85cqw, 31px);
+      line-height: 1.18;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .mechanism-raw-slide .transition-prompt {
+      margin-top: 1.1cqh;
+    }
+
+    .mechanism-explain-lines {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3.2cqw;
+      width: min(1160px, 100%);
+      color: #171a1f;
+      font-family: var(--display-font);
+      font-size: clamp(18px, 1.4cqw, 24px);
+      line-height: 1.18;
+      font-weight: 400;
+    }
+
+    .mechanism-ddd-slide .text-human,
+    .mechanism-ddd-slide .text-price {
+      font-weight: 400;
+    }
+
+    .citation {
+      max-width: 1040px;
+      color: var(--muted);
+      font-size: clamp(17px, 1.35cqw, 22px);
+      line-height: 1.35;
+    }
+
+    .controls {
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #333842;
+      z-index: 20;
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(8px);
+    }
+
+    .controls button {
+      appearance: none;
+      border: 0;
+      background: #f0f2f4;
+      color: #111111;
+      border-radius: 999px;
+      font: 700 15px/1 Arial, Helvetica, sans-serif;
+      padding: 11px 16px;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background: #e1e5e8;
+    }
+
+    .counter {
+      min-width: 76px;
+      text-align: center;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .progress {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--soft);
+      z-index: 15;
+    }
+
+    .progress span {
+      display: block;
+      width: 12.5%;
+      height: 100%;
+      background: var(--accent);
+      transition: width 220ms ease;
+    }
+
+    @media (max-width: 640px) and (orientation: portrait) {
+      body {
+        overflow: auto;
+      }
+
+      .deck {
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .slide {
+        min-height: 100svh;
+        height: auto;
+        padding: 5vh 6vw 112px;
+      }
+
+      .slide.active {
+        justify-content: flex-start;
+        gap: 2.4vh;
+      }
+
+      h1 {
+        font-size: clamp(42px, 10vw, 68px);
+      }
+
+      .paper-title {
+        font-size: clamp(34px, 8.8vw, 58px);
+      }
+
+      h2 {
+        font-size: clamp(32px, 8.6vw, 54px);
+      }
+
+      .lede,
+      .authors,
+      .profile-note {
+        font-size: clamp(20px, 5.4vw, 30px);
+      }
+
+      .profile-block-row {
+        grid-template-columns: 1fr;
+        row-gap: 0.35rem;
+        padding: 16px 0;
+      }
+
+      .profile-block-name {
+        font-size: clamp(23px, 6vw, 32px);
+      }
+
+      .profile-block-examples,
+      .profile-data-intro {
+        font-size: clamp(18px, 4.8vw, 25px);
+      }
+
+      .bullets {
+        gap: 0.95rem;
+        font-size: clamp(21px, 5.6vw, 31px);
+        line-height: 1.18;
+      }
+
+      .commoditization-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .commoditization-block {
+        min-height: 0;
+        padding-top: 12px;
+      }
+
+      .commoditization-copy {
+        font-size: clamp(18px, 4.6vw, 25px);
+        line-height: 1.18;
+      }
+
+      .split,
+      .embedding-stage,
+      .component-layout,
+      .mock-profile-wrap,
+      .decomp-wrap,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .component-layout {
+        height: auto;
+        gap: 1rem;
+      }
+
+      .component-copy {
+        gap: 1rem;
+      }
+
+      .component-copy h2,
+      .component-copy .result-line.compact {
+        max-width: 100%;
+      }
+
+      .component-layout .event-figure {
+        height: auto;
+      }
+
+      .embedding-stage {
+        height: auto;
+        gap: 1rem;
+      }
+
+      .embedding-visual {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0, 1fr);
+      }
+
+      .embedding-legend {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .embedding-copy,
+      .embedding-stage h2,
+      .embedding-stage .lede {
+        max-width: 100%;
+      }
+
+      .mock-profile-wrap {
+        gap: 1.25rem;
+      }
+
+      .equation-legend {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .equation-term {
+        min-height: 118px;
+        padding: 12px 10px;
+      }
+
+      .equation-term strong {
+        font-size: clamp(15px, 1.8vw, 21px);
+      }
+
+      .equation-term span {
+        font-size: clamp(12px, 1.35vw, 15px);
+      }
+
+      .profile-slide h2 {
+        font-size: clamp(34px, 5.1vw, 52px);
+      }
+
+      .profile-note {
+        display: none;
+      }
+
+      .mock-profile {
+        padding: 0;
+      }
+
+      .profile-slide h2 {
+        font-size: clamp(28px, 7.2vw, 40px);
+      }
+
+      .mock-avatar {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+      }
+
+      .mock-profile-head {
+        padding: 14px 16px 12px;
+      }
+
+      .mock-profile-tabs {
+        padding: 8px 16px;
+      }
+
+      .mock-profile-body {
+        grid-template-columns: minmax(0, 1fr) 188px;
+        gap: 10px;
+        padding: 14px 16px 16px;
+      }
+
+      .signal-box {
+        padding: 17px 12px 11px;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .grid {
+        gap: 1.8rem;
+      }
+
+      .controls {
+        bottom: 12px;
+      }
+    }
+
+    @media (max-width: 480px) and (orientation: portrait) {
+      .slide {
+        padding: 3.2vh 5.2vw 108px;
+      }
+
+      h2 {
+        font-size: clamp(29px, 7.6vw, 44px);
+      }
+
+      .bullets {
+        gap: 0.65rem;
+        font-size: clamp(18px, 4.6vw, 24px);
+        line-height: 1.14;
+      }
+
+      .bullet {
+        padding-left: 1em;
+      }
+
+      .citation-inline {
+        font-size: 0.95em;
+      }
+
+      .grid {
+        gap: 1.25rem;
+      }
+
+      .metric strong {
+        font-size: clamp(42px, 13vw, 70px);
+      }
+
+      .metric span {
+        font-size: clamp(18px, 5.2vw, 25px);
+      }
+
+      .mock-profile-wrap {
+        width: 100%;
+      }
+
+      .mock-profile-tabs {
+        display: none;
+      }
+
+      .mock-avatar {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+      }
+
+      .mock-profile-head {
+        padding: 10px 14px;
+      }
+
+      .mock-name {
+        font-size: clamp(22px, 6vw, 30px);
+      }
+
+      .mock-subtitle {
+        font-size: clamp(13px, 3.6vw, 17px);
+      }
+
+      .mock-profile-body {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 11px 13px 12px;
+      }
+
+      .side-column {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .profile-column {
+        gap: 8px;
+      }
+
+      .signal-box {
+        padding: 15px 11px 9px;
+      }
+
+      .profile-section-title {
+        font-size: clamp(16px, 4.4vw, 20px);
+      }
+
+      .credential-line,
+      .review-line {
+        font-size: clamp(12px, 3.35vw, 15px);
+        margin-top: 5px;
+      }
+
+      .review-line:last-child {
+        display: none;
+      }
+
+      .price-main {
+        font-size: clamp(29px, 8vw, 42px);
+      }
+
+      .equation {
+        font-size: clamp(22px, 6.1vw, 34px);
+        overflow-x: visible;
+        white-space: normal;
+        text-align: center;
+        padding: 8px 0;
+        line-height: 1.42;
+      }
+
+      .equation span {
+        display: inline-block;
+      }
+
+      .equation-note {
+        right: 7vw;
+        bottom: calc(var(--nav-safe) + 0.5rem);
+        font-size: clamp(12px, 3vw, 14px);
+      }
+
+      .equation-legend {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .equation-term {
+        min-height: 0;
+        padding: 10px 10px;
+      }
+
+      .equation-term strong {
+        font-size: clamp(15px, 4vw, 18px);
+      }
+
+      .equation-term span {
+        margin-top: 5px;
+        font-size: clamp(12px, 3.2vw, 14px);
+      }
+
+      .embedding-canvas-wrap {
+        min-height: 300px;
+        height: 46vh;
+      }
+
+      .event-chart,
+      .event-chart.components {
+        height: 48vh;
+        min-height: 330px;
+      }
+
+      .component-slide .result-line {
+        font-size: clamp(19px, 4.8vw, 25px);
+      }
+
+      .event-chart.components {
+        height: 410px;
+        min-height: 410px;
+      }
+
+      .mechanism-headlines {
+        grid-template-columns: 1fr;
+        font-size: clamp(18px, 4.8vw, 24px);
+      }
+
+      .transition-prompt {
+        font-size: clamp(18px, 4.8vw, 24px);
+        text-align: left;
+      }
+
+      .mechanism-explain-lines {
+        grid-template-columns: 1fr;
+        gap: 0.55rem;
+        font-size: clamp(17px, 4.5vw, 23px);
+      }
+
+      figure img,
+      .figure-large img,
+      .figure-medium img {
+        max-height: 48vh;
+      }
+    }
+
+    @media (max-height: 820px) and (min-width: 901px) {
+      .slide {
+        padding-top: 4cqh;
+        padding-bottom: 104px;
+      }
+
+      .slide.active {
+        gap: 2.4cqh;
+      }
+
+      h2 {
+        font-size: clamp(36px, 4cqw, 62px);
+      }
+
+      .bullets {
+        gap: 0.8rem;
+        font-size: clamp(22px, 1.9cqw, 32px);
+        line-height: 1.16;
+      }
+
+      .lede {
+        font-size: clamp(22px, 2cqw, 31px);
+      }
+
+      .result-line {
+        font-size: clamp(21px, 1.8cqw, 29px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .event-reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .slide.active .event-chart.run .event-reveal {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active">
+      <h1 class="paper-title"><span class="title-human">Human Capital</span>, <span class="title-ai">AI</span>, and <span class="title-price">Labor Commoditization</span></h1>
+      <p class="authors">Auyon Siddiq and Niuniu Zhang<br>UCLA Anderson School of Management</p>
+      <p class="lede title-question">AI may standardize what workers can produce. Does this make employers view labor as more of a commodity?</p>
+    </section>
+
+    <section class="slide commoditization-slide">
+      <h2>What is <span class="accent-price">labor commoditization</span>?</h2>
+      <div class="commoditization-grid">
+        <div class="commoditization-block evidence">
+          <p class="commoditization-copy"><span class="claim-label">Evidence:</span> AI can compress output differences by raising lower-skilled workers' performance more than higher-skilled workers' performance <span class="citation-inline">(Noy and Zhang 2023; Dell'Acqua et al. 2023; Brynjolfsson et al. 2025)</span>.</p>
+        </div>
+        <div class="commoditization-block theory">
+          <p class="commoditization-copy"><span class="claim-label">Theory:</span> If AI standardizes worker output, employers may view workers with different skill levels as more substitutable, turning labor into more of a commodity <span class="citation-inline">(Fukui 2026)</span>.</p>
+        </div>
+        <div class="commoditization-block prediction">
+          <p class="commoditization-copy"><span class="claim-label">Implication:</span> Labor commoditization suggests employers might value a worker's human capital (skills, education, employment history) less and become more price sensitive.</p>
+        </div>
+        <div class="commoditization-block contribution">
+          <p class="commoditization-copy"><span class="claim-label">This work:</span> AI-based labor commoditization has been theorized but not documented in a real labor market setting; we do so here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>What do we observe?</h2>
+      <div class="grid">
+        <div class="metric">
+          <strong>49,610</strong>
+          <span>worker profiles</span>
+        </div>
+        <div class="metric">
+          <strong>2.26M</strong>
+          <span>contracts on a large online labor market</span>
+        </div>
+        <div class="metric">
+          <strong class="date-metric">2021-2026</strong>
+          <span>study period, includes release of ChatGPT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide profile-data-slide">
+      <h2>Worker profile data</h2>
+      <p class="profile-data-intro">We use a language model to read each worker profile as four <span class="profile-block-highlight">profile blocks</span> that employers see before hiring.</p>
+      <div class="profile-block-list" aria-label="Four worker profile data blocks">
+        <div class="profile-block-row">
+          <div class="profile-block-name human-capital">Self-presentation</div>
+          <div class="profile-block-examples">Profile title, overview text, skill tags, and stated areas of expertise.</div>
+        </div>
+        <div class="profile-block-row">
+          <div class="profile-block-name human-capital">Credentials</div>
+          <div class="profile-block-examples">Formal education, employment history, certifications, and listed work experience.</div>
+        </div>
+        <div class="profile-block-row">
+          <div class="profile-block-name human-capital">Reputation</div>
+          <div class="profile-block-examples">Job success, completed contracts, ratings, prior employer feedback, and platform history.</div>
+        </div>
+        <div class="profile-block-row">
+          <div class="profile-block-name price">Price</div>
+          <div class="profile-block-examples">The posted hourly rate shown alongside the worker's profile.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide embedding-slide">
+      <div class="embedding-stage">
+        <div class="embedding-copy">
+          <h2>Workers' profile information is represented as embeddings.</h2>
+          <p class="lede">Each point is a worker's self-presentation embedding. Nearby points have similar profile language. Select a job category to visualize its workers.</p>
+        </div>
+        <div class="embedding-visual">
+          <div class="embedding-canvas-wrap">
+            <canvas id="embedding-3d" aria-label="Rotatable 3D projection of worker profile embeddings"></canvas>
+          </div>
+          <div class="embedding-legend" id="embedding-legend"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide equation-slide">
+      <h2>We attribute labor demand to human capital and price using machine learning.</h2>
+      <div class="equation-wrap">
+        <div class="equation" aria-label="Predicted demand equals average demand plus Shapley importance for self-presentation, credentials, reputation, and price">
+          <span>ŷ<sub>iq</sub></span>
+          <span>=</span>
+          <span class="mean">ȳ<sub>q</sub></span>
+          <span>+</span>
+          <span class="hc">φ<sup>self</sup><sub>iq</sub></span>
+          <span>+</span>
+          <span class="hc">φ<sup>cred</sup><sub>iq</sub></span>
+          <span>+</span>
+          <span class="hc">φ<sup>rep</sup><sub>iq</sub></span>
+          <span>+</span>
+          <span class="price">φ<sup>price</sup><sub>iq</sub></span>
+        </div>
+        <div class="equation-note"><strong>i</strong> = worker<br><strong>q</strong> = quarter</div>
+        <div class="equation-legend">
+          <div class="equation-term">
+            <strong>Average demand</strong>
+            <span>The baseline level in a quarter.</span>
+          </div>
+          <div class="equation-term hc">
+            <strong>Self-presentation</strong>
+            <span>How much profile text and skills add to demand.</span>
+          </div>
+          <div class="equation-term hc">
+            <strong>Credentials</strong>
+            <span>How much education and work history add to demand.</span>
+          </div>
+          <div class="equation-term hc">
+            <strong>Reputation</strong>
+            <span>How much ratings and prior feedback add to demand.</span>
+          </div>
+          <div class="equation-term price">
+            <strong>Price</strong>
+            <span>How much posted hourly rate adds or subtracts.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide plot-slide demand-slide">
+      <h2>Demand for workers falls more in high AI-exposure job categories.</h2>
+      <p class="result-line">After ChatGPT, demand is <span class="demand">7.0% lower</span> in more AI-exposed<span class="footnote-marker">1</span> job categories, and <span class="demand">9.6% lower by 2026</span>.</p>
+      <figure class="event-figure">
+        <div class="event-chart" id="demand-event-chart" role="img" aria-label="Event study of demand in more AI-exposed categories"></div>
+      </figure>
+      <p class="slide-footnote"><span class="footnote-marker">1</span>AI exposure is based on the occupational exposure measure in Eloundou et al. (2024).</p>
+    </section>
+
+    <section class="slide plot-slide component-slide">
+      <div class="component-layout">
+        <div class="component-copy">
+          <h2>How does AI change how employers value human capital vs. price?</h2>
+          <p class="result-line compact"><span class="hc">Human capital importance falls 7.8%</span> after ChatGPT, while <span class="price">price importance rises 1.1%</span>. By 2026, human capital importance falls 10.1% and price importance rises 1.8%.</p>
+        </div>
+        <figure class="event-figure">
+          <div class="event-chart components" id="component-event-chart" role="img" aria-label="Event studies of profile-block importance in more AI-exposed categories"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide plot-slide mechanism-raw-slide">
+      <div class="mechanism-headlines">
+        <span>Demand premium associated with high-human capital shrinks</span>
+        <span>Demand shifts more toward lower priced workers</span>
+      </div>
+      <figure class="figure-medium">
+        <img src="figures/slide_deck_assets/mechanism_raw_slide.svg?v=20260618remade2" alt="Raw demand levels for high and low human capital and price groups">
+      </figure>
+      <p class="transition-prompt">Does the change in the demand gap also depend on AI exposure?</p>
+    </section>
+
+    <section class="slide plot-slide mechanism-ddd-slide">
+      <h2>Demand shifts are consistent with labor commoditization.</h2>
+      <div class="mechanism-explain-lines">
+        <span>Demand premium for <span class="text-human">high-human capital workers</span> decreases more for workers in high AI-exposure categories.</span>
+        <span>Demand re-allocation toward <span class="text-price">lower-priced workers</span> is more pronounced for workers in high AI-exposure categories.</span>
+      </div>
+      <figure class="figure-large">
+        <img src="figures/slide_deck_assets/mechanism_ddd_slide.svg?v=20260618remade2" alt="Demand-premium compression by AI exposure">
+      </figure>
+    </section>
+
+    <section class="slide conclusion-slide">
+      <h2>AI-based labor commoditization impacts online labor markets, worker incentives, and worker welfare.</h2>
+      <div class="commoditization-grid conclusion-grid">
+        <div class="commoditization-block">
+          <p class="commoditization-copy"><span class="claim-label">Platforms:</span> Search and ranking may need to adapt if employers view workers as more substitutable.</p>
+        </div>
+        <div class="commoditization-block">
+          <p class="commoditization-copy"><span class="claim-label">Workers:</span> Weaker returns to credentials, reputation, and self-presentation may change incentives to invest.</p>
+        </div>
+        <div class="commoditization-block">
+          <p class="commoditization-copy"><span class="claim-label">Prices:</span> If price competition intensifies, commoditization may affect worker earnings and welfare.</p>
+        </div>
+        <div class="commoditization-block">
+          <p class="commoditization-copy"><span class="claim-label">Traditional employment:</span> Commoditization may also change how employers interpret resumes, experience, and pay expectations.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button type="button" id="prev">Back</button>
+      <span class="counter" id="counter">1 / 11</span>
+      <button type="button" id="next">Next</button>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  </main>
+
+  <script>
+    const deck = document.querySelector(".deck");
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    const progress = document.getElementById("progress");
+    let current = 0;
+
+    const EVENT_DATA = {"demand":[{"q":"2021Q1","y":-0.002605,"lo":-0.007011,"hi":0.000889},{"q":"2021Q2","y":-0.001796,"lo":-0.006482,"hi":0.001864},{"q":"2021Q3","y":-0.002863,"lo":-0.006715,"hi":0.001341},{"q":"2021Q4","y":-0.000402,"lo":-0.003829,"hi":0.003283},{"q":"2022Q1","y":-0.002958,"lo":-0.00668,"hi":0.000296},{"q":"2022Q2","y":-0.001387,"lo":-0.005595,"hi":0.001312},{"q":"2022Q3","y":0,"lo":0,"hi":0},{"q":"2022Q4","y":0.004615,"lo":0.001348,"hi":0.007923},{"q":"2023Q1","y":-0.006671,"lo":-0.009698,"hi":-0.003107},{"q":"2023Q2","y":-0.008686,"lo":-0.011738,"hi":-0.004925},{"q":"2023Q3","y":-0.010263,"lo":-0.01382,"hi":-0.006515},{"q":"2023Q4","y":-0.010378,"lo":-0.013477,"hi":-0.006734},{"q":"2024Q1","y":-0.010532,"lo":-0.014597,"hi":-0.006982},{"q":"2024Q2","y":-0.009718,"lo":-0.013859,"hi":-0.005697},{"q":"2024Q3","y":-0.014864,"lo":-0.019263,"hi":-0.010981},{"q":"2024Q4","y":-0.012664,"lo":-0.017069,"hi":-0.009136},{"q":"2025Q1","y":-0.014647,"lo":-0.018792,"hi":-0.010598},{"q":"2025Q2","y":-0.014588,"lo":-0.019139,"hi":-0.00997},{"q":"2025Q3","y":-0.015793,"lo":-0.019966,"hi":-0.01107},{"q":"2025Q4","y":-0.011946,"lo":-0.015787,"hi":-0.008698},{"q":"2026Q1","y":-0.014827,"lo":-0.018922,"hi":-0.010474}],"self_presentation":[{"q":"2021Q1","y":-0.000165,"lo":-0.001919,"hi":0.001255},{"q":"2021Q2","y":-0.000799,"lo":-0.002474,"hi":0.000571},{"q":"2021Q3","y":0.000542,"lo":-0.001036,"hi":0.001778},{"q":"2021Q4","y":0.000834,"lo":-0.000674,"hi":0.002218},{"q":"2022Q1","y":0.000313,"lo":-0.001298,"hi":0.001692},{"q":"2022Q2","y":0.000072,"lo":-0.001316,"hi":0.000818},{"q":"2022Q3","y":0,"lo":0,"hi":0},{"q":"2022Q4","y":0.00111,"lo":-0.000046,"hi":0.002104},{"q":"2023Q1","y":-0.00145,"lo":-0.002635,"hi":-0.000249},{"q":"2023Q2","y":-0.002056,"lo":-0.003435,"hi":-0.00076},{"q":"2023Q3","y":-0.003079,"lo":-0.004185,"hi":-0.00197},{"q":"2023Q4","y":-0.002741,"lo":-0.004375,"hi":-0.001527},{"q":"2024Q1","y":-0.004012,"lo":-0.005434,"hi":-0.002862},{"q":"2024Q2","y":-0.004075,"lo":-0.005708,"hi":-0.002496},{"q":"2024Q3","y":-0.004632,"lo":-0.006298,"hi":-0.002798},{"q":"2024Q4","y":-0.00351,"lo":-0.004886,"hi":-0.002306},{"q":"2025Q1","y":-0.004749,"lo":-0.006451,"hi":-0.003455},{"q":"2025Q2","y":-0.005568,"lo":-0.006957,"hi":-0.003818},{"q":"2025Q3","y":-0.005469,"lo":-0.006862,"hi":-0.004022},{"q":"2025Q4","y":-0.003645,"lo":-0.005004,"hi":-0.002305},{"q":"2026Q1","y":-0.004487,"lo":-0.005878,"hi":-0.002961}],"human_capital":[{"q":"2021Q1","y":-0.000295,"lo":-0.001619,"hi":0.000869},{"q":"2021Q2","y":0.000084,"lo":-0.001234,"hi":0.001019},{"q":"2021Q3","y":-0.00006,"lo":-0.001255,"hi":0.001009},{"q":"2021Q4","y":0.000744,"lo":-0.000477,"hi":0.001626},{"q":"2022Q1","y":0.000059,"lo":-0.001375,"hi":0.000824},{"q":"2022Q2","y":0.000735,"lo":-0.000272,"hi":0.00156},{"q":"2022Q3","y":0,"lo":0,"hi":0},{"q":"2022Q4","y":0.001109,"lo":0.00028,"hi":0.002001},{"q":"2023Q1","y":-0.001067,"lo":-0.00197,"hi":-0.000244},{"q":"2023Q2","y":-0.002194,"lo":-0.003027,"hi":-0.001253},{"q":"2023Q3","y":-0.002367,"lo":-0.0034,"hi":-0.001393},{"q":"2023Q4","y":-0.002637,"lo":-0.003553,"hi":-0.001561},{"q":"2024Q1","y":-0.002275,"lo":-0.003404,"hi":-0.001467},{"q":"2024Q2","y":-0.002738,"lo":-0.003901,"hi":-0.001641},{"q":"2024Q3","y":-0.003947,"lo":-0.005074,"hi":-0.002961},{"q":"2024Q4","y":-0.003293,"lo":-0.004571,"hi":-0.00251},{"q":"2025Q1","y":-0.004138,"lo":-0.005326,"hi":-0.002958},{"q":"2025Q2","y":-0.003936,"lo":-0.005111,"hi":-0.002872},{"q":"2025Q3","y":-0.004292,"lo":-0.005241,"hi":-0.003212},{"q":"2025Q4","y":-0.003319,"lo":-0.004339,"hi":-0.002164},{"q":"2026Q1","y":-0.00397,"lo":-0.005246,"hi":-0.002921}],"reputation":[{"q":"2021Q1","y":-0.001235,"lo":-0.002517,"hi":0.000261},{"q":"2021Q2","y":-0.000599,"lo":-0.002254,"hi":0.00048},{"q":"2021Q3","y":-0.000171,"lo":-0.001448,"hi":0.000938},{"q":"2021Q4","y":-0.000059,"lo":-0.001321,"hi":0.001176},{"q":"2022Q1","y":-0.000208,"lo":-0.001634,"hi":0.000773},{"q":"2022Q2","y":-0.000427,"lo":-0.001606,"hi":0.000615},{"q":"2022Q3","y":0,"lo":0,"hi":0},{"q":"2022Q4","y":0.000239,"lo":-0.000906,"hi":0.001277},{"q":"2023Q1","y":-0.002192,"lo":-0.003084,"hi":-0.0011},{"q":"2023Q2","y":-0.002881,"lo":-0.003862,"hi":-0.001702},{"q":"2023Q3","y":-0.003732,"lo":-0.004791,"hi":-0.002364},{"q":"2023Q4","y":-0.00408,"lo":-0.005265,"hi":-0.002884},{"q":"2024Q1","y":-0.004871,"lo":-0.005956,"hi":-0.003443},{"q":"2024Q2","y":-0.004838,"lo":-0.00611,"hi":-0.003592},{"q":"2024Q3","y":-0.005457,"lo":-0.006803,"hi":-0.004412},{"q":"2024Q4","y":-0.00434,"lo":-0.005508,"hi":-0.002934},{"q":"2025Q1","y":-0.005496,"lo":-0.00695,"hi":-0.004152},{"q":"2025Q2","y":-0.005335,"lo":-0.006732,"hi":-0.003781},{"q":"2025Q3","y":-0.005633,"lo":-0.006901,"hi":-0.003982},{"q":"2025Q4","y":-0.003607,"lo":-0.004956,"hi":-0.002241},{"q":"2026Q1","y":-0.004579,"lo":-0.005887,"hi":-0.002993}],"wage":[{"q":"2021Q1","y":-0.000329,"lo":-0.000593,"hi":-0.000029},{"q":"2021Q2","y":-0.000158,"lo":-0.000382,"hi":0.000058},{"q":"2021Q3","y":0.000136,"lo":-0.000086,"hi":0.00036},{"q":"2021Q4","y":0.00016,"lo":-0.000057,"hi":0.000439},{"q":"2022Q1","y":0.000212,"lo":-0.000041,"hi":0.000464},{"q":"2022Q2","y":0.000226,"lo":0.000018,"hi":0.000427},{"q":"2022Q3","y":0,"lo":0,"hi":0},{"q":"2022Q4","y":0.00002,"lo":-0.000188,"hi":0.0002},{"q":"2023Q1","y":0.000274,"lo":0.00009,"hi":0.000467},{"q":"2023Q2","y":0.0007,"lo":0.000499,"hi":0.000942},{"q":"2023Q3","y":0.001029,"lo":0.000798,"hi":0.001312},{"q":"2023Q4","y":0.001085,"lo":0.000827,"hi":0.001356},{"q":"2024Q1","y":0.001108,"lo":0.000871,"hi":0.001403},{"q":"2024Q2","y":0.001502,"lo":0.001227,"hi":0.001833},{"q":"2024Q3","y":0.001554,"lo":0.001285,"hi":0.001907},{"q":"2024Q4","y":0.001775,"lo":0.001479,"hi":0.002163},{"q":"2025Q1","y":0.001761,"lo":0.001456,"hi":0.002106},{"q":"2025Q2","y":0.002004,"lo":0.001676,"hi":0.002421},{"q":"2025Q3","y":0.002072,"lo":0.001736,"hi":0.00249},{"q":"2025Q4","y":0.002329,"lo":0.001982,"hi":0.002743},{"q":"2026Q1","y":0.002625,"lo":0.002262,"hi":0.003009}]};
+
+    const PAPER_COLORS = {
+      pre: "#9AA6AF",
+      demand: "#5F9B8F",
+      humanCapital: "#4F7A94",
+      price: "#A65E63"
+    };
+    const EXPOSURE_RANGE_SCALE = 8;
+
+    function scaleEventData(data, scale) {
+      return data.map((d) => ({
+        ...d,
+        y: d.y * scale,
+        lo: d.lo * scale,
+        hi: d.hi * scale
+      }));
+    }
+
+    const CHART_SERIES = {
+      demand: { label: "Demand", color: PAPER_COLORS.demand, data: scaleEventData(EVENT_DATA.demand, EXPOSURE_RANGE_SCALE) },
+      self_presentation: { label: "Self-presentation", color: PAPER_COLORS.humanCapital, data: scaleEventData(EVENT_DATA.self_presentation, EXPOSURE_RANGE_SCALE) },
+      human_capital: { label: "Credentials", color: PAPER_COLORS.humanCapital, data: scaleEventData(EVENT_DATA.human_capital, EXPOSURE_RANGE_SCALE) },
+      reputation: { label: "Reputation", color: PAPER_COLORS.humanCapital, data: scaleEventData(EVENT_DATA.reputation, EXPOSURE_RANGE_SCALE) },
+      wage: { label: "Price", color: PAPER_COLORS.price, data: scaleEventData(EVENT_DATA.wage, EXPOSURE_RANGE_SCALE) }
+    };
+
+    const EVENT_REVEAL_DELAY = 0.2;
+    const COMPONENT_REVEAL_DELAY = EVENT_REVEAL_DELAY * 0.81;
+    const COMPONENT_PRICE_GROUP_DELAY = 5.1 * 0.81;
+    const SVG_NS = "http://www.w3.org/2000/svg";
+
+    function svgEl(name, attrs = {}) {
+      const el = document.createElementNS(SVG_NS, name);
+      Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
+      return el;
+    }
+
+    function formatTick(value) {
+      if (Math.abs(value) < 0.00001) return "0";
+      return value.toFixed(3).replace("-0.", "-.").replace("0.", ".");
+    }
+
+    function drawPanel(svg, panel) {
+      const { x, y, width, height, title, series, yDomain, yTicks, showYTitle, showXTicks, groupDelay = 0, revealDelay = EVENT_REVEAL_DELAY } = panel;
+      const g = svgEl("g", { transform: `translate(${x},${y})` });
+      svg.appendChild(g);
+
+      const quarters = series.data.map((d) => d.q);
+      const xScale = (index) => (quarters.length === 1 ? width / 2 : (index / (quarters.length - 1)) * width);
+      const yScale = (value) => height - ((value - yDomain[0]) / (yDomain[1] - yDomain[0])) * height;
+      const postX = (xScale(6) + xScale(7)) / 2;
+
+      if (title) {
+        g.appendChild(svgEl("text", { class: "event-panel-title", x: width / 2, y: -18, "text-anchor": "middle" })).textContent = title;
+      }
+
+      const grid = svgEl("g", { class: "event-grid" });
+      yTicks.forEach((tick) => {
+        const ty = yScale(tick);
+        grid.appendChild(svgEl("line", { x1: 0, x2: width, y1: ty, y2: ty }));
+      });
+      g.appendChild(grid);
+
+      g.appendChild(svgEl("line", { class: "event-zero", x1: 0, x2: width, y1: yScale(0), y2: yScale(0) }));
+      g.appendChild(svgEl("line", { class: "event-post-line", x1: postX, x2: postX, y1: 0, y2: height }));
+
+      const axis = svgEl("g", { class: "event-axis" });
+      axis.appendChild(svgEl("line", { x1: 0, x2: width, y1: height, y2: height }));
+      axis.appendChild(svgEl("line", { x1: 0, x2: 0, y1: 0, y2: height }));
+      g.appendChild(axis);
+
+      const yLabels = svgEl("g", { class: "event-label" });
+      yTicks.forEach((tick) => {
+        const label = svgEl("text", { class: "event-tick", x: -18, y: yScale(tick) + 8, "text-anchor": "end" });
+        label.textContent = formatTick(tick);
+        yLabels.appendChild(label);
+      });
+      g.appendChild(yLabels);
+
+      const xTickIndices = [0, 4, 8, 12, 16, 20];
+      if (showXTicks) {
+        xTickIndices.forEach((index) => {
+          const label = svgEl("text", { class: "event-tick", x: xScale(index), y: height + 45, "text-anchor": "middle" });
+          label.textContent = quarters[index].slice(0, 4);
+          g.appendChild(label);
+        });
+      }
+
+      if (showYTitle) {
+        const label = svgEl("text", {
+          class: "event-y-title",
+          x: -86,
+          y: height / 2,
+          transform: `rotate(-90 -86 ${height / 2})`,
+          "text-anchor": "middle"
+        });
+        label.textContent = showYTitle;
+        g.appendChild(label);
+      }
+
+      if (panel.showPostCallout) {
+        const calloutY = panel.postCalloutY ?? -24;
+        const calloutX = postX + (panel.postCalloutXOffset || 0);
+        const lineGap = panel.postCalloutLineGap || 16;
+        if (panel.showPostCalloutArrow) {
+          const arrowStartX = calloutX - 22;
+          const arrowStartY = calloutY + lineGap + 5;
+          const arrowEndX = postX + 5;
+          const arrowEndY = Math.min(height - 6, arrowStartY + 2);
+          const arrow = svgEl("path", {
+            class: "event-post-arrow",
+            d: `M ${arrowStartX} ${arrowStartY} L ${arrowEndX} ${arrowEndY}`
+          });
+          const head = svgEl("path", {
+            class: "event-post-arrow",
+            d: `M ${arrowEndX + 6} ${arrowEndY - 3} L ${arrowEndX} ${arrowEndY} L ${arrowEndX + 6} ${arrowEndY + 3}`
+          });
+          g.appendChild(arrow);
+          g.appendChild(head);
+        }
+        const postLabel = svgEl("text", {
+          class: "event-post-callout",
+          x: calloutX,
+          y: calloutY,
+          "text-anchor": "middle"
+        });
+        const line1 = svgEl("tspan", { x: calloutX, dy: 0 });
+        line1.textContent = "ChatGPT";
+        const line2 = svgEl("tspan", { x: calloutX, dy: lineGap });
+        line2.textContent = "released";
+        postLabel.appendChild(line1);
+        postLabel.appendChild(line2);
+        g.appendChild(postLabel);
+      }
+
+      const intervals = svgEl("g");
+      series.data.forEach((d, i) => {
+        const ix = xScale(i);
+        const periodColor = i <= 6 ? PAPER_COLORS.pre : series.color;
+        const ciScale = panel.ciScale || 1;
+        const ciLo = d.y - (d.y - d.lo) * ciScale;
+        const ciHi = d.y + (d.hi - d.y) * ciScale;
+        const interval = svgEl("line", {
+          class: "event-interval event-reveal",
+          x1: ix,
+          x2: ix,
+          y1: yScale(ciLo),
+          y2: yScale(ciHi),
+          stroke: periodColor
+        });
+        interval.style.animationDelay = `${groupDelay + i * revealDelay}s`;
+        intervals.appendChild(interval);
+      });
+      g.appendChild(intervals);
+
+      const dots = svgEl("g");
+      series.data.forEach((d, i) => {
+        const periodColor = i <= 6 ? PAPER_COLORS.pre : series.color;
+        const dot = svgEl("circle", {
+          class: "event-dot event-reveal",
+          cx: xScale(i),
+          cy: yScale(d.y),
+          r: panel.dotRadius || 6.2,
+          fill: periodColor,
+          stroke: "#ffffff",
+          "stroke-width": 1.6
+        });
+        dot.style.animationDelay = `${groupDelay + i * revealDelay}s`;
+        dots.appendChild(dot);
+      });
+      g.appendChild(dots);
+    }
+
+    function renderDemandChart() {
+      const container = document.getElementById("demand-event-chart");
+      if (!container) return;
+      container.innerHTML = "";
+      const svg = svgEl("svg", { viewBox: "0 0 1420 470", preserveAspectRatio: "xMidYMid meet" });
+      container.appendChild(svg);
+      drawPanel(svg, {
+        x: 145,
+        y: 48,
+        width: 1210,
+        height: 365,
+        title: "",
+        series: CHART_SERIES.demand,
+        yDomain: [-0.18, 0.08],
+        yTicks: [-0.15, -0.1, -0.05, 0, 0.05],
+        showYTitle: "Change in demand",
+        showXTicks: true,
+        dotRadius: 8.6,
+        showPostCallout: true,
+        groupDelay: 0
+      });
+    }
+
+    function renderComponentChart() {
+      const container = document.getElementById("component-event-chart");
+      if (!container) return;
+      container.innerHTML = "";
+      const isMobile = window.matchMedia("(max-width: 640px)").matches;
+      const svg = svgEl("svg", {
+        viewBox: isMobile ? "0 0 760 830" : "0 0 1120 760",
+        preserveAspectRatio: "xMidYMid meet"
+      });
+      svg.classList.add("component-event-svg");
+      container.appendChild(svg);
+      const sharedYTitle = svgEl("text", {
+        class: "event-y-title",
+        x: isMobile ? 32 : 26,
+        y: isMobile ? 415 : 380,
+        transform: `rotate(-90 ${isMobile ? 32 : 26} ${isMobile ? 415 : 380})`,
+        "text-anchor": "middle"
+      });
+      sharedYTitle.textContent = "Change in importance for hiring";
+      svg.appendChild(sharedYTitle);
+      const panels = isMobile
+        ? [
+            { key: "self_presentation", x: 112, y: 48, width: 590, height: 130, groupDelay: 0, revealDelay: COMPONENT_REVEAL_DELAY },
+            { key: "human_capital", x: 112, y: 245, width: 590, height: 130, groupDelay: 0, revealDelay: COMPONENT_REVEAL_DELAY },
+            { key: "reputation", x: 112, y: 442, width: 590, height: 130, groupDelay: 0, revealDelay: COMPONENT_REVEAL_DELAY },
+            { key: "wage", x: 112, y: 639, width: 590, height: 130, groupDelay: COMPONENT_PRICE_GROUP_DELAY, revealDelay: COMPONENT_REVEAL_DELAY, ciScale: 1.86 }
+          ]
+        : [
+            { key: "self_presentation", x: 108, y: 70, width: 420, height: 215, groupDelay: 0, revealDelay: COMPONENT_REVEAL_DELAY },
+            { key: "human_capital", x: 648, y: 70, width: 420, height: 215, groupDelay: 0, revealDelay: COMPONENT_REVEAL_DELAY },
+            { key: "reputation", x: 108, y: 430, width: 420, height: 215, groupDelay: 0, revealDelay: COMPONENT_REVEAL_DELAY },
+            { key: "wage", x: 648, y: 430, width: 420, height: 215, groupDelay: COMPONENT_PRICE_GROUP_DELAY, revealDelay: COMPONENT_REVEAL_DELAY, ciScale: 1.86 }
+          ];
+      panels.forEach((panel, index) => {
+        const series = CHART_SERIES[panel.key];
+        drawPanel(svg, {
+          x: panel.x,
+          y: panel.y,
+          width: panel.width,
+          height: panel.height,
+          title: series.label,
+          series,
+          yDomain: [-0.06, 0.03],
+          yTicks: [-0.06, -0.03, 0, 0.03],
+          showYTitle: "",
+          showXTicks: true,
+          dotRadius: isMobile ? (index === 3 ? 6.3 : 5.7) : (index === 3 ? 5.7 : 5.1),
+          showPostCallout: false,
+          postCalloutXOffset: isMobile ? 0 : 24,
+          postCalloutY: isMobile ? 0 : 160,
+          postCalloutLineGap: 12,
+          showPostCalloutArrow: false,
+          groupDelay: panel.groupDelay,
+          revealDelay: panel.revealDelay
+        });
+      });
+    }
+
+    function renderEventCharts() {
+      renderDemandChart();
+      renderComponentChart();
+    }
+
+    const embeddingState = {
+      points: [],
+      labels: [],
+      activeCategory: "Web, Mobile & Software Dev",
+      highlightColor: "#3F8FB5",
+      inactiveColor: "#D2D7DD",
+      rx: -0.35,
+      ry: 0.55,
+      dragging: false,
+      lastX: 0,
+      lastY: 0,
+      lastFrameTime: 0,
+      animationFrame: null
+    };
+
+    function hexToRgb(hex) {
+      const clean = hex.replace("#", "");
+      return {
+        r: parseInt(clean.slice(0, 2), 16),
+        g: parseInt(clean.slice(2, 4), 16),
+        b: parseInt(clean.slice(4, 6), 16)
+      };
+    }
+
+    function resizeCanvas(canvas) {
+      const box = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const width = Math.max(1, Math.floor(box.width * dpr));
+      const height = Math.max(1, Math.floor(box.height * dpr));
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      return { width, height, dpr };
+    }
+
+    function renderEmbeddingLegend(labels) {
+      const legend = document.getElementById("embedding-legend");
+      if (!legend) return;
+      legend.innerHTML = "";
+      labels.forEach((item) => {
+        const row = document.createElement("button");
+        row.type = "button";
+        row.className = "legend-item";
+        row.dataset.category = item.category;
+        const text = document.createElement("span");
+        text.textContent = item.label;
+        row.appendChild(text);
+        row.addEventListener("mouseenter", () => setActiveEmbeddingCategory(item.category));
+        row.addEventListener("focus", () => setActiveEmbeddingCategory(item.category));
+        row.addEventListener("click", () => setActiveEmbeddingCategory(item.category));
+        legend.appendChild(row);
+      });
+      updateEmbeddingLegendState();
+    }
+
+    function setActiveEmbeddingCategory(category) {
+      embeddingState.activeCategory = category;
+      updateEmbeddingLegendState();
+      drawEmbeddingCloud();
+    }
+
+    function updateEmbeddingLegendState() {
+      const legend = document.getElementById("embedding-legend");
+      if (!legend) return;
+      legend.querySelectorAll(".legend-item").forEach((item) => {
+        const isActive = item.dataset.category === embeddingState.activeCategory;
+        item.classList.toggle("active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+    }
+
+    function drawEmbeddingCloud() {
+      const canvas = document.getElementById("embedding-3d");
+      if (!canvas || !embeddingState.points.length) return;
+      const ctx = canvas.getContext("2d");
+      const { width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, width, height);
+
+      const cx = width / 2;
+      const cy = height / 2;
+      const scale = Math.min(width * 0.62, height * 0.68);
+      const cosY = Math.cos(embeddingState.ry);
+      const sinY = Math.sin(embeddingState.ry);
+      const cosX = Math.cos(embeddingState.rx);
+      const sinX = Math.sin(embeddingState.rx);
+      const projected = [];
+
+      const project = (x, y, z) => {
+        const x1 = x * cosY + z * sinY;
+        const z1 = -x * sinY + z * cosY;
+        const y1 = y * cosX - z1 * sinX;
+        const z2 = y * sinX + z1 * cosX;
+        const perspective = 1.45 / (1.85 - z2 * 0.26);
+        return {
+          x: cx + x1 * scale * perspective,
+          y: cy - y1 * scale * perspective,
+          z: z2
+        };
+      };
+
+      for (const point of embeddingState.points) {
+        const position = project(point[0], point[1], point[2]);
+        const isActive = point[3] === embeddingState.activeCategory;
+        projected.push({
+          ...position,
+          color: isActive ? embeddingState.highlightColor : embeddingState.inactiveColor,
+          opacity: isActive ? 0.76 : 0.16,
+          r: Math.max(0.5, 1.05 + position.z * 0.16) * (width / 1100) * 1.99 * (isActive ? 1.08 : 0.86)
+        });
+      }
+
+      projected.sort((a, b) => a.z - b.z);
+      for (const p of projected) {
+        const rgb = hexToRgb(p.color);
+        ctx.fillStyle = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${p.opacity})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function isEmbeddingSlideActive() {
+      return Boolean(document.querySelector(".slide.active #embedding-3d"));
+    }
+
+    function animateEmbeddingCloud(timestamp) {
+      if (embeddingState.points.length && isEmbeddingSlideActive()) {
+        if (!embeddingState.lastFrameTime) {
+          embeddingState.lastFrameTime = timestamp;
+          drawEmbeddingCloud();
+        } else {
+          const elapsed = timestamp - embeddingState.lastFrameTime;
+          if (elapsed > 38) {
+            if (!embeddingState.dragging) {
+              embeddingState.ry += elapsed * 0.00011232;
+            }
+            drawEmbeddingCloud();
+            embeddingState.lastFrameTime = timestamp;
+          }
+        }
+      } else {
+        embeddingState.lastFrameTime = timestamp;
+      }
+      embeddingState.animationFrame = window.requestAnimationFrame(animateEmbeddingCloud);
+    }
+
+    async function initEmbeddingCloud() {
+      const canvas = document.getElementById("embedding-3d");
+      if (!canvas) return;
+      try {
+        const response = await fetch("figures/slide_deck_assets/embedding_3d_points.json");
+        const payload = await response.json();
+        embeddingState.points = payload.points;
+        embeddingState.labels = payload.labels || [];
+        renderEmbeddingLegend(embeddingState.labels);
+        drawEmbeddingCloud();
+        if (!embeddingState.animationFrame) {
+          embeddingState.animationFrame = window.requestAnimationFrame(animateEmbeddingCloud);
+        }
+      } catch (error) {
+        const ctx = canvas.getContext("2d");
+        resizeCanvas(canvas);
+        ctx.fillStyle = "#60646c";
+        ctx.font = "24px Arial, Helvetica, sans-serif";
+        ctx.fillText("Embedding data unavailable. Serve this deck from the project folder.", 24, 48);
+      }
+
+      canvas.addEventListener("pointerdown", (event) => {
+        embeddingState.dragging = true;
+        embeddingState.lastX = event.clientX;
+        embeddingState.lastY = event.clientY;
+        embeddingState.lastFrameTime = 0;
+        canvas.setPointerCapture(event.pointerId);
+      });
+
+      canvas.addEventListener("pointermove", (event) => {
+        if (!embeddingState.dragging) return;
+        const dx = event.clientX - embeddingState.lastX;
+        const dy = event.clientY - embeddingState.lastY;
+        embeddingState.ry += dx * 0.008;
+        embeddingState.rx += dy * 0.008;
+        embeddingState.rx = Math.max(-1.25, Math.min(1.25, embeddingState.rx));
+        embeddingState.lastX = event.clientX;
+        embeddingState.lastY = event.clientY;
+        drawEmbeddingCloud();
+      });
+
+      const stopDrag = (event) => {
+        embeddingState.dragging = false;
+        embeddingState.lastFrameTime = 0;
+        if (event && event.pointerId !== undefined && canvas.hasPointerCapture(event.pointerId)) {
+          canvas.releasePointerCapture(event.pointerId);
+        }
+      };
+      canvas.addEventListener("pointerup", stopDrag);
+      canvas.addEventListener("pointercancel", stopDrag);
+      canvas.addEventListener("lostpointercapture", stopDrag);
+      document.addEventListener("pointerup", stopDrag);
+      document.addEventListener("pointercancel", stopDrag);
+      window.addEventListener("resize", drawEmbeddingCloud);
+    }
+
+    function updateChrome() {
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      deck.classList.toggle("title-active", current === 0);
+    }
+
+    function resetAnimations(scope) {
+      const animatedCharts = scope.querySelectorAll(".event-chart");
+      animatedCharts.forEach((chart) => {
+        chart.classList.remove("run");
+        void chart.offsetWidth;
+        chart.classList.add("run");
+      });
+    }
+
+    function showSlide(index) {
+      slides[current].classList.remove("active");
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      updateChrome();
+      window.requestAnimationFrame(() => {
+        resetAnimations(slides[current]);
+        if (slides[current].querySelector("#embedding-3d")) {
+          drawEmbeddingCloud();
+        }
+      });
+    }
+
+    document.getElementById("prev").addEventListener("click", () => showSlide(current - 1));
+    document.getElementById("next").addEventListener("click", () => showSlide(current + 1));
+
+    let chartResizeTimer = null;
+    window.addEventListener("resize", () => {
+      clearTimeout(chartResizeTimer);
+      chartResizeTimer = window.setTimeout(() => {
+        renderEventCharts();
+        resetAnimations(slides[current]);
+      }, 120);
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+        event.preventDefault();
+        showSlide(current + 1);
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        showSlide(current - 1);
+      }
+    });
+
+    renderEventCharts();
+    initEmbeddingCloud();
+    updateChrome();
+    resetAnimations(slides[current]);
+  </script>
+</body>
+</html>
