@@ -583,8 +583,9 @@
     }
 
     .component-event-svg .event-y-title {
-      font-size: 18px;
-      font-weight: 700;
+      fill: #171a1f;
+      font-size: 22px;
+      font-weight: 800;
     }
 
     .component-event-svg .event-post-callout {
@@ -2129,12 +2130,12 @@
       container.appendChild(svg);
       const sharedYTitle = svgEl("text", {
         class: "event-y-title",
-        x: isMobile ? 32 : 26,
+        x: isMobile ? 56 : 54,
         y: isMobile ? 415 : 380,
-        transform: `rotate(-90 ${isMobile ? 32 : 26} ${isMobile ? 415 : 380})`,
+        transform: `rotate(-90 ${isMobile ? 56 : 54} ${isMobile ? 415 : 380})`,
         "text-anchor": "middle"
       });
-      sharedYTitle.textContent = "Change in importance for hiring";
+      sharedYTitle.textContent = "Change to importance in demand";
       svg.appendChild(sharedYTitle);
       const panels = isMobile
         ? [
