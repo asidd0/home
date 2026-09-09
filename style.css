@@ -83,11 +83,6 @@ main {
   gap: 10px;
 }
 
-.hero-copy .profile-links,
-.profile-links a {
-  font-size: 15px;
-}
-
 .x-link {
   font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
   font-weight: 900;
