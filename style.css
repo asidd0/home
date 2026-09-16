@@ -186,7 +186,7 @@ li {
 }
 
 .publication-list > li > a {
-  display: block;
+  display: inline;
 }
 
 .publication-list em {
@@ -237,10 +237,6 @@ li {
 
   .hero-photo {
     max-width: 264px;
-  }
-
-  .publication-list > li > a {
-    display: inline;
   }
 
   .columns {
