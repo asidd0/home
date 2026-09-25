@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A research collection of newspaper coverage of childcare at UCLA, with dated scans, article crops, and searchable machine transcriptions."><title>Childcare at UCLA</title><link rel="stylesheet" href="styles.css?v=20260924-small-date"><link rel="canonical" href="https://auyonsiddiq.com/childcare/"></head>
+<body data-page="featured">
+<main id="main">
+<section class="intro timeline-intro"><div><p class="collection-range" id="timelineRange">1926–2001</p><h1>Childcare at UCLA</h1><p class="collection-subtitle">The struggle for on-campus childcare, as told in the pages of the <em>Daily Bruin</em>.</p><p class="collection-independence">Not affiliated with the <em>Daily Bruin</em>.</p></div></section>
+<div class="featured-controls" id="featuredControls" role="group" aria-label="Article selection"><button id="keyFeatured" aria-pressed="true">Featured articles <span id="keyFeaturedCount">50</span></button><button id="allFeatured" aria-pressed="false">All articles <span id="allFeaturedCount">233</span></button></div>
+<nav id="timelineNav" class="timeline-nav" aria-label="Jump to year"><div class="timeline-years" id="timelineYears"></div></nav>
+<section id="featured" class="featured-section" aria-label="Featured articles timeline"><p class="loading">Loading…</p></section>
+
+<section class="browse" hidden aria-label="Browse the collection"><div class="browse-heading"><h2>Search the archive</h2></div>
+<div class="filters"><label class="search-label" for="search"><span>Keyword</span><input id="search" type="search" placeholder="A title, author, phrase or topic…" autocomplete="off"></label><fieldset class="years"><legend>Year range</legend><div><input id="yearFrom" type="number" aria-label="From year" placeholder="From"><span>—</span><input id="yearTo" type="number" aria-label="Through year" placeholder="To"></div></fieldset></div>
+
+<div class="results-heading"><p id="resultCount" role="status" aria-live="polite">Preparing the index…</p><button id="reset" class="text-button" hidden>Clear</button></div><p id="filterError" class="error" hidden></p><div id="cards" class="archive-list"></div><div class="more-row"><button id="loadMore" class="button" hidden>Show more entries</button></div>
+</section>
+<footer class="minimal-footer"><span>Childcare at UCLA</span></footer>
+</main>
+<dialog id="reader" class="reader" aria-labelledby="readerTitle"><div class="reader-nav"><button id="closeReader" class="text-button">← Timeline</button><div><button id="previous" aria-label="Previous entry">←</button><button id="next" aria-label="Next entry">→</button></div></div><div id="readerContent"></div></dialog>
+
+<script src="app.js?v=20260924-no-header" defer></script>
+</body></html>
