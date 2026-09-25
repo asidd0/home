@@ -18,7 +18,7 @@ body[data-page=featured] .nav-featured,body[data-page=featured] .nav-archive{fon
 #featured .placard-date span{margin:0;text-align:right}
 #featured .clipping{height:320px;padding:18px;border:0;border-radius:0;box-shadow:none;background:transparent}
 #featured .placard:hover .clipping,#featured .placard:focus-visible .clipping{background:transparent}
-#featured .placard-copy{padding-top:14px}
+#featured .placard-copy{padding:0 0 12px}
 #featured .placard h3{font-size:25px;margin:0}
 @media(max-width:1000px){#featured{gap:38px 28px}#featured .clipping{height:280px}#featured .placard h3{font-size:23px}}
 @media(max-width:720px){#featured{grid-template-columns:1fr;gap:36px;padding-top:30px;padding-bottom:40px}#featured .placard{scroll-margin-top:105px}#featured .clipping{height:320px;padding:12px 0}#featured .placard-date{font-size:11px;gap:12px}#featured .placard-date span{font-size:9px}#featured .placard h3{font-size:25px}.year-stop{min-height:44px}.image-controls button{min-width:44px;height:44px}}
@@ -45,3 +45,7 @@ body[data-page=featured] .nav-featured,body[data-page=featured] .nav-archive{fon
 
 /* Fit the full year rail on desktop; retain larger scrollable stops on small screens. */
 @media(min-width:1024px){.timeline-years .year-stop{flex:1 1 0;min-width:28px}.timeline-years .year-gap{flex:0 0 10px}}
+
+/* Keep each headline with its clipping and expose the reader action on touch screens. */
+.placard-open{display:block;padding-top:10px;font-size:11px;line-height:1.5;color:var(--accent);text-underline-offset:3px}
+.placard:hover .placard-open,.placard:focus-visible .placard-open{text-decoration:underline}
