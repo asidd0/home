@@ -47,5 +47,5 @@ body[data-page=featured] .nav-featured,body[data-page=featured] .nav-archive{fon
 @media(min-width:1024px){.timeline-years .year-stop{flex:1 1 0;min-width:28px}.timeline-years .year-gap{flex:0 0 10px}}
 
 /* Keep each headline with its clipping and expose the reader action on touch screens. */
-.placard-open{display:block;padding-top:10px;font-size:11px;line-height:1.5;color:var(--accent);text-underline-offset:3px}
+.placard-open{display:block;padding-top:8px;font-size:11px;line-height:1.5;color:var(--accent);text-underline-offset:3px}
 .placard:hover .placard-open,.placard:focus-visible .placard-open{text-decoration:underline}

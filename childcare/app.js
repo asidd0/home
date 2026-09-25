@@ -38,7 +38,7 @@ function renderFeatured(){
   // A continuous grid keeps every desktop row paired across year boundaries.
   $('#featured').innerHTML=selection.map(f=>{
     const e=byId.get(f.id),firstInYear=groups.get(e.year)[0].id===f.id;
-    return `<a class="placard" ${firstInYear?`id="year-${e.year}"`:''} data-year="${e.year}" href="#entry/${e.id}" aria-label="${esc(f.display_title)}, ${esc(dateLabel(e))}"><div class="placard-date"><time datetime="${e.date}">${esc(dateLabel(e))}</time><span>${esc(e.type)}</span></div><div class="placard-copy"><h3>${esc(f.display_title)}</h3></div><div class="clipping"><img src="${esc(f.cover)}" alt="Newspaper clipping: ${esc(f.display_title)}" loading="lazy"></div><span class="placard-open">View article <span aria-hidden="true">↗</span></span></a>`;
+    return `<a class="placard" ${firstInYear?`id="year-${e.year}"`:''} data-year="${e.year}" href="#entry/${e.id}" aria-label="${esc(f.display_title)}, ${esc(dateLabel(e))}"><div class="placard-date"><time datetime="${e.date}">${esc(dateLabel(e))}</time><span>${esc(e.type)}</span></div><div class="placard-copy"><h3>${esc(f.display_title)}</h3><span class="placard-open">View article <span aria-hidden="true">↗</span></span></div><div class="clipping"><img src="${esc(f.cover)}" alt="Newspaper clipping: ${esc(f.display_title)}" loading="lazy"></div></a>`;
   }).join('');
   const cards=[...$('#featured').querySelectorAll('.placard')];
   let scheduled=false,activeYear=null;
