@@ -49,3 +49,8 @@ body[data-page=featured] .nav-featured,body[data-page=featured] .nav-archive{fon
 /* Keep each headline with its clipping and expose the reader action on touch screens. */
 .placard-open{display:block;padding-top:8px;font-size:11px;line-height:1.5;color:var(--accent);text-underline-offset:3px}
 .placard:hover .placard-open,.placard:focus-visible .placard-open{text-decoration:underline}
+
+/* Move directly to the transcript without changing the article permalink. */
+.jump-to-text{display:inline-block;margin-top:8px;padding:6px 0;font-size:11px;line-height:1.5;color:var(--accent);text-decoration:none}
+.jump-to-text:hover,.jump-to-text:focus-visible{text-decoration:underline}
+#articleText{scroll-margin-top:64px}
