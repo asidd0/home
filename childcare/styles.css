@@ -42,3 +42,6 @@ body[data-page=featured] .nav-featured,body[data-page=featured] .nav-archive{fon
 /* Keep navigation aligned after removing the redundant masthead label. */
 .masthead{justify-content:flex-end}
 @media(max-width:720px){.masthead nav{width:auto;justify-content:flex-end;gap:20px}}
+
+/* Fit the full year rail on desktop; retain larger scrollable stops on small screens. */
+@media(min-width:1024px){.timeline-years .year-stop{flex:1 1 0;min-width:28px}.timeline-years .year-gap{flex:0 0 10px}}
