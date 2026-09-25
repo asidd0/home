@@ -57,7 +57,7 @@ copy('data/reading-text.json')
 featured = json.loads((source / 'data/featured.json').read_text())
 public_features = []
 for feature in featured['entries']:
-    public = {k: feature[k] for k in ['id', 'key_article', 'display_title', 'cover']}
+    public = {k: feature[k] for k in ['id', 'key_article', 'display_title', 'display_author', 'cover']}
     public['reading'] = [{'id': part['id'], 'text': part['text']} for part in feature['reading']]
     copy(feature['cover'])
     public_features.append(public)
@@ -66,12 +66,12 @@ write_json('featured.json', {'entries': public_features})
 by_id = {e['id']: e for e in public_entries}
 main_ids = {g['id'] for g in grouped['articles']}
 assert len(main_ids) == 233
-assert sum(f['key_article'] for f in public_features) == 50
+assert sum(f['key_article'] for f in public_features) == 60
 for group in grouped['articles']:
     assert all(part in by_id for part in group['parts'])
 assert all(alias in by_id and main in main_ids for alias, main in grouped['aliases'].items())
 for entry in public_entries:
     for crop in entry['crops']:
         assert (target / crop['file']).is_file()
-print(f'Exported {len(main_ids)} listings, 50 featured articles, and {sum(len(e["crops"]) for e in public_entries)} original-resolution crops.')
+print(f'Exported {len(main_ids)} listings, 60 featured articles, and {sum(len(e["crops"]) for e in public_entries)} original-resolution crops.')
 print(f'Public archive: {sum(p.stat().st_size for p in target.rglob("*") if p.is_file()) / 1024**2:.1f} MiB')
