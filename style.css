@@ -195,6 +195,10 @@ li {
   display: inline;
 }
 
+.publication-list .publication-title {
+  color: var(--blue);
+}
+
 .publication-list em {
   font-style: normal;
   font-weight: 700;
