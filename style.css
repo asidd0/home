@@ -149,6 +149,12 @@ h3 {
   margin: 24px 0 8px;
 }
 
+#publications > h3 {
+  color: var(--blue);
+  font-size: 18px;
+  margin: 28px 0 12px;
+}
+
 h4 {
   font-size: 15px;
   font-weight: 600;
