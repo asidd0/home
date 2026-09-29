@@ -150,7 +150,7 @@ h3 {
 }
 
 #publications > h3 {
-  color: var(--blue);
+  color: var(--ink);
   font-size: 18px;
   margin: 28px 0 12px;
 }
