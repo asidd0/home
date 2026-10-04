@@ -419,8 +419,6 @@ body{margin:0;background:#fff}
 #auyon-site main [data-view="students"] .publication-notes{margin:0;padding:0;color:var(--as-ink)}
 #auyon-site main [data-view="students"]>ul,#auyon-site main [data-view="talks"]>ul,#auyon-site main [data-view="awards"]>ul{margin-top:0;margin-bottom:0}
 #auyon-site main [data-view="students"] li,#auyon-site main [data-view="talks"] li,#auyon-site main [data-view="awards"]>ul>li{margin:0;padding-top:0;padding-bottom:0}
-#auyon-site main [data-view="students"]>ul>li+li,
-#auyon-site main [data-view="awards"]>ul>li+li{margin-top:10px}
 #auyon-site .hero-bio a{font-weight:400;text-decoration:none}
 #auyon-site .hero-bio a:hover,#auyon-site .hero-bio a:focus-visible{text-decoration:underline}
 @media(max-width:480px){#auyon-site h1{font-size:35px}#auyon-site .top-nav a{font-size:14px}}
@@ -430,7 +428,7 @@ body{margin:0;background:#fff}
 #auyon-site main [data-view="teaching"] ul{list-style:none;padding:0;margin:0}
 #auyon-site main [data-view="teaching"] li{list-style:none;margin:0;padding:0}
 #auyon-site main [data-view="teaching"] li::marker{content:""}
-#auyon-site main [data-view="students"] ul.publication-notes{padding-left:19px;margin:4px 0 0;list-style:disc}
+#auyon-site main [data-view="students"] ul.publication-notes{padding-left:19px;margin:0;list-style:disc}
 #auyon-site main [data-view="students"] ul.publication-notes li{display:list-item;list-style:disc;font-size:13px;line-height:var(--as-leading);margin:0;padding:0}
 #auyon-site main [data-view="students"] ul.publication-notes li::marker{content:normal;color:var(--as-ink)}
 #auyon-site main [data-view="awards"] .paper-award-block{line-height:var(--as-leading);margin-bottom:24px}
