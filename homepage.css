@@ -1,0 +1,538 @@
+/* Approved Instrument Sans / Libre Franklin layout. All site rules are scoped. */
+html{scroll-behavior:auto}
+body{margin:0;background:#fff}
+
+
+#auyon-site {
+  --as-blue: #2774ae;
+  --as-ink: #202124;
+  --as-muted: #5f6368;
+  --as-line: #d5d7da;
+  --as-background: #ffffff;
+  --as-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --as-body: "Helvetica Neue", Arial, sans-serif;
+  --as-photo-position: 50% 0%;
+  --as-photo-scale: 1;
+}
+#auyon-site * {
+  box-sizing: border-box;
+}
+#auyon-site {
+  scroll-behavior: smooth;
+}
+#auyon-site {
+  margin: 0;
+  background: var(--as-background);
+  color: var(--as-ink);
+  font-family: var(--as-body);
+  font-size: 15px;
+  line-height: 1.58;
+}
+#auyon-site a {
+  color: var(--as-blue);
+  text-decoration: none;
+}
+#auyon-site a:hover,
+#auyon-site a:focus {
+  color: #003b5c;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+#auyon-site main {
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 44px 24px 52px;
+}
+#auyon-site .hero {
+  align-items: start;
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: 264px minmax(0, 1fr);
+  row-gap: 18px;
+}
+#auyon-site .hero-photo img {
+  aspect-ratio: 1 / 1;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: var(--as-photo-position);
+  transform: scale(var(--as-photo-scale));
+  transform-origin: var(--as-photo-position);
+  width: 100%;
+}
+#auyon-site .hero-photo {
+  overflow: hidden;
+}
+#auyon-site .hero-copy {
+  padding-top: 10px;
+}
+#auyon-site .hero-copy p {
+  font-size: 18px;
+}
+#auyon-site .profile-links {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+#auyon-site .x-link {
+  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+#auyon-site .social-icon {
+  align-items: center;
+  display: inline-flex;
+  height: 18px;
+  justify-content: center;
+  width: 18px;
+}
+#auyon-site .social-icon svg {
+  display: block;
+  fill: currentColor;
+  height: 15px;
+  width: 15px;
+}
+#auyon-site .hero-bio {
+  grid-column: 1 / -1;
+  max-width: 800px;
+}
+#auyon-site .hero-bio p:first-child {
+  margin-top: 0;
+}
+#auyon-site .eyebrow,
+#auyon-site .affiliation {
+  color: var(--as-muted);
+  margin: 0 0 2px;
+}
+#auyon-site h1,
+#auyon-site h2,
+#auyon-site h3,
+#auyon-site h4 {
+  font-family: var(--as-display);
+  line-height: 1.2;
+}
+#auyon-site h1 {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+#auyon-site h2 {
+  color: var(--as-ink);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+#auyon-site h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 24px 0 8px;
+}
+#auyon-site #publications > h3 {
+  color: var(--as-ink);
+  font-size: 18px;
+  margin: 28px 0 12px;
+}
+#auyon-site h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px 0 8px;
+  color: var(--as-muted);
+}
+#auyon-site .content-section {
+  border-top: 1px solid var(--as-line);
+  margin-top: 34px;
+  padding-top: 28px;
+}
+#auyon-site .compact {
+  max-width: 880px;
+}
+#auyon-site ul {
+  margin: 0;
+  padding-left: 22px;
+}
+#auyon-site li {
+  margin: 0 0 8px;
+}
+#auyon-site .publication-list {
+  list-style: none;
+  padding-left: 0;
+}
+#auyon-site .publication-list li {
+  margin-bottom: 14px;
+  padding-left: 0;
+}
+#auyon-site .publication-list > li > a {
+  display: inline;
+}
+#auyon-site .publication-list .publication-title {
+  color: var(--as-blue);
+}
+#auyon-site .publication-list em {
+  font-style: normal;
+  font-weight: 700;
+}
+#auyon-site .publication-notes {
+  color: var(--as-muted);
+  font-size: 13px;
+  list-style: disc;
+  margin-top: 4px;
+  padding-left: 20px;
+}
+#auyon-site .publication-notes li {
+  border-left: 0;
+  margin-bottom: 3px;
+  padding-left: 0;
+}
+#auyon-site .columns {
+  columns: 2;
+  column-gap: 48px;
+}
+#auyon-site .site-footer {
+  border-top: 1px solid var(--as-line);
+  margin-top: 24px;
+  padding: 24px;
+  text-align: center;
+}
+#auyon-site .site-footer img {
+  height: auto;
+  max-width: 239px;
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+#auyon-site main {
+    padding-top: 32px;
+  }
+#auyon-site .hero {
+    grid-template-columns: 1fr;
+  }
+#auyon-site .hero-photo {
+    max-width: 264px;
+  }
+#auyon-site .columns {
+    columns: 1;
+  }
+}
+
+#auyon-site{color-scheme:light;width:100%;min-width:0;font-family:"Helvetica Neue",Arial,sans-serif;font-size:15px;font-weight:400;line-height:1.58;background:#fff;color:#202124}
+#auyon-site a{font-weight:inherit}
+#auyon-site [hidden]{display:none!important}
+#auyon-site p{margin:1em 0}
+#auyon-site .eyebrow,#auyon-site .affiliation{margin:0 0 2px}
+#auyon-site .top-nav{max-width:920px;margin:0 auto;padding:24px 24px 0}
+#auyon-site .top-nav-inner{display:flex;flex-wrap:wrap;gap:8px 26px;border-bottom:1px solid #d5d7da;padding-bottom:15px}
+#auyon-site .top-nav a{font-size:15px;line-height:1.6;white-space:nowrap}
+#auyon-site .top-nav a[aria-current="page"]{font-weight:600;color:#202124}
+#auyon-site main{padding-top:30px}
+#auyon-site .content-section:first-of-type{margin-top:0}
+#auyon-site main>[data-view]:not(.hero){margin-top:0;border-top:0;padding-top:0}
+#auyon-site main>[data-view="awards"]+section[data-view="awards"]{margin-top:34px;border-top:1px solid #d5d7da;padding-top:28px}
+#auyon-site .hero-bio p:first-child{margin-top:0}
+#auyon-site .hero-copy a{overflow-wrap:anywhere}
+#auyon-site .site-footer{max-width:920px;margin-left:auto;margin-right:auto}
+@media(max-width:560px){#auyon-site .top-nav{padding-top:18px}#auyon-site .top-nav-inner{gap:3px 20px;padding-bottom:12px}#auyon-site .top-nav a{min-height:40px;display:inline-flex;align-items:center;font-size:14px}#auyon-site main{padding-top:24px}#auyon-site .hero-copy{padding-top:0}#auyon-site .hero-copy p{font-size:16px}#auyon-site .hero-copy p a[href^="mailto:"]{font-size:14px}#auyon-site h1{font-size:32px}}
+@media(pointer:coarse){#auyon-site .top-nav a{min-height:44px;display:inline-flex;align-items:center}}
+
+
+#auyon-site{--as-photo:224px;--as-text:16px;--as-blue:#315d7d;--as-ink:#252b31;--as-muted:#646e77;--as-line:#e0e3e6;color:var(--as-ink);font-family:var(--as-body);font-size:var(--as-text);font-weight:400;line-height:1.75;background:var(--as-background)}
+#auyon-site main{max-width:940px;padding:38px 36px 38px}
+#auyon-site p{font-size:inherit;font-weight:400}
+#auyon-site a{color:var(--as-blue);font-weight:inherit}
+#auyon-site a:hover,#auyon-site a:focus-visible{color:var(--as-blue);text-decoration:underline;text-underline-offset:4px}
+#auyon-site h1,#auyon-site h2,#auyon-site h3,#auyon-site h4{font-family:var(--as-display);color:var(--as-ink)}
+#auyon-site h1{font-size:44px;font-weight:500;letter-spacing:-.025em;line-height:1.15;margin-bottom:15px}
+#auyon-site h2{font-weight:500;font-size:25px;letter-spacing:0;text-transform:none;margin-bottom:25px}
+#auyon-site h3,#auyon-site #publications>h3{font-size:17px;font-weight:500;letter-spacing:0}
+#auyon-site .hero{grid-template-columns:var(--as-photo) minmax(0,1fr);column-gap:38px;row-gap:28px;align-items:start}
+#auyon-site .hero-photo{width:100%;max-width:var(--as-photo);overflow:hidden}
+#auyon-site .hero-photo img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center}
+#auyon-site .hero-copy{align-self:center;padding:0}
+#auyon-site .hero-copy p{font-size:16px;line-height:1.65}
+#auyon-site .hero-copy p:not(.eyebrow):not(.affiliation){margin:16px 0 0}
+#auyon-site .hero-copy p a[href^="mailto:"]{font-size:15px}
+#auyon-site .hero-bio{max-width:820px}
+#auyon-site .hero-bio p{margin:0 0 18px}
+#auyon-site .hero-bio p:last-child{margin-bottom:0}
+#auyon-site .top-nav{max-width:940px;padding:25px 36px 0}
+#auyon-site .top-nav-inner{gap:6px 27px;border-bottom:1px solid var(--as-line);padding-bottom:17px}
+#auyon-site .top-nav a{font-family:var(--as-nav);font-size:14px;font-weight:400;line-height:1.5;padding:0 0 2px}
+#auyon-site .top-nav a[aria-current="page"]{color:var(--as-ink);font-weight:600}
+#auyon-site .site-footer{max-width:868px;margin:0 auto;padding:24px 0 28px;border-top:1px solid var(--as-line)}
+#auyon-site .site-footer img{max-width:190px}
+#auyon-site .publication-list em{font-weight:500}
+#auyon-site .publication-notes{font-family:var(--as-body);font-size:13px}
+#auyon-site .publication-list>li{margin-bottom:22px}
+#auyon-site .content-section li{break-inside:avoid}
+@media(max-width:680px){#auyon-site main{padding:28px 24px 32px}#auyon-site .top-nav{padding:18px 24px 0}#auyon-site .top-nav-inner{gap:4px 23px;padding-bottom:12px}#auyon-site .top-nav a{font-size:13px;min-height:38px;display:inline-flex;align-items:center}#auyon-site h1{font-size:37px}#auyon-site .hero{grid-template-columns:190px minmax(0,1fr);column-gap:25px;row-gap:25px}#auyon-site .hero-copy p{font-size:14px}#auyon-site .hero-copy p a[href^="mailto:"]{font-size:13px}#auyon-site .hero-bio{font-size:16px}#auyon-site .site-footer{margin-left:24px;margin-right:24px;padding:21px 0 24px}}
+@media(max-width:480px){#auyon-site main{padding:27px 22px 32px}#auyon-site .top-nav{padding:16px 22px 0}#auyon-site .top-nav-inner{column-gap:18px}#auyon-site .hero{grid-template-columns:1fr;row-gap:23px}#auyon-site .hero-photo{max-width:210px}#auyon-site .hero-copy p{font-size:15px}#auyon-site .hero-copy p a[href^="mailto:"]{font-size:14px}#auyon-site h1{font-size:36px}#auyon-site .hero-bio{font-size:15px;line-height:1.8}#auyon-site .site-footer{margin-left:22px;margin-right:22px}#auyon-site .columns{columns:1}}
+@media(pointer:coarse){#auyon-site .top-nav a{min-height:44px}}
+#auyon-site .hero-photo img{filter:none;opacity:1;mix-blend-mode:normal}
+#auyon-site .top-nav .nav-cv{margin-left:auto}
+#auyon-site .hero-copy p:not(.eyebrow):not(.affiliation){margin-top:19px}
+#auyon-site .hero-copy .profile-links{display:none}
+@media(max-width:680px){#auyon-site .top-nav .nav-cv{margin-left:0}#auyon-site .top-nav-inner{column-gap:20px}}
+@media(max-width:480px){#auyon-site .top-nav-inner{column-gap:16px}#auyon-site .top-nav a{font-size:13px}}
+
+#auyon-site{--as-body:'IBM Plex Sans',Arial,sans-serif;--as-display:'IBM Plex Sans',Arial,sans-serif;--as-nav:'IBM Plex Sans',Arial,sans-serif;--as-background:#fff;--as-photo:182px;--as-blue:#375b78;--as-ink:#273540;--as-muted:#67737d;--as-text:15.5px;line-height:1.75}
+#auyon-site .top-nav-inner{border-bottom:0;padding-bottom:12px}
+#auyon-site .top-nav a{font-size:13px;letter-spacing:.015em}
+#auyon-site .top-nav a[aria-current="page"]{font-weight:500;text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:1px}
+#auyon-site main{padding-top:35px}
+#auyon-site .hero{grid-template-columns:minmax(0,1fr) var(--as-photo);column-gap:51px;row-gap:30px}
+#auyon-site .hero-copy{grid-column:1;grid-row:1;align-self:start}
+#auyon-site .hero-photo{grid-column:2;grid-row:1 / span 2;align-self:start}
+#auyon-site .hero-bio{grid-column:1;grid-row:2}
+#auyon-site h1{font-size:46px;font-weight:400;letter-spacing:-.025em}
+#auyon-site .hero-copy p{font-size:15px;line-height:1.65}
+#auyon-site .hero-copy p a[href^="mailto:"]{font-size:14px}
+#auyon-site .hero-bio p{margin-bottom:19px}
+#auyon-site .site-footer{text-align:left}
+#auyon-site .site-footer img{max-width:172px}
+@media(max-width:680px){#auyon-site .hero{grid-template-columns:minmax(0,1fr) 145px;column-gap:27px;row-gap:27px}#auyon-site .hero-photo{grid-row:1}#auyon-site .hero-bio{grid-column:1 / -1;grid-row:2;font-size:15px}#auyon-site h1{font-size:38px}#auyon-site .hero-copy p{font-size:14px}}
+@media(max-width:480px){#auyon-site .hero{grid-template-columns:1fr;row-gap:25px}#auyon-site .hero-photo{grid-column:1;grid-row:1;max-width:185px}#auyon-site .hero-copy{grid-column:1;grid-row:2}#auyon-site .hero-bio{grid-column:1;grid-row:3;font-size:15px}#auyon-site h1{font-size:37px}}
+
+
+
+#auyon-site .paper-awards{margin:0 0 42px}
+#auyon-site .paper-award-block{padding:23px 0;border-top:1px solid var(--as-line);break-inside:avoid}
+#auyon-site .paper-award-block:first-child{padding-top:0;border-top:0}
+#auyon-site .paper-award-block h4{margin:0 0 12px;font-size:17px;line-height:1.5;font-weight:500;letter-spacing:0}
+#auyon-site .paper-award-block h4 a{font-weight:500;text-decoration:none}
+#auyon-site .paper-award-block h4 a:hover,#auyon-site .paper-award-block h4 a:focus-visible{text-decoration:underline}
+#auyon-site .paper-award-block ul{margin:0;padding-left:19px;font-size:14px;line-height:1.7}
+#auyon-site .paper-award-block li{margin:0 0 7px;padding-left:3px}
+#auyon-site .paper-award-block li:last-child{margin-bottom:0}
+#auyon-site #awards>h3{margin:0 0 23px;font-size:18px;font-weight:500}
+@media(max-width:480px){#auyon-site .paper-award-block{padding:22px 0}#auyon-site .paper-award-block h4{font-size:16px}#auyon-site .paper-award-block ul{font-size:14px;padding-left:17px}}
+
+
+
+#auyon-site{--as-display:'IBM Plex Sans',Arial,sans-serif;--as-body:'Source Sans 3',Arial,sans-serif;--as-nav:'Source Sans 3',Arial,sans-serif;}
+
+
+#auyon-site{--as-ink:#202b36;--as-muted:#414d59}
+#auyon-site .top-nav .nav-cv{margin-left:0}
+#auyon-site .top-nav-inner{justify-content:flex-start;column-gap:27px}
+#auyon-site .top-nav a,#auyon-site .top-nav a:hover,#auyon-site .top-nav a:focus-visible{color:var(--as-muted)}
+#auyon-site .top-nav a[aria-current="page"]{color:var(--as-ink)}
+#auyon-site .content-section li,#auyon-site .publication-notes,#auyon-site .publication-notes li{color:var(--as-ink)}
+#auyon-site .content-section li::marker{color:var(--as-ink)}
+#auyon-site .publication-list>li>a,#auyon-site .publication-list .publication-title,#auyon-site .paper-award-block h4 a{color:var(--as-blue);font-weight:500}
+#auyon-site .paper-awards{margin-bottom:30px}
+#auyon-site .paper-award-block{padding:15px 0}
+#auyon-site .paper-award-block h4{font-size:16px;line-height:1.5;margin:0 0 5px}
+#auyon-site .paper-award-block ul{display:block;list-style:none;margin:0;padding:0;font-size:14px;line-height:1.65}
+#auyon-site .paper-award-block li{display:inline;margin:0;padding:0;color:var(--as-ink)}
+#auyon-site #awards>h3{margin-bottom:19px}
+@media(max-width:680px){#auyon-site .top-nav-inner{column-gap:20px}}
+@media(max-width:480px){#auyon-site .top-nav-inner{column-gap:16px}#auyon-site .paper-award-block{padding:14px 0}#auyon-site .paper-award-block h4{font-size:15px}#auyon-site .paper-award-block ul{font-size:14px}}
+#auyon-site .paper-award-block{border-top:1px solid var(--as-line)}
+#auyon-site .paper-award-block:first-child{border-top:0}
+
+
+
+#auyon-site{--as-ink:#18212b;--as-muted:#283643;--as-line:#dce1e6;--as-blue:#285f94;--as-background:#fff;color:var(--as-ink)}
+#auyon-site h1,#auyon-site h2,#auyon-site h3,#auyon-site h4{color:var(--as-ink)}
+#auyon-site .top-nav a,#auyon-site .top-nav a:hover,#auyon-site .top-nav a:focus-visible{color:var(--as-blue)}
+#auyon-site .top-nav a[aria-current="page"]{color:var(--as-ink)}
+#auyon-site .hero-copy p{color:var(--as-ink)}
+#auyon-site .hero-copy p a[href^="mailto:"]{color:var(--as-blue)}
+#auyon-site .hero-bio a{font-weight:500;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+#auyon-site .publication-list>li>a,#auyon-site .publication-list .publication-title,#auyon-site .paper-award-block h4 a{color:var(--as-blue)}
+#auyon-site .hero-photo{border-radius:0}
+#auyon-site .hero-bio{min-width:0}
+#auyon-site .hero-copy{min-width:0}
+#auyon-site .top-nav-inner{gap:6px 27px;justify-content:flex-start}
+#auyon-site .site-footer{border-top:1px solid var(--as-line)}
+@media(max-width:680px){#auyon-site .top-nav-inner{gap:4px 20px}}
+@media(max-width:480px){#auyon-site .top-nav-inner{column-gap:16px}}
+#auyon-site .hero{grid-template-columns:minmax(0,1fr) var(--as-photo);column-gap:45px;row-gap:28px}
+#auyon-site .hero-copy{grid-column:1;grid-row:1}
+#auyon-site .hero-photo{grid-column:2;grid-row:1 / span 2}
+#auyon-site .hero-bio{grid-column:1;grid-row:2}
+#auyon-site .top-nav-inner{border-bottom:1px solid var(--as-line);padding-bottom:16px}
+#auyon-site main{padding-top:36px}
+@media(max-width:680px){#auyon-site .hero{grid-template-columns:minmax(0,1fr) 150px;column-gap:25px}#auyon-site .hero-photo{grid-row:1}#auyon-site .hero-bio{grid-column:1 / -1}}
+@media(max-width:480px){#auyon-site .hero{grid-template-columns:1fr;row-gap:24px}#auyon-site .hero-photo{grid-column:1;grid-row:1;max-width:190px}#auyon-site .hero-copy{grid-column:1;grid-row:2}#auyon-site .hero-bio{grid-column:1;grid-row:3}}
+
+
+
+#auyon-site{--as-display:'Manrope',Arial,sans-serif;--as-body:'Inter',Arial,sans-serif;--as-nav:'Inter',Arial,sans-serif;}
+#auyon-site .publication-list em{font-family:var(--as-body);font-style:normal;font-weight:700;color:#141c25;font-synthesis:none}
+#auyon-site .publication-list>li>a,#auyon-site .publication-list .publication-title{font-weight:500;color:var(--as-blue)}
+#auyon-site [data-view="talks"] .columns{columns:1;column-count:1;column-gap:0}
+#auyon-site [data-view="talks"],#auyon-site [data-view="awards"]{line-height:1.3}
+#auyon-site [data-view="talks"] li,#auyon-site [data-view="awards"]>ul>li{line-height:1.3;margin:0;padding-top:0;padding-bottom:0}
+#auyon-site [data-view="talks"]>ul,#auyon-site [data-view="awards"]>ul{margin-top:0;margin-bottom:0}
+#auyon-site [data-view="awards"] .paper-award-block{padding:12px 0}
+#auyon-site [data-view="awards"] .paper-award-block:first-child{padding-top:0}
+#auyon-site [data-view="awards"] .paper-award-block h4{line-height:1.3;margin-bottom:4px}
+#auyon-site [data-view="awards"] .paper-award-block ul,#auyon-site [data-view="awards"] .paper-award-block li{line-height:1.3}
+#auyon-site [data-view="awards"] .paper-awards{margin-bottom:24px}
+#auyon-site [data-view="awards"]>h3{margin-bottom:13px}
+#auyon-site [data-view="talks"] h2,#auyon-site [data-view="awards"] h2{margin-bottom:22px}
+#auyon-site .hero{grid-template-columns:minmax(0,1fr) var(--as-photo);column-gap:45px;row-gap:30px}
+#auyon-site .hero-copy{grid-column:1;grid-row:1;align-self:center}
+#auyon-site .hero-photo{grid-column:2;grid-row:1}
+#auyon-site .hero-bio{grid-column:1 / -1;grid-row:2;max-width:790px}
+#auyon-site h1{font-size:43px}
+@media(max-width:680px){#auyon-site .hero{grid-template-columns:minmax(0,1fr) 150px;column-gap:25px}#auyon-site h1{font-size:37px}}
+@media(max-width:480px){#auyon-site .hero{grid-template-columns:1fr;row-gap:24px}#auyon-site .hero-photo{grid-column:1;grid-row:1;max-width:180px}#auyon-site .hero-copy{grid-column:1;grid-row:2}#auyon-site .hero-bio{grid-column:1;grid-row:3}#auyon-site h1{font-size:36px}}
+
+
+
+#auyon-site{--as-display:'Public Sans',Arial,sans-serif;--as-body:'Lato',Arial,sans-serif;--as-nav:'Lato',Arial,sans-serif;}
+#auyon-site [data-view="talks"],#auyon-site [data-view="awards"]{line-height:1.4}
+#auyon-site [data-view="talks"] li,#auyon-site [data-view="awards"]>ul>li{line-height:1.4;margin-bottom:3px}
+#auyon-site [data-view="talks"] li:last-child,#auyon-site [data-view="awards"]>ul>li:last-child{margin-bottom:0}
+#auyon-site [data-view="awards"] .paper-award-block ul,#auyon-site [data-view="awards"] .paper-award-block li{line-height:1.4}
+#auyon-site [data-view="awards"] .paper-award-block h4{line-height:1.4;margin-bottom:5px}
+#auyon-site [data-view="awards"] .paper-award-block{padding:13px 0}
+#auyon-site [data-view="awards"] ul,#auyon-site [data-view="talks"] ul{list-style:none;padding-left:0}
+#auyon-site [data-view="awards"] li,#auyon-site [data-view="talks"] li{list-style:none;padding-left:0}
+#auyon-site [data-view="awards"] li::marker,#auyon-site [data-view="talks"] li::marker{content:""}
+#auyon-site .top-nav .nav-cv{margin-left:0}
+#auyon-site .top-nav-inner{justify-content:flex-start}
+#auyon-site[data-portrait="center"] .top-nav-inner{justify-content:center}
+
+
+
+#auyon-site{--as-display:'Public Sans',Arial,sans-serif;--as-body:'Lato',Arial,sans-serif;--as-nav:'Lato',Arial,sans-serif;--as-name:43px;}
+#auyon-site{--as-leading:1.75}
+#auyon-site main [data-view],#auyon-site main [data-view] :is(p,ul,li,.hero-bio,.publication-notes,.hero-copy p a){font-size:var(--as-text);line-height:var(--as-leading)}
+#auyon-site .top-nav a{font-size:14px;line-height:1.5}
+#auyon-site h1{font-size:var(--as-name);font-weight:400;line-height:1.15}
+#auyon-site main h2{font-size:25px;line-height:1.3;font-weight:500}
+#auyon-site main h3,#auyon-site main #publications>h3,#auyon-site main #awards>h3{font-size:18px;line-height:1.4;font-weight:500;margin-bottom:16px}
+#auyon-site main [data-view="awards"] .paper-award-block h4{font-size:var(--as-text);line-height:var(--as-leading);font-weight:500;margin:0 0 3px}
+#auyon-site main [data-view="awards"],#auyon-site main [data-view="awards"] .paper-award-block{border:0}
+#auyon-site main [data-view="awards"] .paper-award-block{padding:0;margin:0 0 19px}
+#auyon-site main [data-view="awards"] .paper-awards{margin-bottom:29px}
+#auyon-site main>[data-view="awards"]+section[data-view="awards"]{margin-top:28px;padding-top:0;border:0}
+#auyon-site main [data-view="students"] ul{list-style:none;padding-left:0}
+#auyon-site main [data-view="students"] li{list-style:none;padding-left:0}
+#auyon-site main [data-view="students"] li::marker{content:""}
+#auyon-site main [data-view="students"] .publication-notes{margin:0;padding:0;color:var(--as-ink)}
+#auyon-site main [data-view="students"]>ul,#auyon-site main [data-view="talks"]>ul,#auyon-site main [data-view="awards"]>ul{margin-top:0;margin-bottom:0}
+#auyon-site main [data-view="students"] li,#auyon-site main [data-view="talks"] li,#auyon-site main [data-view="awards"]>ul>li{margin:0;padding-top:0;padding-bottom:0}
+#auyon-site .hero-bio a{font-weight:400;text-decoration:none}
+#auyon-site .hero-bio a:hover,#auyon-site .hero-bio a:focus-visible{text-decoration:underline}
+@media(max-width:480px){#auyon-site h1{font-size:35px}#auyon-site .top-nav a{font-size:14px}}
+
+
+
+#auyon-site main [data-view="teaching"] ul{list-style:none;padding:0;margin:0}
+#auyon-site main [data-view="teaching"] li{list-style:none;margin:0;padding:0}
+#auyon-site main [data-view="teaching"] li::marker{content:""}
+#auyon-site main [data-view="students"] ul.publication-notes{padding-left:19px;margin:0;list-style:disc}
+#auyon-site main [data-view="students"] ul.publication-notes li{display:list-item;list-style:disc;font-size:13px;line-height:var(--as-leading);margin:0;padding:0}
+#auyon-site main [data-view="students"] ul.publication-notes li::marker{content:normal;color:var(--as-ink)}
+#auyon-site main [data-view="awards"] .paper-award-block{line-height:var(--as-leading);margin-bottom:17px}
+#auyon-site main [data-view="awards"] .paper-award-block h4{display:inline;font-family:var(--as-body);margin:0}
+#auyon-site main [data-view="awards"] .paper-award-block ul{display:inline}
+#auyon-site{--as-leading:1.5}
+
+
+
+#auyon-site{--as-display:'Instrument Sans',Arial,sans-serif;--as-body:'Libre Franklin',Arial,sans-serif;--as-nav:'Libre Franklin',Arial,sans-serif;--as-name:42px;--as-placement:13px;}
+#auyon-site .site-footer{border:0;text-align:center}
+#auyon-site .site-footer a{display:inline-block}
+#auyon-site .site-footer img{display:block;margin:0 auto}
+#auyon-site main [data-view="students"] ul.publication-notes li{font-size:var(--as-placement);line-height:var(--as-leading)}
+
+
+
+#auyon-site .top-nav-inner{display:flex;align-items:center;flex-wrap:nowrap;gap:24px;padding-bottom:16px}
+#auyon-site .nav-links{display:flex;align-items:center;flex-wrap:wrap;gap:6px 27px;min-width:0;flex:1}
+#auyon-site .top-nav .nav-logo{display:flex;align-items:center;flex:0 0 150px;margin-left:auto;line-height:1;text-decoration:none}
+#auyon-site .nav-logo img{display:block;width:150px;max-width:100%;height:auto}
+@media(max-width:680px){
+  #auyon-site .top-nav-inner{gap:20px}
+  #auyon-site .nav-links{gap:6px 20px}
+  #auyon-site .top-nav .nav-logo{flex-basis:126px}
+  #auyon-site .nav-logo img{width:126px}
+}
+@media(max-width:560px){
+  #auyon-site .top-nav-inner{flex-wrap:wrap;row-gap:18px}
+  #auyon-site .top-nav .nav-logo{order:-1}
+  #auyon-site .nav-links{flex-basis:100%;gap:8px 20px}
+}
+@media(max-width:480px){#auyon-site .nav-links{column-gap:16px}}
+
+
+
+#auyon-site .top-nav .nav-logo{position:relative;flex:0 0 48px;width:48px;height:25px;overflow:hidden}
+#auyon-site .top-nav .nav-logo img{position:absolute;left:-1px;top:-3px;width:120px;max-width:none;height:auto}
+#auyon-site ol.publication-list{list-style:decimal outside;margin:0;padding-left:28px}
+#auyon-site ol.publication-list>li{display:list-item;padding-left:4px}
+#auyon-site ol.publication-list>li::marker{color:var(--as-ink);font-weight:400}
+@media(max-width:680px){
+  #auyon-site .top-nav .nav-logo{flex-basis:40.3px;width:40.3px;height:20.9px}
+  #auyon-site .top-nav .nav-logo img{width:100.8px;left:-.84px;top:-2.53px}
+}
+
+
+
+@media(max-width:560px){
+  #auyon-site .top-nav{padding-top:14px}
+  #auyon-site .top-nav-inner{flex-wrap:nowrap;align-items:center;gap:16px;padding-bottom:10px}
+  #auyon-site .nav-links{flex:1;gap:0 12px}
+  #auyon-site .top-nav .nav-links a{min-height:44px;padding:0;font-size:14px}
+  #auyon-site .top-nav .nav-logo{order:0;align-self:center;min-height:0;margin-left:0}
+  #auyon-site main{padding-top:24px}
+  #auyon-site .hero{grid-template-columns:minmax(0,1fr) 86px;column-gap:18px;row-gap:0;align-items:center}
+  #auyon-site .hero-photo{grid-column:2;grid-row:1;width:86px;max-width:86px;align-self:center}
+  #auyon-site .hero-copy{display:contents}
+  #auyon-site .hero-copy h1{grid-column:1;grid-row:1;font-size:30px;line-height:1.15;font-weight:400;margin:0;align-self:center}
+  #auyon-site .hero-copy p{grid-column:1 / -1}
+  #auyon-site .hero-copy .eyebrow{grid-row:2;margin:18px 0 2px}
+  #auyon-site .hero-copy .affiliation{grid-row:3;margin:0}
+  #auyon-site .hero-copy p:not(.eyebrow):not(.affiliation){grid-row:4;margin:16px 0 0}
+  #auyon-site .hero-bio{grid-column:1 / -1;grid-row:5;margin-top:26px}
+}
+@media(max-width:360px){
+  #auyon-site .hero{grid-template-columns:minmax(0,1fr) 76px;column-gap:14px}
+  #auyon-site .hero-photo{width:76px;max-width:76px}
+  #auyon-site .hero-copy h1{font-size:28px}
+}
+
+
+
+#auyon-site .mobile-menu-toggle{display:none}
+@media(max-width:560px){
+  #auyon-site .top-nav{padding-top:12px}
+  #auyon-site .top-nav-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 16px;align-items:center;padding-bottom:10px}
+  #auyon-site .mobile-menu-toggle{display:inline-flex;align-items:center;justify-self:start;min-height:44px;padding:0;border:0;background:transparent;color:var(--as-blue);font-family:var(--as-body);font-size:14px;line-height:1.5;text-align:left}
+  #auyon-site .mobile-menu-toggle::after{content:'+';margin-left:9px;font-size:20px;font-weight:400}
+  #auyon-site .mobile-menu-toggle[aria-expanded="true"]::after{content:'−'}
+  #auyon-site .top-nav .nav-logo{grid-column:2;grid-row:1;justify-self:end}
+  #auyon-site .nav-links{grid-column:1 / -1;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin-top:10px;padding-top:8px;border-top:1px solid var(--as-line)}
+  #auyon-site[data-mobile-nav-ready]:not([data-mobile-menu-open]) .nav-links{display:none}
+  #auyon-site .top-nav .nav-links a{min-height:44px;width:100%;justify-content:flex-start}
+  #auyon-site main{padding-top:24px}
+  #auyon-site .hero{display:flex;flex-direction:column;align-items:center;gap:0;text-align:center}
+  #auyon-site .hero-photo{width:112px;max-width:112px;align-self:center;margin:0 0 18px}
+  #auyon-site .hero-copy{display:contents}
+  #auyon-site .hero-copy h1{font-size:32px;line-height:1.15;margin:0 0 12px;align-self:center}
+  #auyon-site .hero-copy .eyebrow{max-width:320px;margin:0 0 3px}
+  #auyon-site .hero-copy .affiliation{margin:0;max-width:320px}
+  #auyon-site .hero-copy p:not(.eyebrow):not(.affiliation){margin:14px 0 0;max-width:100%}
+  #auyon-site .hero-bio{margin-top:28px;text-align:left;width:100%;max-width:none}
+  #auyon-site .hero-bio p{margin-bottom:20px}
+  #auyon-site ol.publication-list{padding-left:25px}
+  #auyon-site ol.publication-list>li{padding-left:3px;margin-bottom:22px}
+}
+
+
+
+@media(max-width:560px){
+#auyon-site main [data-view],#auyon-site main [data-view] :is(p,ul,li,.hero-bio,.publication-notes,.hero-copy p a),#auyon-site main [data-view="awards"] .paper-award-block h4{font-size:14px}
+#auyon-site main [data-view="students"] ul.publication-notes li{font-size:13px}
+}
+
+#auyon-site{--as-photo:190px;--as-text:14.5px}
+#auyon-site #main-content:focus{outline:none}

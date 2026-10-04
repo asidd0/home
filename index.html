@@ -7,7 +7,11 @@
     <title>Auyon Siddiq | UCLA Anderson School of Management</title>
     <meta name="description" content="Auyon Siddiq is an Associate Professor of Decisions, Operations and Technology Management at the UCLA Anderson School of Management.">
     <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="style.css?v=20260928-3">
+    <link rel="stylesheet" href="homepage.css?v=20261003-1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+    <script src="site.js?v=20261003-1" defer></script>
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-ksliyUQd8Vk5SaJGocq5O.js"></script>
     <script>
@@ -16,8 +20,27 @@
     </script>
   </head>
   <body>
-    <main>
-      <section class="hero">
+<div id="auyon-site" data-portrait="right">
+<header class="site-header">
+<nav class="top-nav" aria-label="Main navigation">
+  <div class="top-nav-inner">
+<button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-controls="auyon-site-navigation">Menu</button>
+<div class="nav-links" id="auyon-site-navigation">
+    <a href="#about" data-view-link="about" aria-current="page">About</a>
+    <a href="#publications" data-view-link="publications">Publications</a>
+    <a href="#teaching" data-view-link="teaching">Teaching</a>
+    <a href="#students" data-view-link="students">Students</a>
+    <a href="#awards" data-view-link="awards">Awards</a>
+    <a href="#talks" data-view-link="talks">Talks</a>
+    <a class="nav-cv" href="pdfs/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+  </div>
+<a class="nav-logo" href="https://www.ucla.edu/" target="_blank" rel="noopener noreferrer"><img src="assets/ucla-logo.png" alt="UCLA"></a>
+</div>
+</nav>
+</header>
+
+    <main id="main-content" tabindex="-1">
+      <section id="about" class="hero" data-view="about">
         <div class="hero-photo">
           <img src="assets/profile-photo.jpg" alt="Auyon Siddiq">
         </div>
@@ -26,23 +49,21 @@
           <p class="eyebrow">Associate Professor of Decisions, Operations and Technology Management</p>
           <p class="affiliation">UCLA Anderson School of Management</p>
           <p><a href="mailto:auyon.siddiq@anderson.ucla.edu">auyon.siddiq@anderson.ucla.edu</a></p>
-          <p class="profile-links">
-            <a href="pdfs/cv.pdf">CV</a>
-          </p>
+
         </div>
         <div class="hero-bio">
-          <p>I am an Associate Professor of Decisions, Operations and Technology Management at the UCLA Anderson School of Management. I study questions related to digital labor platforms, AI, and urban sustainability, often from a market design perspective. My work develops and applies methods that blend optimization, econometrics, and game theory.</p>
-          <p>I'm teaching a new MBA class called <a href="https://ucla-anderson-ssai.github.io/SSAI/">Science and Strategy of Artificial Intelligence</a>. I have also taught core statistics in the full-time MBA program and core optimization in the Master of Science in Business Analytics (MSBA) program. In 2020, I was named to Poets &amp; Quants' list of the Best 40-Under-40 Business School Professors.</p>
+          <p>I’m an Associate Professor of Decisions, Operations and Technology Management at the UCLA Anderson School of Management. My research focuses on market design, digital platforms, and AI. I draw on methods from optimization, econometrics, and game theory, sometimes developing new solution or estimation techniques.</p>
+          <p>I'm teaching a new MBA class called <a href="https://ucla-anderson-ssai.github.io/SSAI/" target="_blank" rel="noopener noreferrer">Science and Strategy of Artificial Intelligence</a>. I have also taught core statistics in the full-time MBA program and core optimization in the Master of Science in Business Analytics (MSBA) program. In 2020, I was named to Poets &amp; Quants' list of the Best 40-Under-40 Business School Professors.</p>
           <p>I serve as an Associate Editor at <em>Manufacturing &amp; Service Operations Management</em> (M&amp;SOM) and the <em>INFORMS Journal on Data Science</em> (IJDS).</p>
           <p>Before joining UCLA, I received a PhD in Operations Research from the University of California, Berkeley.</p>
         </div>
       </section>
 
-      <section id="publications" class="content-section">
+      <section id="publications" class="content-section" data-view="publications">
         <h2>Publications</h2>
 
         <h3>Working Papers</h3>
-        <ul class="publication-list">
+        <ol class="publication-list" reversed start="16">
           <li>
             <span class="publication-title">The Rat Race at Work: Technology, Workforce Capacity, and Burnout.</span>
           </li>
@@ -51,147 +72,150 @@
             with Elisabeth Paulson.
           </li>
           <li>
-            <a href="pdfs/commoditization.pdf">Human Capital, AI, and Labor Commoditization.</a><br>
+            <a href="pdfs/commoditization.pdf" target="_blank" rel="noopener noreferrer">Human Capital, AI, and Labor Commoditization.</a><br>
             with Niuniu Zhang.
           </li>
           <li>
-            <a href="pdfs/empirical-market-design-surplus-food.pdf">Empirical Market Design in Surplus Food Marketplaces.</a><br>
+            <a href="pdfs/empirical-market-design-surplus-food.pdf" target="_blank" rel="noopener noreferrer">Empirical Market Design in Surplus Food Marketplaces.</a><br>
             with Alexandra Yizhuo Dong and Jingwei Zhang.<br>
             Major Revision, <em>Operations Research</em>.
-            <ul class="publication-notes">
-              <li>Accepted to MSOM Sustainable Operations SIG Day, 2026.</li>
-              <li>Best Paper Presentation Award, Early Career Sustainable Operations Workshop, 2026 (Dong).</li>
-              <li>Second Place, POMS College of Sustainable Operations Student Paper Competition, 2026 (Dong).</li>
-            </ul>
           </li>
-        </ul>
+        </ol>
 
         <h3>Accepted or Published</h3>
-        <ul class="publication-list">
+        <ol class="publication-list" reversed start="12">
           <li>
-            <a href="pdfs/platform-disintermediation.pdf">Platform Disintermediation: Information Effects and Pricing Remedies.</a><br>
+            <a href="pdfs/platform-disintermediation.pdf" target="_blank" rel="noopener noreferrer">Platform Disintermediation: Information Effects and Pricing Remedies.</a><br>
             with Shreyas Sekar.<br>
             <em>Operations Research</em> (2026), Vol. 74, No. 3: 1304&ndash;1320.
-            <ul class="publication-notes">
-              <li>Accepted to 25th ACM Conference on Economics and Computation (EC '24).</li>
-              <li>Accepted to MSOM Technology, Innovation, and Entrepreneurship (TIE) SIG Day, 2024.</li>
-            </ul>
           </li>
           <li>
-            <a href="pdfs/planning-bike-lanes-with-data.pdf">Planning Bike Lanes with Data: Ridership, Congestion, and Path Selection.</a><br>
+            <a href="pdfs/planning-bike-lanes-with-data.pdf" target="_blank" rel="noopener noreferrer">Planning Bike Lanes with Data: Ridership, Congestion, and Path Selection.</a><br>
             with Sheng Liu and Jingwei Zhang.<br>
             <em>Management Science</em> (2025), Vol. 71, No. 9: 7631&ndash;7654.
-            <ul class="publication-notes">
-              <li>Winner, INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2023.</li>
-              <li>Winner, POMS College of Sustainable Operations Student Paper Competition, 2022 (Zhang).</li>
-              <li>Second Place, INFORMS Service Science Best Student Paper Award, 2022 (Zhang).</li>
-              <li>Second Place, Section on Location Analysis Best Student Paper Award, 2023 (Zhang).</li>
-              <li>Finalist, MSOM Society Award for Responsible Research in Operations Management, 2025.</li>
-              <li>Finalist, INFORMS Data Mining and Decision Analytics Best Paper Award (Applied Track), 2022.</li>
-              <li>Accepted to MSOM Sustainable Operations SIG Day, 2022.</li>
-            </ul>
           </li>
           <li>
-            <a href="pdfs/discovering-causal-models-with-optimization.pdf">Discovering Causal Models with Optimization: Confounders, Cycles, and Instrument Validity.</a><br>
+            <a href="pdfs/discovering-causal-models-with-optimization.pdf" target="_blank" rel="noopener noreferrer">Discovering Causal Models with Optimization: Confounders, Cycles, and Instrument Validity.</a><br>
             with Frederick Eberhardt and Nur Kaynar.<br>
             <em>Management Science</em> (2025), Vol. 71, No. 4: 3283&ndash;3302.
-            <ul class="publication-notes">
-              <li>Second Place, ADIA Lab Best Paper Award, 2024 (Prize: $30,000).</li>
-            </ul>
+
           </li>
           <li>
-            <a href="pdfs/fairness-in-crowdwork.pdf">Fairness in Crowdwork: Making the Human AI Supply Chain More Humane.</a><br>
+            <a href="pdfs/fairness-in-crowdwork.pdf" target="_blank" rel="noopener noreferrer">Fairness in Crowdwork: Making the Human AI Supply Chain More Humane.</a><br>
             with Martin Gonzalez Cabello, Charles J. Corbett, and Catherine Hu.<br>
             <em>Business Horizons</em> (2025), Vol. 68, No. 5: 645&ndash;657.
           </li>
           <li>
-            <a href="pdfs/online-labor-platform-incentive-contracts.pdf">Estimating Effects of Incentive Contracts in Online Labor Platforms.</a><br>
+            <a href="pdfs/online-labor-platform-incentive-contracts.pdf" target="_blank" rel="noopener noreferrer">Estimating Effects of Incentive Contracts in Online Labor Platforms.</a><br>
             with Nur Kaynar.<br>
             <em>Management Science</em> (2023), Vol. 69, No. 4: 2106&ndash;2126.
           </li>
           <li>
-            <a href="pdfs/ride-hailing-platforms-competition-autonomous-vehicles.pdf">Ride-hailing Platforms: Competition and Autonomous Vehicles.</a><br>
+            <a href="pdfs/ride-hailing-platforms-competition-autonomous-vehicles.pdf" target="_blank" rel="noopener noreferrer">Ride-hailing Platforms: Competition and Autonomous Vehicles.</a><br>
             with Terry A. Taylor.<br>
             <em>Manufacturing &amp; Service Operations Management</em> (2022), Vol. 24, No. 3: 1511&ndash;1528.
           </li>
           <li>
-            <a href="pdfs/partnerships-in-urban-mobility.pdf">Partnerships in Urban Mobility: Incentive Mechanisms for Improving Public Transit Adoption.</a><br>
+            <a href="pdfs/partnerships-in-urban-mobility.pdf" target="_blank" rel="noopener noreferrer">Partnerships in Urban Mobility: Incentive Mechanisms for Improving Public Transit Adoption.</a><br>
             with Christopher S. Tang and Jingwei Zhang.<br>
             <em>Manufacturing &amp; Service Operations Management</em> (2022), Vol. 24, No. 2: 956&ndash;971.
           </li>
           <li>
-            <a href="pdfs/shield-net.pdf">Shield-Net: Matching Supply with Demand for Face Shields During the COVID-19 Pandemic.</a><br>
+            <a href="pdfs/shield-net.pdf" target="_blank" rel="noopener noreferrer">Shield-Net: Matching Supply with Demand for Face Shields During the COVID-19 Pandemic.</a><br>
             with Rebecca Alcock and Justin J. Boutilier.<br>
             <em>INFORMS Journal on Applied Analytics</em> (2022), Vol. 52, No. 6: 471&ndash;582.
-            <ul class="publication-notes">
-              <li>Finalist, Doing Good with Good OR Student Paper Competition, 2021 (Alcock).</li>
-            </ul>
+
           </li>
           <li>
-            <a href="pdfs/medicare-shared-savings-incentive-design.pdf">Data-Driven Incentive Design in the Medicare Shared Savings Program.</a><br>
+            <a href="pdfs/medicare-shared-savings-incentive-design.pdf" target="_blank" rel="noopener noreferrer">Data-Driven Incentive Design in the Medicare Shared Savings Program.</a><br>
             with Anil Aswani and Zuo-Jun (Max) Shen.<br>
             <em>Operations Research</em> (2019), Vol. 67, No. 4: 1002&ndash;1026.
-            <ul class="publication-notes">
-              <li>Second Place, INFORMS Health Application Society Pierskalla Best Paper Award, 2016.</li>
-            </ul>
+
           </li>
           <li>
-            <a href="pdfs/inverse-optimization-with-noisy-data.pdf">Inverse Optimization with Noisy Data.</a><br>
+            <a href="pdfs/inverse-optimization-with-noisy-data.pdf" target="_blank" rel="noopener noreferrer">Inverse Optimization with Noisy Data.</a><br>
             with Anil Aswani and Zuo-Jun (Max) Shen.<br>
             <em>Operations Research</em> (2018), Vol. 66, No. 3: 870&ndash;892.
-            <ul class="publication-notes">
-              <li>Berkeley IEOR Katta G. Murty Prize, 2016.</li>
-            </ul>
+
           </li>
           <li>
-            <a href="pdfs/robust-defibrillator-deployment.pdf">Robust Defibrillator Deployment Under Cardiac Arrest Location Uncertainty via Row-and-Column Generation.</a><br>
+            <a href="pdfs/robust-defibrillator-deployment.pdf" target="_blank" rel="noopener noreferrer">Robust Defibrillator Deployment Under Cardiac Arrest Location Uncertainty via Row-and-Column Generation.</a><br>
             with Timothy C. Y. Chan and Zuo-Jun (Max) Shen.<br>
             <em>Operations Research</em> (2018), Vol. 66, No. 2: 358&ndash;379.
-            <ul class="publication-notes">
-              <li>Winner, Canadian Operational Research Society Student Paper Competition, 2014.</li>
-              <li>Second Place, INFORMS Health Applications Society Student Paper Competition, 2017.</li>
-            </ul>
+
           </li>
           <li>
-            <a href="pdfs/public-access-defibrillator-range.pdf">Modeling the Impact of Public Access Defibrillator Range on Cardiac Arrest Coverage.</a><br>
+            <a href="pdfs/public-access-defibrillator-range.pdf" target="_blank" rel="noopener noreferrer">Modeling the Impact of Public Access Defibrillator Range on Cardiac Arrest Coverage.</a><br>
             with Steven C. Brooks and Timothy C. Y. Chan.<br>
             <em>Resuscitation</em> (2013), Vol. 84, No. 7: 904&ndash;909.
           </li>
-        </ul>
+        </ol>
       </section>
 
-      <section id="teaching" class="content-section compact">
+      <section id="teaching" class="content-section compact" data-view="teaching">
         <h2>Teaching</h2>
-        <ul>
-          <li>Data and Decisions (MGMTFT 402), Full-Time MBA, Fall 2018 - present.</li>
-          <li>Optimization (MGMTMSA 403), Master of Science in Business Analytics, Fall 2019 - present.</li>
-          <li><a href="https://ucla-anderson-ssai.github.io/SSAI/">Science and Strategy of Artificial Intelligence</a> (MGMT298D), Full-Time MBA, Spring 2026.</li>
+        <ul role="list">
+          <li><a href="https://ucla-anderson-ssai.github.io/SSAI/" target="_blank" rel="noopener noreferrer">Science and Strategy of Artificial Intelligence</a> (MGMT298D), Full-Time MBA, 2026 - present.</li>
+          <li>Optimization (MGMTMSA 403), Master of Science in Business Analytics, 2019-2026.</li>
+          <li>Data and Decisions (MGMTFT 402), Full-Time MBA, 2018-2026.</li>
         </ul>
       </section>
 
-      <section id="students" class="content-section compact">
+      <section id="students" class="content-section compact" data-view="students">
         <h2>Students</h2>
-        <ul>
+        <ul role="list">
           <li>Zachary Jordan (exp. 2030, Co-Advised with Harriet Jeon)</li>
           <li>Niuniu Zhang (exp. 2029)</li>
-          <li><a href="http://alexandradong.com/">Alexandra Yizhuo Dong</a> (exp. 2028)</li>
+          <li><a href="http://alexandradong.com/" target="_blank" rel="noopener noreferrer">Alexandra Yizhuo Dong</a> (exp. 2028)</li>
           <li>Martin Gonzalez Cabello (exp. 2027, Dissertation Co-Chair with Charles J. Corbett)</li>
-          <li><a href="https://www.jingwei-zhang.com/">Jingwei Zhang</a> (2023, Dissertation Co-Chair with Christopher S. Tang)
-            <ul class="publication-notes">
+          <li><a href="https://www.jingwei-zhang.com/" target="_blank" rel="noopener noreferrer">Jingwei Zhang</a> (2023, Dissertation Co-Chair with Christopher S. Tang)
+            <ul role="list" class="publication-notes">
               <li>Placement: Assistant Professor, SC Johnson College of Business, Cornell University.</li>
             </ul>
           </li>
-          <li><a href="https://nkaynar.github.io/">Nur Kaynar</a> (2022, Dissertation Chair)
-            <ul class="publication-notes">
+          <li><a href="https://nkaynar.github.io/" target="_blank" rel="noopener noreferrer">Nur Kaynar</a> (2022, Dissertation Chair)
+            <ul role="list" class="publication-notes">
               <li>Placement: Assistant Professor, SC Johnson College of Business, Cornell University.</li>
             </ul>
           </li>
         </ul>
       </section>
 
-      <section id="awards" class="content-section compact">
-        <h2>Awards</h2>
-        <ul>
+      <section id="awards" class="content-section compact" data-view="awards">
+        <h2>Awards &amp; Grants</h2>
+<h3>Paper Awards</h3>
+<div class="paper-awards">
+<article class="paper-award-block">
+<h4><a href="pdfs/empirical-market-design-surplus-food.pdf" target="_blank" rel="noopener noreferrer">Empirical Market Design in Surplus Food Marketplaces</a>:</h4>
+<ul role="list"><li>Best Paper Presentation Award, Early Career Sustainable Operations Workshop, 2026 (Dong);</li> <li>Second Place, POMS College of Sustainable Operations Student Paper Competition, 2026 (Dong).</li></ul>
+</article>
+<article class="paper-award-block">
+<h4><a href="pdfs/planning-bike-lanes-with-data.pdf" target="_blank" rel="noopener noreferrer">Planning Bike Lanes with Data: Ridership, Congestion, and Path Selection</a>:</h4>
+<ul role="list"><li>Winner, INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2023;</li> <li>Winner, POMS College of Sustainable Operations Student Paper Competition, 2022 (Zhang);</li> <li>Second Place, INFORMS Service Science Best Student Paper Award, 2022 (Zhang);</li> <li>Second Place, Section on Location Analysis Best Student Paper Award, 2023 (Zhang);</li> <li>Finalist, MSOM Society Award for Responsible Research in Operations Management, 2025;</li> <li>Finalist, INFORMS Data Mining and Decision Analytics Best Paper Award (Applied Track), 2022.</li></ul>
+</article>
+<article class="paper-award-block">
+<h4><a href="pdfs/discovering-causal-models-with-optimization.pdf" target="_blank" rel="noopener noreferrer">Discovering Causal Models with Optimization: Confounders, Cycles, and Instrument Validity</a>:</h4>
+<ul role="list"><li>Second Place, ADIA Lab Best Paper Award, 2024 (Prize: $30,000).</li></ul>
+</article>
+<article class="paper-award-block">
+<h4><a href="pdfs/shield-net.pdf" target="_blank" rel="noopener noreferrer">Shield-Net: Matching Supply with Demand for Face Shields During the COVID-19 Pandemic</a>:</h4>
+<ul role="list"><li>Finalist, Doing Good with Good OR Student Paper Competition, 2021 (Alcock).</li></ul>
+</article>
+<article class="paper-award-block">
+<h4><a href="pdfs/medicare-shared-savings-incentive-design.pdf" target="_blank" rel="noopener noreferrer">Data-Driven Incentive Design in the Medicare Shared Savings Program</a>:</h4>
+<ul role="list"><li>Second Place, INFORMS Health Application Society Pierskalla Best Paper Award, 2016.</li></ul>
+</article>
+<article class="paper-award-block">
+<h4><a href="pdfs/inverse-optimization-with-noisy-data.pdf" target="_blank" rel="noopener noreferrer">Inverse Optimization with Noisy Data</a>:</h4>
+<ul role="list"><li>Berkeley IEOR Katta G. Murty Prize, 2016.</li></ul>
+</article>
+<article class="paper-award-block">
+<h4><a href="pdfs/robust-defibrillator-deployment.pdf" target="_blank" rel="noopener noreferrer">Robust Defibrillator Deployment Under Cardiac Arrest Location Uncertainty via Row-and-Column Generation</a>:</h4>
+<ul role="list"><li>Winner, Canadian Operational Research Society Student Paper Competition, 2014;</li> <li>Second Place, INFORMS Health Applications Society Student Paper Competition, 2017.</li></ul>
+</article>
+</div>
+<h3>Awards</h3>
+        <ul role="list">
           <li>Management Science Meritorious Service Award, 2023.</li>
           <li>Dean's Prize for Outstanding Faculty Mentorship of Ph.D. Students, 2023.</li>
           <li>Eric and E Juline Faculty Excellence in Research Award, 2022.</li>
@@ -208,9 +232,9 @@
         </ul>
       </section>
 
-      <section class="content-section compact">
-        <h2>Grants</h2>
-        <ul>
+      <section class="content-section compact" data-view="awards">
+        <h3>Grants</h3>
+        <ul role="list">
           <li>UCLA Anderson Morrison Center Grant, 2024 - 2025.</li>
           <li>UCLA Senate COR Faculty Grant, 2024 - 2025.</li>
           <li>UCLA Society of Hellman Fellows Award, 2022 - 2023.</li>
@@ -219,9 +243,9 @@
         </ul>
       </section>
 
-      <section class="content-section compact">
+      <section id="talks" class="content-section compact" data-view="talks">
         <h2>Talks</h2>
-        <ul class="columns">
+        <ul role="list" class="columns">
           <li>McCombs School of Business, The University of Texas at Austin, 2027.</li>
           <li>Daniel J. Epstein Department of Industrial &amp; Systems Engineering, University of Southern California, 2026.</li>
           <li>Sloan School of Management, MIT, 2025.</li>
@@ -247,8 +271,8 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <a href="http://anderson.ucla.edu"><img src="assets/ucla-logo.png" alt="UCLA Anderson School of Management"></a>
-    </footer>
+
+
+</div>
   </body>
 </html>
