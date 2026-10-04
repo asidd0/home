@@ -375,10 +375,10 @@ body{margin:0;background:#fff}
 #auyon-site [data-view="awards"] .paper-awards{margin-bottom:24px}
 #auyon-site [data-view="awards"]>h3{margin-bottom:13px}
 #auyon-site [data-view="talks"] h2,#auyon-site [data-view="awards"] h2{margin-bottom:22px}
-#auyon-site .hero{grid-template-columns:minmax(0,1fr) var(--as-photo);column-gap:45px;row-gap:30px}
+#auyon-site .hero{grid-template-columns:minmax(0,1fr) var(--as-photo);column-gap:45px;row-gap:30px;max-width:790px}
 #auyon-site .hero-copy{grid-column:1;grid-row:1;align-self:center}
 #auyon-site .hero-photo{grid-column:2;grid-row:1}
-#auyon-site .hero-bio{grid-column:1 / -1;grid-row:2;max-width:790px}
+#auyon-site .hero-bio{grid-column:1 / -1;grid-row:2;max-width:none}
 #auyon-site h1{font-size:43px}
 @media(max-width:680px){#auyon-site .hero{grid-template-columns:minmax(0,1fr) 150px;column-gap:25px}#auyon-site h1{font-size:37px}}
 @media(max-width:480px){#auyon-site .hero{grid-template-columns:1fr;row-gap:24px}#auyon-site .hero-photo{grid-column:1;grid-row:1;max-width:180px}#auyon-site .hero-copy{grid-column:1;grid-row:2}#auyon-site .hero-bio{grid-column:1;grid-row:3}#auyon-site h1{font-size:36px}}
