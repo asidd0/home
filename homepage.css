@@ -380,7 +380,7 @@ body{margin:0;background:#fff}
 #auyon-site .hero-photo{grid-column:2;grid-row:1}
 #auyon-site .hero-bio{grid-column:1 / -1;grid-row:2;max-width:none}
 #auyon-site h1{font-size:43px}
-@media(max-width:680px){#auyon-site .hero{grid-template-columns:minmax(0,1fr) 150px;column-gap:25px}#auyon-site h1{font-size:37px}}
+@media(max-width:680px){#auyon-site .hero{grid-template-columns:minmax(0,1fr) 180px;column-gap:25px}#auyon-site h1{font-size:37px}}
 @media(max-width:480px){#auyon-site .hero{grid-template-columns:1fr;row-gap:24px}#auyon-site .hero-photo{grid-column:1;grid-row:1;max-width:180px}#auyon-site .hero-copy{grid-column:1;grid-row:2}#auyon-site .hero-bio{grid-column:1;grid-row:3}#auyon-site h1{font-size:36px}}
 
 
@@ -515,7 +515,7 @@ body{margin:0;background:#fff}
   #auyon-site .top-nav .nav-links a{min-height:44px;width:100%;justify-content:flex-start}
   #auyon-site main{padding-top:24px}
   #auyon-site .hero{display:flex;flex-direction:column;align-items:center;gap:0;text-align:center}
-  #auyon-site .hero-photo{width:112px;max-width:112px;align-self:center;margin:0 0 18px}
+  #auyon-site .hero-photo{width:134.4px;max-width:134.4px;align-self:center;margin:0 0 18px}
   #auyon-site .hero-copy{display:contents}
   #auyon-site .hero-copy h1{font-size:32px;line-height:1.15;margin:0 0 12px;align-self:center}
   #auyon-site .hero-copy .eyebrow{max-width:320px;margin:0 0 3px}
@@ -534,5 +534,5 @@ body{margin:0;background:#fff}
 #auyon-site main [data-view="students"] ul.publication-notes li{font-size:13px}
 }
 
-#auyon-site{--as-photo:190px;--as-text:14.5px;--as-content-width:830px}
+#auyon-site{--as-photo:228px;--as-text:14.5px;--as-content-width:830px}
 #auyon-site #main-content:focus{outline:none}
