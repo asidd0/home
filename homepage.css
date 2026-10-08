@@ -536,3 +536,20 @@ body{margin:0;background:#fff}
 
 #auyon-site{--as-photo:228px;--as-text:14.5px;--as-content-width:830px}
 #auyon-site #main-content:focus{outline:none}
+
+/* Frame each view with matching top and bottom spacing. */
+#auyon-site main {
+  --as-frame-gap: 36px;
+  padding-top: var(--as-frame-gap);
+}
+#auyon-site main::after {
+  content: "";
+  display: block;
+  margin-top: var(--as-frame-gap);
+  border-top: 1px solid var(--as-line);
+}
+@media (max-width: 560px) {
+  #auyon-site main {
+    --as-frame-gap: 24px;
+  }
+}
