@@ -1,323 +1,310 @@
-\documentclass[11pt]{res}
-\usepackage[top=1in, bottom=0.25in, left=0.5in, right=0.5in]{geometry}
-\setlength{\textheight}{9.3in}
-\textwidth=6.5in
-%\itemsep=0in
-%\parsep=0in
-% if using pdflatex:
-%\setlength{\pdfpagewidth}{\paperwidth}
-%\setlength{\pdfpageheight}{\paperheight} 
-%\usepackage{mathpazo}
-\newenvironment{list1}{
-  \begin{list}{\ding{113}}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
-      \setlength{\leftmargin}{0.0in}}}{\end{list}}
-\newenvironment{list2}{
-  \begin{list}{$\circ$}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
-      \setlength{\leftmargin}{0.2in}}}{\end{list}}
-
-\usepackage{hyperref}
+\documentclass[11pt,letterpaper]{article}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-
-\usepackage{bbm}
-\usepackage{dsfont}
-\usepackage{booktabs}
-\usepackage{enumitem}
-\usepackage{lscape}
-\usepackage{bm}
-\usepackage{xcolor}
-\def\qed{$\square$}
-%\usepackage{subfigure}
-\usepackage{bbm}
-
-
-\linespread{1.05}
+\usepackage{lmodern}
+\usepackage[margin=0.6in,top=0.5in,bottom=0.5in,headheight=12pt,headsep=10pt,footskip=20pt]{geometry}
+\usepackage{microtype,enumitem,needspace,tabularx,fancyhdr,xcolor,anyfontsize}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Auyon A. Siddiq -- Curriculum Vitae},pdfauthor={Auyon A. Siddiq}}
+\urlstyle{same}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Auyon A. Siddiq}
+\fancyhead[R]{\footnotesize Curriculum Vitae}
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\arraystretch}{0.9}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\newcommand{\cvsection}[1]{\par\addvspace{8pt}\Needspace{4\baselineskip}{\normalsize\scshape #1\par}\vspace{2pt}\hrule height 0.3pt\vspace{5pt}}
+\newcommand{\cvsubsection}[1]{\par\addvspace{6pt}\Needspace{3\baselineskip}{\itshape #1\par}\vspace{3pt}}
+\newcommand{\cvnotes}[1]{{\fontsize{9.2}{10.6}\selectfont\leftskip=1.325in\noindent #1\par}\vspace{2pt}}
+\newcommand{\cvaward}[2]{\par\addvspace{4pt}\Needspace{3\baselineskip}\noindent\textit{#1:} #2\par}
+\newcommand{\cventry}[2]{\par\Needspace{2\baselineskip}\noindent\begin{tabularx}{\linewidth}[t]{@{}>{\raggedright\arraybackslash}p{1.20in}@{\hspace{9pt}}>{\raggedright\arraybackslash}X@{}}{\small #1}& #2\end{tabularx}\par\vspace{0pt}}
+\newcommand{\cvpaper}[2]{\par\Needspace{3\baselineskip}\noindent\begin{tabularx}{\linewidth}[t]{@{}>{\raggedright\arraybackslash}p{1.20in}@{\hspace{9pt}}>{\raggedright\arraybackslash}X@{}}#1&#2\end{tabularx}\par\vspace{2pt}}
 \begin{document}
-\begin{resume}
-\vspace{-1in}
-\begin{center}
-{\LARGE \bf  AUYON A. SIDDIQ} \\
-\vspace{1mm}
-{\bf UCLA Anderson School of Management}\\
-B-511 Gold Hall, 110 Westwood Plaza, Los Angeles, California, 90095   \\
-\texttt{auyon.siddiq@anderson.ucla.edu} $\vert$ \url{auyonsiddiq.com}
-\end{center}
-\vspace*{-8mm}
+\fontsize{10.5}{11.8}\selectfont
+\thispagestyle{empty}
 
-\begin{center}
-{\it \small  Last updated: October 2026}\\
-Up-to-date version \href{https://www.dropbox.com/scl/fi/b4zxmgo697t5uk0ylope2/cv.pdf?rlkey=77ld652ql4fb3v9rf5iqufpc5&dl=0}{\textcolor{blue}{here.}}
-\end{center}
+{\fontsize{21}{26}\selectfont AUYON A. SIDDIQ}\par\vspace{3pt}{\bfseries UCLA Anderson School of Management}\par\vspace{2pt}{\small B-511 Gold Hall, 110 Westwood Plaza, Los Angeles, California, 90095\par\href{mailto:auyon.siddiq@anderson.ucla.edu}{auyon.siddiq@anderson.ucla.edu}\enspace|\enspace\href{https://auyonsiddiq.com}{auyonsiddiq.com}}\par\vspace{3pt}{\footnotesize Last updated: October 2026}\par
+\cvsection{Appointments}
 
-{\large \bf APPOINTMENTS}
+\textit{UCLA Anderson School of Management}\par
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cventry{2025 -- present}{Associate Professor of Decisions, Operations \& Technology Management}
 
-{\normalsize
+\cventry{2018 -- 2025}{Assistant Professor of Decisions, Operations \& Technology Management}
 
-{ \it UCLA Anderson School of Management} \\
-\vspace*{-.2in}
+\cvsection{Education}
 
-\begin{list1}
-\item[] Associate Professor of Decisions, Operations \& Technology Management \hfill 2025 --  present
-\item[] Assistant Professor of Decisions, Operations \& Technology Management \hfill 2018 -- 2025 \\ 
-\end{list1}}
+\textit{University of California, Berkeley}\par
 
+\cventry{2018}{PhD, Operations Research (Minors in Statistics and Computer Science)}
 
-\vspace{2mm}
-{\large \bf EDUCATION}
+\cventry{2014}{MS, Operations Research}
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\vspace{2pt}
 
-{\normalsize
+\textit{University of Toronto}\par
 
-{ \it University of California, Berkeley} \\
-\vspace*{-.2in}
+\cventry{2013}{MASc, Industrial Engineering}
 
-\begin{list1}
-\item[] PhD, Operations Research (Minors in Statistics and Computer Science) \hfill {2013 -- 2018}
-\item[] MS, Operations Research  \hfill {2013 -- 2014}
-\end{list1}
- { \it University of Toronto} \hfill {2011 -- 2013}\\
-\vspace*{-.2in}
-\begin{list1}
-\item[] MASc, Industrial Engineering
-\vspace*{.05in}
-\end{list1}
+\vspace{2pt}
 
-{  \it Dalhousie University} \hfill {2006 -- 2011}\\
+\textit{Dalhousie University}\par
 
-\vspace*{-.2in}
-\begin{list1}
-\item[] BEng, Electrical Engineering \\
-\end{list1}
-}
-\vspace{2mm}
+\cventry{2011}{BEng, Electrical Engineering}
 
-{\large  \bf RESEARCH}
+\cvsection{Research}
+\cvsubsection{Working papers}
 
+\cvpaper{}{``The Rat Race at Work: Technology, Incentives, and Burnout.''}
+\vspace{1pt}
 
-\vspace{-7mm}
+\cvpaper{}{``Human-AI Decision-Making for an Underspecified Problem.'' with Elisabeth Paulson.}
+\vspace{1pt}
 
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cvpaper{}{``Human Capital, AI, and Labor Commoditization.'' with Niuniu Zhang.}
+\vspace{1pt}
 
-\textit{\large Working papers:}
- 
-``The Rat Race at Work: Technology, Incentives, and Burnout.''
+\cvpaper{}{``Empirical Market Design in Surplus Food Marketplaces.'' with Alexandra Yizhuo Dong and Jingwei Zhang. Major Revision, \textbf{Operations Research}.}
+\vspace{1pt}
 
-``Human-AI Decision-Making for an Underspecified Problem.'' with Elisabeth Paulson.
+\cvsubsection{Accepted or published}
 
-``Human Capital, AI, and Labor Commoditization.'' with Niuniu Zhang.
+\cvpaper{2026}{``Platform Disintermediation: Information Effects and Pricing Remedies.'' with Shreyas Sekar. \textbf{Operations Research}, Vol. 74, No. 3: 1304--1320.}
+\cvnotes{Accepted to 25th ACM Conference on Economics and Computation (EC '24). \enspace\textbullet\enspace Accepted to MSOM Technology, Innovation, and Entrepreneurship (TIE) SIG Day, 2024.}
+\vspace{1pt}
 
-``Empirical Market Design in Surplus Food Marketplaces.'' with Alexandra Yizhuo Dong and Jingwei Zhang. Major Revision, {\it Operations Research}.
+\cvpaper{2025}{``Planning Bike Lanes with Data: Ridership, Congestion, and Path Selection.'' with Sheng Liu and Jingwei Zhang. \textbf{Management Science}, Vol 71, No. 9: 7631--7654.}
+\cvnotes{Accepted to MSOM Sustainable Operations SIG Day, 2022.}
+\vspace{1pt}
 
-\textit{\large Accepted or published:}
+\cvpaper{2025}{``Discovering Causal Models with Optimization: Confounders, Cycles, and Instrument Validity.'' with Frederick Eberhardt and Nur Kaynar. \textbf{Management Science}, Vol. 74, No. 4: 3283--3302.}
+\vspace{1pt}
 
-\underline{Operations journals}
+\cvpaper{2025}{``Fairness in Crowdwork: Making the Human AI Supply Chain More Humane.'' with Martin Gonzalez Cabello, Charles J. Corbett, and Catherine Hu. \textbf{Business Horizons}, Vol. 68, No. 5: 645--657.}
+\vspace{1pt}
 
-``Platform Disintermediation: Information Effects and Pricing Remedies.'' with Shreyas Sekar.  {\it Operations Research} (2026), Vol. 74, No. 3: 1304--1320. \\
-  \phantom{xxx} \textbullet \quad {\footnotesize Accepted to  25th ACM Conference on Economics and Computation (EC '24).}\\
- \phantom{xxx} \textbullet \quad {\footnotesize Accepted to MSOM Technology, Innovation, and Entrepreneurship (TIE) SIG Day, 2024.}
+\cvpaper{2023}{``Estimating Effects of Incentive Contracts in Online Labor Platforms.'' with Nur Kaynar. \textbf{Management Science}, Vol. 69, No. 4: 2106--2126.}
+\vspace{1pt}
 
- ``Planning Bike Lanes with Data: Ridership, Congestion, and Path Selection.'' with Sheng Liu and Jingwei Zhang.  \textit{Management Science} (2025), Vol 71, No. 9: 7631--7654. \\
-         \phantom{xxx} \textbullet \quad {\footnotesize Winner, INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2023.} \\
- \phantom{xxx} \textbullet \quad {\footnotesize Winner, POMS College of Sustainable Operations Student Paper Competition, 2022 (Zhang).} \\
-  \phantom{xxx} \textbullet \quad {\footnotesize Second Place, INFORMS Service Science Best Student Paper Award, 2022 (Zhang).} \\
-      \phantom{xxx} \textbullet \quad {\footnotesize Second Place, Section on Location Analysis Best Student Paper Award, 2023 (Zhang).} \\
-          \phantom{xxx} \textbullet \quad {\footnotesize Finalist, MSOM Society Award for Responsible Research in Operations Management, 2025.} \\
-    \phantom{xxx} \textbullet \quad {\footnotesize Finalist, INFORMS Data Mining and Decision Analytics Best Paper Award (Applied Track), 2022.} \\
-     \phantom{xxx} \textbullet \quad {\footnotesize Accepted to MSOM Sustainable Operations SIG Day, 2022.}
+\cvpaper{2022}{``Ride-hailing Platforms: Competition and Autonomous Vehicles.'' with Terry A. Taylor. \textbf{Manufacturing \& Service Operations Management}, Vol. 24, No. 3: 1511--1528.}
+\vspace{1pt}
 
-``Discovering Causal Models with Optimization: Confounders, Cycles, and Instrument Validity.'' with Frederick Eberhardt and Nur Kaynar. \textit{Management Science} (2025), Vol. 74, No. 4: 3283--3302. \\
-  \phantom{xxx} \textbullet \quad {\footnotesize Second Place, ADIA Lab Best Paper Award, 2024 (Prize: \$30,000).} 
+\cvpaper{2022}{``Partnerships in Urban Mobility: Incentive Mechanisms for Improving Public Transit Adoption.'' with Christopher S. Tang and Jingwei Zhang. \textbf{Manufacturing \& Service Operations Management}, Vol. 24, No. 2: 956--971.}
+\vspace{1pt}
 
-``Estimating Effects of Incentive Contracts in Online Labor Platforms.'' with Nur Kaynar. \textit{Management Science} (2023), Vol. 69, No. 4: 2106--2126.
+\cvpaper{2022}{``Shield-Net: Matching Supply with Demand for Face Shields During the COVID-19 Pandemic.'' with Rebecca Alcock and Justin J. Boutilier. \textbf{INFORMS Journal on Applied Analytics}, Vol. 52, No. 6: 471--582.}
+\vspace{1pt}
 
-``Ride-hailing Platforms: Competition and Autonomous Vehicles.'' with Terry A. Taylor. \textit{Manufacturing \& Service Operations Management} (2022), Vol. 24, No. 3: 1511--1528.
+\cvpaper{2019}{``Data-Driven Incentive Design in the Medicare Shared Savings Program.'' with Anil Aswani and Zuo-Jun (Max) Shen. \textbf{Operations Research}, Vol. 67, No. 4: 1002--1026.}
+\vspace{1pt}
 
-``Partnerships in Urban Mobility: Incentive Mechanisms for Improving Public Transit Adoption.'' with Christopher S. Tang and Jingwei Zhang. \textit{Manufacturing \& Service Operations Management} (2022), Vol. 24, No. 2: 956--971.
+\cvpaper{2018}{``Inverse Optimization with Noisy Data.'' with Anil Aswani and Zuo-Jun (Max) Shen. \textbf{Operations Research}, Vol. 66, No. 3: 870--892.}
+\vspace{1pt}
 
-``Data-Driven Incentive Design in the Medicare Shared Savings Program.'' with Anil Aswani and Zuo-Jun (Max) Shen. \textit{Operations Research} (2019), Vol. 67, No. 4: 1002--1026.\\
- \phantom{xxx} \textbullet \quad {\footnotesize Second Place, INFORMS Health Application Society Pierskalla Best Paper Award, 2016.}
+\cvpaper{2018}{``Robust Defibrillator Deployment Under Cardiac Arrest Location Uncertainty via Row-and-Column Generation.'' with Timothy C. Y. Chan and Zuo-Jun (Max) Shen. \textbf{Operations Research}, Vol. 66, No. 2: 358--379.}
+\vspace{1pt}
 
-``Inverse Optimization with Noisy Data.'' with Anil Aswani and Zuo-Jun (Max) Shen. \textit{Operations Research} (2018), Vol. 66, No. 3: 870--892.\\
- \phantom{xxx} \textbullet \quad {\footnotesize Berkeley IEOR Katta G. Murty Prize, 2016.} 
+\cvpaper{2013}{``Modeling the Impact of Public Access Defibrillator Range on Cardiac Arrest Coverage.'' with Steven C. Brooks and Timothy C. Y. Chan. \textbf{Resuscitation}, Vol. 84, No. 7: 904--909.}
+\vspace{1pt}
 
-``Robust Defibrillator Deployment Under Cardiac Arrest Location Uncertainty via Row-and-Column Generation.'' with Timothy C. Y. Chan and Zuo-Jun (Max) Shen. \textit{Operations Research} (2018), Vol. 66, No. 2: 358--379. \\
- \phantom{xxx} \textbullet \quad {\footnotesize Winner, Canadian Operational Research Society Student Paper Competition, 2014.} \\
- \phantom{xxx} \textbullet \quad {\footnotesize Second Place, INFORMS Health Applications Society Student Paper Competition, 2017.}
-  
-\underline{Practitioner and medical journals}
- 
- ``Fairness in Crowdwork: Making the Human AI Supply Chain More Humane.'' with Martin Gonzalez Cabello, Charles J. Corbett, and Catherine Hu. \textit{Business Horizons} (2025), Vol. 68, No. 5: 645--657.
-
-``Shield-Net: Matching Supply with Demand for Face Shields During the COVID-19 Pandemic.'' with Rebecca Alcock and Justin J. Boutilier. \textit{INFORMS Journal on Applied Analytics} (2022), Vol. 52, No. 6: 471--582. \\
- \phantom{xxx} \textbullet \quad {\footnotesize Finalist, Doing Good with Good OR Student Paper Competition, 2021 (Alcock).} 
-
-``Modeling the Impact of Public Access Defibrillator Range on Cardiac Arrest Coverage.'' with Steven C. Brooks and Timothy C. Y. Chan.  \textit{Resuscitation} (2013), Vol. 84, No. 7: 904--909.  \\
- 
- 
-
-{\large  \bf  TEACHING} 
-
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
-
-{\it Data and Decisions (MGMTFT 402)}. \hfill {Fall 2018 -- }\\
-Full-Time MBA (core), UCLA Anderson. 
-
-{\it Optimization (MGMTMSA 403)}. \hfill {Fall 2019 --}\\
-Master of Science in Business Analytics (core), UCLA Anderson.
+\cvsection{Teaching}
 
-{\it Science and Strategy of Artificial Intelligence (MGMT298D)}. \hfill {Spring 2026}\\
-Full-Time MBA, UCLA Anderson.  \\
+\cventry{Spring 2026}{{\it Science and Strategy of Artificial Intelligence (MGMT298D)}. Full-Time MBA (elective).}
 
-{\large  \bf DOCTORAL ADVISING} 
+\cventry{Fall 2019 --}{{\it Optimization (MGMTMSA 403)}. Master of Science in Business Analytics (core).}
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cventry{Fall 2018 --}{{\it Data and Decisions (MGMTFT 402)}. Full-Time MBA (core).}
 
-Zachary Jordan (Co-Advised with Harriet Jeon)  \hfill  exp. 2030 \\
-Niuniu Zhang  \hfill  exp. 2029 \\
-Alexandra Yizhuo Dong  \hfill  exp. 2028 \\
-Martin Gonzalez Cabello (Dissertation Co-Chair with Charles J. Corbett)  \hfill  exp. 2027 \\
-Jingwei Zhang (Dissertation Co-Chair with Christopher S. Tang)  \hfill  2023 \\
- \phantom{xxx} \textbullet \quad {\footnotesize Placement: Assistant Professor, SC Johnson College of Business, Cornell University} \\
-Nur Kaynar (Dissertation Chair) \hfill  2022 \\
- \phantom{xxx} \textbullet \quad {\footnotesize Placement: Assistant Professor, SC Johnson College of Business, Cornell University}
-
-{\it Committee membership:} Mirel Yavuz (Anderson, 2024), Xinyi Guan (Anderson, 2024), Akina Ikudo (Economics, 2021) \\ 
-
-
-
-{\large  \bf AWARDS} 
-
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
-
-Management Science Meritorious Service Award \hfill 2023 \\
-Dean's Prize for Outstanding Faculty Mentorship of Ph.D. Students \hfill 2023 \\
-Eric and E Juline Faculty Excellence in Research Award \hfill 2022 \\
-M\&SOM Meritorious Service Award  \hfill 2020, 2022 -- 2024 \\
-Poets\&Quants Best 40-Under-40 Business School Professors  \hfill 2020 \\
-Berkeley Haas EMBA Outstanding Graduate Student Instructor Award  \hfill 2016, 2018 \\
-NSERC Postgraduate Scholarship -- Doctoral \hfill 2014 -- 2017 \\
-UC Berkeley Teaching Effectiveness Award \hfill 2015 \\
-Berkeley IEOR Outstanding Graduate Student Instructor Award \hfill 2015  \\
-NSERC Postgraduate Scholarship -- Masters \hfill  2012 \\
-NSERC Undergraduate Student Research Award  \hfill  2007, 2008, 2010 \\
-Canadian National Millennium Scholarship  \hfill  2006 -- 2010  \\
-Dalhousie University Chancellor's Scholarship \hfill  2006 -- 2009 \\
+\cvsection{Doctoral Advising}
 
-{\large  \bf GRANTS} 
+\cventry{exp. 2030}{Zachary Jordan (Co-Advised with Harriet Jeon)}
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cventry{exp. 2029}{Niuniu Zhang}
 
-UCLA Anderson Morrison Center Grant \hfill 2024 -- 2025 \\
-UCLA Senate COR Faculty Grant \hfill 2024 -- 2025 \\
-UCLA Society of Hellman Fellows Award \hfill 2022 -- 2023 \\
-UCLA Easton Center Faculty Research Award \hfill 2022 -- 2023 \\
-Co-Principal Investigator, National Science Foundation (RAPID), \$100,000 \hfill 2020 -- 2021 \\
+\cventry{exp. 2028}{Alexandra Yizhuo Dong}
 
-{\large  \bf TALKS} 
+\cventry{exp. 2027}{Martin Gonzalez Cabello (Dissertation Co-Chair with Charles J. Corbett)}
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cventry{2023}{Jingwei Zhang (Dissertation Co-Chair with Christopher S. Tang)}
+\cvnotes{Placement: Assistant Professor, SC Johnson College of Business, Cornell University}
 
-\underline{Invited seminars:}
+\cventry{2022}{Nur Kaynar (Dissertation Chair)}
+\cvnotes{Placement: Assistant Professor, SC Johnson College of Business, Cornell University}
 
-McCombs School of Business, The University of Texas at Austin \hfill 2027 \\
-Epstein Department of Industrial \& Systems Engineering, USC \hfill 2026 \\
-Sloan School of Management, MIT  \hfill 2025 \\
-Stanford Graduate School of Business   \hfill 2025 \\
-Kenan-Flagler Business School, UNC-Chapel Hill  \hfill 2025 \\
-Stern School of Business, New York University   \hfill 2025 \\
-Columbia Business School  \hfill 2025 \\
-Yale School of Management   \hfill 2025 \\
-Wisconsin School of Business   \hfill 2025 \\
-Ross School of Business, University of Michigan \hfill 2024 \\
-Haas School of Business, University of California, Berkeley \hfill 2023 \\
-Johnson College of Business, Cornell University \hfill 2023 \\
-Fuqua School of Business, Duke University \hfill 2023 \\
-Wharton School, University of Pennsylvania \hfill 2023 \\
-Rotman School of Management, University of Toronto \hfill 2023 \\
-Haas School of Business, University of California, Berkeley \hfill 2022 \\
- Rotman OM Young Scholar Seminar Series, University of Toronto \hfill 2022 \\
- Logistics Research Seminar, Amazon \hfill 2022 \\
- Tuck School of Business, Dartmouth College \hfill 2021 \\
-Data Science Lab, MIT \hfill 2020 \\
-Department of Mechanical and Industrial Engineering, University of Toronto \hfill 2019 
+\vspace{3pt}\textit{Committee membership:} Mirel Yavuz (Anderson, 2024), Xinyi Guan (Anderson, 2024), Akina Ikudo (Economics, 2021)\par
 
-\underline{Conferences and workshops:}
+\cvsection{Paper Awards}
 
-Anderson Research Seminar \hfill 2024 \\
-INFORMS Annual Meeting\hfill 2024 \\
-MSOM Technology, Innovation, and Entrepreneurship SIG Day \hfill 2024 \\
-INFORMS Revenue Management and Pricing Conference \hfill 2023 \\
-SoCal OR/OM Day, Marshall School of Business, University of Southern California \hfill 2023 \\
-INFORMS Annual Meeting\hfill 2023 \\
-INFORMS Annual Meeting \hfill 2019 \\
-SoCal OR/OM Day, Merage School of Business, University of California, Irvine \hfill 2019 \\
-INFORMS International \hfill 2016 \\
-INFORMS Annual Meeting \hfill 2015 -- 2018\\
+\cvaward{Empirical Market Design in Surplus Food Marketplaces}{Best Paper Presentation Award, Early Career Sustainable Operations Workshop, 2026 (Dong); Second Place, POMS College of Sustainable Operations Student Paper Competition, 2026 (Dong).}
 
+\cvaward{Planning Bike Lanes with Data: Ridership, Congestion, and Path Selection}{Winner, INFORMS Public Sector Operations Research (PSOR) Best Paper Award, 2023; Winner, POMS College of Sustainable Operations Student Paper Competition, 2022 (Zhang); Second Place, INFORMS Service Science Best Student Paper Award, 2022 (Zhang); Second Place, Section on Location Analysis Best Student Paper Award, 2023 (Zhang); Finalist, MSOM Society Award for Responsible Research in Operations Management, 2025; Finalist, INFORMS Data Mining and Decision Analytics Best Paper Award (Applied Track), 2022.}
 
+\cvaward{Discovering Causal Models with Optimization: Confounders, Cycles, and Instrument Validity}{Second Place, ADIA Lab Best Paper Award, 2024 (Prize: \$30,000).}
 
-\vspace{2mm}
+\cvaward{Shield-Net: Matching Supply with Demand for Face Shields During the COVID-19 Pandemic}{Finalist, Doing Good with Good OR Student Paper Competition, 2021 (Alcock).}
 
-{\large  \bf SERVICE} 
+\cvaward{Data-Driven Incentive Design in the Medicare Shared Savings Program}{Second Place, INFORMS Health Application Society Pierskalla Best Paper Award, 2016.}
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cvaward{Inverse Optimization with Noisy Data}{Berkeley IEOR Katta G. Murty Prize, 2016.}
 
-Associate Editor, {\it Manufacturing \& Service Operations Management}  \hfill 2026 --\\
-Associate Editor, {\it INFORMS Journal on Data Science}
- \hfill 2025 --
+\cvaward{Robust Defibrillator Deployment Under Cardiac Arrest Location Uncertainty via Row-and-Column Generation}{Winner, Canadian Operational Research Society Student Paper Competition, 2014; Second Place, INFORMS Health Applications Society Student Paper Competition, 2017.}
 
-Reviewer, {\it INFORMS Journal on Optimization}, {\it Management Science}, {\it Manufacturing \&  \\ 
-\hspace*{0.58in}  Service Operations Management}, {\it Mathematical Programming}, {\it Naval Research \\
-\hspace*{0.58in} Logistics}, {\it Operations Research}, {\it Production and Operations Management}  \hfill 2016 --  \\ \\
-Anderson DOTM Seminar Series Committee \hfill 2019 -- 2024 \\
-Anderson DOTM Ph.D. Admissions Committee \hfill 2018 -- 2024 \\
-Anderson DOTM Faculty Search Committee \hfill 2021, 2023, 2024 \\ \\
-Co-Chair, INFORMS Public Sector Operations Research (PSOR) Best Paper Award    \hfill 2024 \\
-Co-Chair, Optimization and Analytics Cluster, CORS / INFORMS International    \hfill 2022 \\
-Co-Chair, Healthcare Analytics Track, POMS Annual Conference   \hfill 2019 \\ \\
-Chair, George B. Dantzig Dissertation Award  \hfill 2025 \\
-Committee Member, George B. Dantzig Dissertation Award  \hfill 2024 \\
-Judge, MSOM Student Paper Competition \hfill 2020, 2021 -- 2024 \\
-Judge, POMS Best Healthcare Paper Competition \hfill 2023, 2024 \\
-Judge, INFORMS Health Application Society Pierskalla Best Paper Award \hfill 2020, 2022 -- 2024 \\
-Judge, INFORMS Public Sector Operations Research (PSOR) Best Paper Award \hfill 2019 -- 2022 \\
-Judge, INFORMS Health Application Society Student Paper Award \hfill 2019, 2021 \\
+\cvsection{Awards}
 
+\cventry{2023}{Management Science Meritorious Service Award}
 
+\cventry{2023}{Dean's Prize for Outstanding Faculty Mentorship of Ph.D. Students}
 
+\cventry{2022}{Eric and E Juline Faculty Excellence in Research Award}
 
-{\large  \bf INDUSTRY} 
+\cventry{2020, 2022 -- 2024}{M\&SOM Meritorious Service Award}
 
-\vspace{-7mm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.15pt}}
+\cventry{2020}{Poets\&Quants Best 40-Under-40 Business School Professors}
 
-ExxonMobil, Calgary, Canada \hfill 2009 -- 2011 \\
-Four internships across research and engineering divisions.
+\cventry{2016, 2018}{Berkeley Haas EMBA Outstanding Graduate Student Instructor Award}
 
-\vspace{4mm}
+\cventry{2014 -- 2017}{NSERC Postgraduate Scholarship -- Doctoral}
 
-\end{resume}
+\cventry{2015}{UC Berkeley Teaching Effectiveness Award}
+
+\cventry{2015}{Berkeley IEOR Outstanding Graduate Student Instructor Award}
+
+\cventry{2012}{NSERC Postgraduate Scholarship -- Masters}
+
+\cventry{2007, 2008, 2010}{NSERC Undergraduate Student Research Award}
+
+\cventry{2006 -- 2010}{Canadian National Millennium Scholarship}
+
+\cventry{2006 -- 2009}{Dalhousie University Chancellor's Scholarship}
+
+\cvsection{Grants}
+
+\cventry{2024 -- 2025}{UCLA Anderson Morrison Center Grant}
+
+\cventry{2024 -- 2025}{UCLA Senate COR Faculty Grant}
+
+\cventry{2022 -- 2023}{UCLA Society of Hellman Fellows Award}
+
+\cventry{2022 -- 2023}{UCLA Easton Center Faculty Research Award}
+
+\cventry{2020 -- 2021}{Co-Principal Investigator, National Science Foundation (RAPID), \$100,000}
+
+\cvsection{Talks}
+
+\cvsubsection{Invited seminars}
+
+\cventry{2027}{McCombs School of Business, The University of Texas at Austin}
+
+\cventry{2026}{Epstein Department of Industrial \& Systems Engineering, USC}
+
+\cventry{2025}{Sloan School of Management, MIT}
+
+\cventry{2025}{Stanford Graduate School of Business}
+
+\cventry{2025}{Kenan-Flagler Business School, UNC-Chapel Hill}
+
+\cventry{2025}{Stern School of Business, New York University}
+
+\cventry{2025}{Columbia Business School}
+
+\cventry{2025}{Yale School of Management}
+
+\cventry{2025}{Wisconsin School of Business}
+
+\cventry{2024}{Ross School of Business, University of Michigan}
+
+\cventry{2023}{Haas School of Business, University of California, Berkeley}
+
+\cventry{2023}{Johnson College of Business, Cornell University}
+
+\cventry{2023}{Fuqua School of Business, Duke University}
+
+\cventry{2023}{Wharton School, University of Pennsylvania}
+
+\cventry{2023}{Rotman School of Management, University of Toronto}
+
+\cventry{2022}{Haas School of Business, University of California, Berkeley}
+
+\cventry{2022}{Rotman OM Young Scholar Seminar Series, University of Toronto}
+
+\cventry{2022}{Logistics Research Seminar, Amazon}
+
+\cventry{2021}{Tuck School of Business, Dartmouth College}
+
+\cventry{2020}{Data Science Lab, MIT}
+
+\cventry{2019}{Department of Mechanical and Industrial Engineering, University of Toronto}
+
+\cvsubsection{Conferences and workshops}
+
+\cventry{2024}{Anderson Research Seminar}
+
+\cventry{2024}{INFORMS Annual Meeting}
+
+\cventry{2024}{MSOM Technology, Innovation, and Entrepreneurship SIG Day}
+
+\cventry{2023}{INFORMS Revenue Management and Pricing Conference}
+
+\cventry{2023}{SoCal OR/OM Day, Marshall School of Business, University of Southern California}
+
+\cventry{2023}{INFORMS Annual Meeting}
+
+\cventry{2019}{INFORMS Annual Meeting}
+
+\cventry{2019}{SoCal OR/OM Day, Merage School of Business, University of California, Irvine}
+
+\cventry{2016}{INFORMS International}
+
+\cventry{2015 -- 2018}{INFORMS Annual Meeting}
+
+\cvsection{Service}
+
+\cventry{2026 --}{Associate Editor, \textit{Manufacturing \& Service Operations Management}}
+
+\cventry{2025 --}{Associate Editor, \textit{INFORMS Journal on Data Science}}
+
+\cventry{2016 --}{Reviewer, \textit{INFORMS Journal on Optimization}, \textit{Management Science}, \textit{Manufacturing \& Service Operations Management}, \textit{Mathematical Programming}, \textit{Naval Research Logistics}, \textit{Operations Research}, \textit{Production and Operations Management}}
+
+\cventry{2026 -- 2028}{UCLA Anderson Staffing Committee}
+
+\cventry{2026 --}{DOTM Area Ph.D. Coordinator}
+
+\cventry{2019 -- 2024, 2026}{Anderson DOTM Seminar Series Committee}
+
+\cventry{2018 -- 2024}{Anderson DOTM Ph.D. Admissions Committee}
+
+\cventry{2021, 2023, 2024}{Anderson DOTM Faculty Search Committee}
+
+\cventry{2024}{Co-Chair, INFORMS Public Sector Operations Research (PSOR) Best Paper Award}
+
+\cventry{2022}{Co-Chair, Optimization and Analytics Cluster, CORS / INFORMS International}
+
+\cventry{2019}{Co-Chair, Healthcare Analytics Track, POMS Annual Conference}
+
+\cventry{2025}{Chair, George B. Dantzig Dissertation Award}
+
+\cventry{2024}{Committee Member, George B. Dantzig Dissertation Award}
+
+\cventry{2020, 2021 -- 2024}{Judge, MSOM Student Paper Competition}
+
+\cventry{2023, 2024}{Judge, POMS Best Healthcare Paper Competition}
+
+\cventry{2020, 2022 -- 2024}{Judge, INFORMS Health Application Society Pierskalla Best Paper Award}
+
+\cventry{2019 -- 2022}{Judge, INFORMS Public Sector Operations Research (PSOR) Best Paper Award}
+
+\cventry{2019, 2021}{Judge, INFORMS Health Application Society Student Paper Award}
+
+\cvsection{Industry}
+
+\cventry{2009 -- 2011}{ExxonMobil, Calgary, Canada}
+\cvnotes{Four internships across research and engineering divisions.}
+
 \end{document}
