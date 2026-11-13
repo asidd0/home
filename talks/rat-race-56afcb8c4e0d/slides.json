@@ -1,0 +1,392 @@
+[
+  {
+    "page": 1,
+    "slide": 1,
+    "title": "Opening title",
+    "text": "The Rat Race at Work:\nTechnology and Burnout\nAuyon Siddiq\nUCLA Anderson School of Management\nNovember 2026"
+  },
+  {
+    "page": 2,
+    "slide": 2,
+    "title": "Operations / operari / meaning",
+    "text": "operations\noperari\n= to work, to labor"
+  },
+  {
+    "page": 3,
+    "slide": 2,
+    "title": "Operations / operari / meaning",
+    "text": "operations\noperari\n= to work, to labor"
+  },
+  {
+    "page": 4,
+    "slide": 2,
+    "title": "Operations / operari / meaning",
+    "text": "operations\noperari\n= to work, to labor"
+  },
+  {
+    "page": 5,
+    "slide": 3,
+    "title": "Umbrella question / mechanisms bullet",
+    "text": "AI and Work\nHow does AI change the way work is\nallocated, completed, and rewarded?\n– Role of information, competition, and incentives\n3"
+  },
+  {
+    "page": 6,
+    "slide": 3,
+    "title": "Umbrella question / mechanisms bullet",
+    "text": "AI and Work\nHow does AI change the way work is\nallocated, completed, and rewarded?\n– Role of information, competition, and incentives\n3"
+  },
+  {
+    "page": 7,
+    "slide": 4,
+    "title": "Human-AI diagram / first question / second question",
+    "text": "“Human-AI Decision-Making for an Underspecified Problem”\nWith Elisabeth Paulson (Harvard Business School)\nHow should a human use AI to make decisions under information asymmetry?\nHuman makes decisions over periods t = 1, . . . , T with assistance from AI.\nHuman shares contextual information with AI and can adopt or override recommendation\nHuman AI\nPrivate information µ\nθt + ε\nx∗\n– Under what conditions can the AI learn µ?\n– How do communication costs and the human’s problem-solving ability affect\nlong-run learning and decision quality?\n4"
+  },
+  {
+    "page": 8,
+    "slide": 4,
+    "title": "Human-AI diagram / first question / second question",
+    "text": "“Human-AI Decision-Making for an Underspecified Problem”\nWith Elisabeth Paulson (Harvard Business School)\nHow should a human use AI to make decisions under information asymmetry?\nHuman makes decisions over periods t = 1, . . . , T with assistance from AI.\nHuman shares contextual information with AI and can adopt or override recommendation\nHuman AI\nPrivate information µ\nθt + ε\nx∗\n– Under what conditions can the AI learn µ?\n– How do communication costs and the human’s problem-solving ability affect\nlong-run learning and decision quality?\n4"
+  },
+  {
+    "page": 9,
+    "slide": 4,
+    "title": "Human-AI diagram / first question / second question",
+    "text": "“Human-AI Decision-Making for an Underspecified Problem”\nWith Elisabeth Paulson (Harvard Business School)\nHow should a human use AI to make decisions under information asymmetry?\nHuman makes decisions over periods t = 1, . . . , T with assistance from AI.\nHuman shares contextual information with AI and can adopt or override recommendation\nHuman AI\nPrivate information µ\nθt + ε\nx∗\n– Under what conditions can the AI learn µ?\n– How do communication costs and the human’s problem-solving ability affect\nlong-run learning and decision quality?\n4"
+  },
+  {
+    "page": 10,
+    "slide": 5,
+    "title": "Human capital: theory / task evidence / marketplace test",
+    "text": "“Human Capital, AI, and Labor Commoditization”\nWith Niuniu Zhang (UCLA Anderson)\nHas AI changed the value of human capital in freelance labor markets?\n– Theory: Standardizing tasks reduces reliance on worker know-how, making\nworkers more substitutable (Fukui, Nakamura, and Steinsson, 2026).\n– AI narrows performance gaps: larger gains for lower-performing writers and\nnovice support agents (Noy and Zhang, 2023; Brynjolfsson et al., 2025).\n– Our test: In Upwork, a freelance marketplace, does hiring shift away from\nworkers with stronger human capital and toward lower-priced workers?\n5"
+  },
+  {
+    "page": 11,
+    "slide": 5,
+    "title": "Human capital: theory / task evidence / marketplace test",
+    "text": "“Human Capital, AI, and Labor Commoditization”\nWith Niuniu Zhang (UCLA Anderson)\nHas AI changed the value of human capital in freelance labor markets?\n– Theory: Standardizing tasks reduces reliance on worker know-how, making\nworkers more substitutable (Fukui, Nakamura, and Steinsson, 2026).\n– AI narrows performance gaps: larger gains for lower-performing writers and\nnovice support agents (Noy and Zhang, 2023; Brynjolfsson et al., 2025).\n– Our test: In Upwork, a freelance marketplace, does hiring shift away from\nworkers with stronger human capital and toward lower-priced workers?\n5"
+  },
+  {
+    "page": 12,
+    "slide": 5,
+    "title": "Human capital: theory / task evidence / marketplace test",
+    "text": "“Human Capital, AI, and Labor Commoditization”\nWith Niuniu Zhang (UCLA Anderson)\nHas AI changed the value of human capital in freelance labor markets?\n– Theory: Standardizing tasks reduces reliance on worker know-how, making\nworkers more substitutable (Fukui, Nakamura, and Steinsson, 2026).\n– AI narrows performance gaps: larger gains for lower-performing writers and\nnovice support agents (Noy and Zhang, 2023; Brynjolfsson et al., 2025).\n– Our test: In Upwork, a freelance marketplace, does hiring shift away from\nworkers with stronger human capital and toward lower-priced workers?\n5"
+  },
+  {
+    "page": 13,
+    "slide": 6,
+    "title": "Upwork sample and observed variables, all at once; no hiring plot",
+    "text": "Upwork data\n29,133 workers 1.65M contracts\n2021Q1–2026Q1\n– Human capital: prior work, credentials, and client feedback.\n– Prices: historical hourly contract rates.\n– Hiring: quarterly contract starts, including zero-contract quarters.\nAI exposure measured from workers’ pre-ChatGPT work histories.\n6"
+  },
+  {
+    "page": 14,
+    "slide": 7,
+    "title": "Observed-hiring DDD: experience / baseline hourly price and takeaway",
+    "text": "Who gets hired as AI changes work?\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.020\n−0.015\n−0.010\n−0.005\n0.000\n0.005\n0.010\nChange in hiring gradient\n(log(1 + contracts))\nBaseline experience\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.03\n−0.02\n−0.01\n0.00\n0.01\nChange in hiring gradient\n(log(1 + contracts))\nBaseline hourly price\nDDD per 0.1 higher E1 × 1 SD higher log(1 + baseline measure), relative to 2022Q3.\n95% pointwise percentile intervals; 1,000 worker-bootstrap draws.\nBaseline values and standardization are fixed. Each panel has its own y-axis scale.\nResults suggest the competitive position of low-price workers strengthens relative\nto high-price workers.\n7"
+  },
+  {
+    "page": 15,
+    "slide": 7,
+    "title": "Observed-hiring DDD: experience / baseline hourly price and takeaway",
+    "text": "Who gets hired as AI changes work?\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.020\n−0.015\n−0.010\n−0.005\n0.000\n0.005\n0.010\nChange in hiring gradient\n(log(1 + contracts))\nBaseline experience\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.03\n−0.02\n−0.01\n0.00\n0.01\nChange in hiring gradient\n(log(1 + contracts))\nBaseline hourly price\nDDD per 0.1 higher E1 × 1 SD higher log(1 + baseline measure), relative to 2022Q3.\n95% pointwise percentile intervals; 1,000 worker-bootstrap draws.\nBaseline values and standardization are fixed. Each panel has its own y-axis scale.\nResults suggest the competitive position of low-price workers strengthens relative\nto high-price workers.\n7"
+  },
+  {
+    "page": 16,
+    "slide": 8,
+    "title": "Shapley event studies: left column / right column",
+    "text": "Shapley event studies: contributions to predicted hiring\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nPrior work (W)\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nCredentials (C)\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nReputation (R)\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nHistorical pricing (P)\nChange in contribution to predicted log(1 + contracts)\nPer 0.1 higher E1 exposure; reference: 2022Q3.\n95% pointwise percentile intervals; 100 worker-bootstrap draws.\n8"
+  },
+  {
+    "page": 17,
+    "slide": 8,
+    "title": "Shapley event studies: left column / right column",
+    "text": "Shapley event studies: contributions to predicted hiring\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nPrior work (W)\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nCredentials (C)\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nReputation (R)\n2021Q12021Q32022Q12022Q32023Q12023Q32024Q12024Q32025Q12025Q32026Q1\n−0.015\n−0.010\n−0.005\n0.000\n0.005\nHistorical pricing (P)\nChange in contribution to predicted log(1 + contracts)\nPer 0.1 higher E1 exposure; reference: 2022Q3.\n95% pointwise percentile intervals; 100 worker-bootstrap draws.\n8"
+  },
+  {
+    "page": 18,
+    "slide": 9,
+    "title": "Rat race title and research question",
+    "text": "The Rat Race at Work:\nTechnology and Burnout\nAuyon Siddiq\nUCLA Anderson School of Management\nHow do productivity gains from\nAI impact employee welfare?\nNovember 2026"
+  },
+  {
+    "page": 19,
+    "slide": 10,
+    "title": "Productivity headline / broader evidence",
+    "text": "AI drives productivity gains across job types\nMIT News July 14, 2023\nFaster, higher-quality writing (Noy and Zhang, 2023).\nConsulting, customer support, and software development (Dell’Acqua et al., 2023;\nBrynjolfsson et al., 2025; Cui et al., 2025).\n10"
+  },
+  {
+    "page": 20,
+    "slide": 10,
+    "title": "Productivity headline / broader evidence",
+    "text": "AI drives productivity gains across job types\nMIT News July 14, 2023\nFaster, higher-quality writing (Noy and Zhang, 2023).\nConsulting, customer support, and software development (Dell’Acqua et al., 2023;\nBrynjolfsson et al., 2025; Cui et al., 2025).\n10"
+  },
+  {
+    "page": 21,
+    "slide": 11,
+    "title": "HBR study / intensification / workday evidence",
+    "text": "But does it mean less work?\n– Eight-month field study at a U.S. tech firm with ∼200 employees.\n– More tasks, longer hours,\noften without being asked (Ranganathan and Ye, 2026).\n– Longer workdays in AI-exposed occupations (Jiang et al., 2025).\n11"
+  },
+  {
+    "page": 22,
+    "slide": 11,
+    "title": "HBR study / intensification / workday evidence",
+    "text": "But does it mean less work?\n– Eight-month field study at a U.S. tech firm with ∼200 employees.\n– More tasks, longer hours,\noften without being asked (Ranganathan and Ye, 2026).\n– Longer workdays in AI-exposed occupations (Jiang et al., 2025).\n11"
+  },
+  {
+    "page": 23,
+    "slide": 11,
+    "title": "HBR study / intensification / workday evidence",
+    "text": "But does it mean less work?\n– Eight-month field study at a U.S. tech firm with ∼200 employees.\n– More tasks, longer hours,\noften without being asked (Ranganathan and Ye, 2026).\n– Longer workdays in AI-exposed occupations (Jiang et al., 2025).\n11"
+  },
+  {
+    "page": 24,
+    "slide": 12,
+    "title": "Question / Competition / Meta / Microsoft and Amazon / wider incentives",
+    "text": "Why might AI lead to more work?\nCompetition\nBusiness Insider May 21, 2025\nTarget: 15–20% in the lowest category, teams of 150+ (Dixit and Mann, 2025).\n– Microsoft: forced performance categories (Eichenwald, 2012).\n– Amazon: reported “rank-and-yank” ratings (Soper, 2022).\nCompetition beyond rankings: bonuses, raises, promotions (Nalebuff and Stiglitz,\n1983; Landers et al., 1996).\n12"
+  },
+  {
+    "page": 25,
+    "slide": 12,
+    "title": "Question / Competition / Meta / Microsoft and Amazon / wider incentives",
+    "text": "Why might AI lead to more work? Competition\nBusiness Insider May 21, 2025\nTarget: 15–20% in the lowest category, teams of 150+ (Dixit and Mann, 2025).\n– Microsoft: forced performance categories (Eichenwald, 2012).\n– Amazon: reported “rank-and-yank” ratings (Soper, 2022).\nCompetition beyond rankings: bonuses, raises, promotions (Nalebuff and Stiglitz,\n1983; Landers et al., 1996).\n12"
+  },
+  {
+    "page": 26,
+    "slide": 12,
+    "title": "Question / Competition / Meta / Microsoft and Amazon / wider incentives",
+    "text": "Why might AI lead to more work? Competition\nBusiness Insider May 21, 2025\nTarget: 15–20% in the lowest category, teams of 150+ (Dixit and Mann, 2025).\n– Microsoft: forced performance categories (Eichenwald, 2012).\n– Amazon: reported “rank-and-yank” ratings (Soper, 2022).\nCompetition beyond rankings: bonuses, raises, promotions (Nalebuff and Stiglitz,\n1983; Landers et al., 1996).\n12"
+  },
+  {
+    "page": 27,
+    "slide": 12,
+    "title": "Question / Competition / Meta / Microsoft and Amazon / wider incentives",
+    "text": "Why might AI lead to more work? Competition\nBusiness Insider May 21, 2025\nTarget: 15–20% in the lowest category, teams of 150+ (Dixit and Mann, 2025).\n– Microsoft: forced performance categories (Eichenwald, 2012).\n– Amazon: reported “rank-and-yank” ratings (Soper, 2022).\nCompetition beyond rankings: bonuses, raises, promotions (Nalebuff and Stiglitz,\n1983; Landers et al., 1996).\n12"
+  },
+  {
+    "page": 28,
+    "slide": 12,
+    "title": "Question / Competition / Meta / Microsoft and Amazon / wider incentives",
+    "text": "Why might AI lead to more work? Competition\nBusiness Insider May 21, 2025\nTarget: 15–20% in the lowest category, teams of 150+ (Dixit and Mann, 2025).\n– Microsoft: forced performance categories (Eichenwald, 2012).\n– Amazon: reported “rank-and-yank” ratings (Soper, 2022).\nCompetition beyond rankings: bonuses, raises, promotions (Nalebuff and Stiglitz,\n1983; Landers et al., 1996).\n12"
+  },
+  {
+    "page": 29,
+    "slide": 13,
+    "title": "Full Altman quotation and attribution, all at once",
+    "text": "“It’s like a relative game. People are very focused\non how they’re doing relative to other people . . .\nI think we’re all going to be much busier than we\nthought we were supposed to be. ” (Sam Altman,\nRelentless, 2026)\n13"
+  },
+  {
+    "page": 30,
+    "slide": 14,
+    "title": "Burnout evidence, one bullet at a time",
+    "text": "Burnout reduces the firm’s productive capacity\nExhaustion, detachment and reduced efficacy under chronic stress (WHO, 2019).\n– Lower performance: meta-analysis of 45 studies links burnout to worse job\nperformance (Corbeanu et al., 2023).\n– Lost productive time: burnout predicts longer sickness absence in a\nlongitudinal study of 201 managers (Schaufeli et al., 2009).\n– Model-based cost estimate: about $5 million annually for a U.S. firm with 1,000\nemployees (Martinez et al., 2025).\nProductivity gains can be offset by lost productive capacity.\n14"
+  },
+  {
+    "page": 31,
+    "slide": 14,
+    "title": "Burnout evidence, one bullet at a time",
+    "text": "Burnout reduces the firm’s productive capacity\nExhaustion, detachment and reduced efficacy under chronic stress (WHO, 2019).\n– Lower performance: meta-analysis of 45 studies links burnout to worse job\nperformance (Corbeanu et al., 2023).\n– Lost productive time: burnout predicts longer sickness absence in a\nlongitudinal study of 201 managers (Schaufeli et al., 2009).\n– Model-based cost estimate: about $5 million annually for a U.S. firm with 1,000\nemployees (Martinez et al., 2025).\nProductivity gains can be offset by lost productive capacity.\n14"
+  },
+  {
+    "page": 32,
+    "slide": 14,
+    "title": "Burnout evidence, one bullet at a time",
+    "text": "Burnout reduces the firm’s productive capacity\nExhaustion, detachment and reduced efficacy under chronic stress (WHO, 2019).\n– Lower performance: meta-analysis of 45 studies links burnout to worse job\nperformance (Corbeanu et al., 2023).\n– Lost productive time: burnout predicts longer sickness absence in a\nlongitudinal study of 201 managers (Schaufeli et al., 2009).\n– Model-based cost estimate: about $5 million annually for a U.S. firm with 1,000\nemployees (Martinez et al., 2025).\nProductivity gains can be offset by lost productive capacity.\n14"
+  },
+  {
+    "page": 33,
+    "slide": 15,
+    "title": "Employee protection, one bullet at a time",
+    "text": "Investing in employee protection\n– HubSpot offers coaching, therapy and meditation as part of its effort to prevent\nburnout (HubSpot, 2021).\n– Greater control over work schedules and more supervisor support can reduce\nburnout: a randomized initiative with 867 IT workers (Moen et al., 2016).\n– Among 1,012 employees, autonomy and support were associated with a weaker\nlink between job demands and exhaustion or cynicism (Bakker et al., 2005).\nCan better conditions protect employees when incentives also respond?\n15"
+  },
+  {
+    "page": 34,
+    "slide": 15,
+    "title": "Employee protection, one bullet at a time",
+    "text": "Investing in employee protection\n– HubSpot offers coaching, therapy and meditation as part of its effort to prevent\nburnout (HubSpot, 2021).\n– Greater control over work schedules and more supervisor support can reduce\nburnout: a randomized initiative with 867 IT workers (Moen et al., 2016).\n– Among 1,012 employees, autonomy and support were associated with a weaker\nlink between job demands and exhaustion or cynicism (Bakker et al., 2005).\nCan better conditions protect employees when incentives also respond?\n15"
+  },
+  {
+    "page": 35,
+    "slide": 15,
+    "title": "Employee protection, one bullet at a time",
+    "text": "Investing in employee protection\n– HubSpot offers coaching, therapy and meditation as part of its effort to prevent\nburnout (HubSpot, 2021).\n– Greater control over work schedules and more supervisor support can reduce\nburnout: a randomized initiative with 867 IT workers (Moen et al., 2016).\n– Among 1,012 employees, autonomy and support were associated with a weaker\nlink between job demands and exhaustion or cynicism (Bakker et al., 2005).\nCan better conditions protect employees when incentives also respond?\n15"
+  },
+  {
+    "page": 36,
+    "slide": 16,
+    "title": "The paper's two research questions",
+    "text": "This paper\nHow does productivity-enhancing technology affect\nemployee welfare?\nTo what extent can improved work conditions protect\nemployees from the costs of this competition?\n16"
+  },
+  {
+    "page": 37,
+    "slide": 16,
+    "title": "The paper's two research questions",
+    "text": "This paper\nHow does productivity-enhancing technology affect\nemployee welfare?\nTo what extent can improved work conditions protect\nemployees from the costs of this competition?\n16"
+  },
+  {
+    "page": 38,
+    "slide": 17,
+    "title": "Model divider",
+    "text": "Model"
+  },
+  {
+    "page": 39,
+    "slide": 18,
+    "title": "Production / interpretation and references",
+    "text": "Technology and employee output\nn ≥ 3 identical employees t ∈ [0, 1]\nyi(xi) ≡ θxiτi(xi)\nθ x i τi(xi)\nTechnology Chosen intensity Productive time\n– Technology scales the output of completed work (Nalebuff and Stiglitz, 1983).\n– Multiplicative production connects to O-ring models and recent work on\nAI (Kremer, 1993; Gans and Goldfarb, 2025).\nIntensity chosen before burnout occurs.\n18"
+  },
+  {
+    "page": 40,
+    "slide": 18,
+    "title": "Production / interpretation and references",
+    "text": "Technology and employee output\nn ≥ 3 identical employees t ∈ [0, 1]\nyi(xi) ≡ θxiτi(xi)\nθ x i τi(xi)\nTechnology Chosen intensity Productive time\n– Technology scales the output of completed work (Nalebuff and Stiglitz, 1983).\n– Multiplicative production connects to O-ring models and recent work on\nAI (Kremer, 1993; Gans and Goldfarb, 2025).\nIntensity chosen before burnout occurs.\n18"
+  },
+  {
+    "page": 41,
+    "slide": 19,
+    "title": "Total pay / relative pay / graph",
+    "text": "Relative-performance incentives\n– Total pay: own output plus relative\npay\nyi(xi) + ri(y(x))\n– Relative pay: performance against\nthe team average\nri(y) =\nZ yi−¯y\n0\n(γ − z)+ dz\n−1 0 1 2 3 4\nyi ¡ ¹y\n−4\n−2\n0\n2\n4\nri(y)\n° = 1 ° = 2 ° = 3\nHigher γ: stronger rewards for relative performance, with a higher cap.\n19"
+  },
+  {
+    "page": 42,
+    "slide": 19,
+    "title": "Total pay / relative pay / graph",
+    "text": "Relative-performance incentives\n– Total pay: own output plus relative\npay\nyi(xi) + ri(y(x))\n– Relative pay: performance against\nthe team average\nri(y) =\nZ yi−¯y\n0\n(γ − z)+ dz\n−1 0 1 2 3 4\nyi ¡ ¹y\n−4\n−2\n0\n2\n4\nri(y)\n° = 1 ° = 2 ° = 3\nHigher γ: stronger rewards for relative performance, with a higher cap.\n19"
+  },
+  {
+    "page": 43,
+    "slide": 19,
+    "title": "Total pay / relative pay / graph",
+    "text": "Relative-performance incentives\n– Total pay: own output plus relative\npay\nyi(xi) + ri(y(x))\n– Relative pay: performance against\nthe team average\nri(y) =\nZ yi−¯y\n0\n(γ − z)+ dz\n−1 0 1 2 3 4\nyi ¡ ¹y\n−4\n−2\n0\n2\n4\nri(y)\n° = 1 ° = 2 ° = 3\nHigher γ: stronger rewards for relative performance, with a higher cap.\n19"
+  },
+  {
+    "page": 44,
+    "slide": 20,
+    "title": "Burnout hazard alone / low-exposure CDF / high-exposure CDF swap",
+    "text": "Work intensity and burnout\nBurnout hazard\nρxα\ni tα−1\nα > 2\nxi: chosen intensity\nρ: burnout exposure\nfrom work conditions\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n20"
+  },
+  {
+    "page": 45,
+    "slide": 20,
+    "title": "Burnout hazard alone / low-exposure CDF / high-exposure CDF swap",
+    "text": "Work intensity and burnout\nBurnout hazard\nρxα\ni tα−1\nα > 2\nxi: chosen intensity\nρ: burnout exposure\nfrom work conditions\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n20"
+  },
+  {
+    "page": 46,
+    "slide": 20,
+    "title": "Burnout hazard alone / low-exposure CDF / high-exposure CDF swap",
+    "text": "Work intensity and burnout\nBurnout hazard\nρxα\ni tα−1\nα > 2\nxi: chosen intensity\nρ: burnout exposure\nfrom work conditions\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nPr(¿ < t)\nLower burnout exposure (½ = 0:05)\n0.0 0.2 0.4 0.6 0.8 1.0\nTime (t)\nHigher burnout exposure (½ = 1)\nWork intensity\nx = 1 x = 2 x = 3\n20"
+  },
+  {
+    "page": 47,
+    "slide": 21,
+    "title": "Utility / profit / equilibrium",
+    "text": "Employee choices and firm outcomes\nEmployee utility\nui(xi, x−i) ≡ E\n\"\nyi(xi) + ri(y(x))\n| {z }\nAbsolute and relative pay\n−\nZ τi(xi)\n0\nxα\ni tα−1 dt\n| {z }\nWork cost\n− ϕw1{τi(xi) < 1}\n| {z }\nBurnout cost\n\f\f\f\f\f x\n#\n.\nFirm profit\nπ(x) ≡ E\n\" nX\ni=1\n\u0010\nvyi(xi)| {z }\nOutput value\n−\n\u0002\nyi(xi) + ri(y(x))\n\u0003\n| {z }\nAbsolute and relative pay\n− ϕf 1{τi(xi) < 1}| {z }\nBurnout cost\n\u0011 \f\f\f\f\f x\n#\n.\nUnique, symmetric equilibrium: x∗ = (x∗, . . . , x∗)\nW ∗ ≡Pn\ni=1 ui(x∗\ni , x∗\n−i), Π∗ ≡ π(x∗)\n21"
+  },
+  {
+    "page": 48,
+    "slide": 21,
+    "title": "Utility / profit / equilibrium",
+    "text": "Employee choices and firm outcomes\nEmployee utility\nui(xi, x−i) ≡ E\n\"\nyi(xi) + ri(y(x))\n| {z }\nAbsolute and relative pay\n−\nZ τi(xi)\n0\nxα\ni tα−1 dt\n| {z }\nWork cost\n− ϕw1{τi(xi) < 1}\n| {z }\nBurnout cost\n\f\f\f\f\f x\n#\n.\nFirm profit\nπ(x) ≡ E\n\" nX\ni=1\n\u0010\nvyi(xi)| {z }\nOutput value\n−\n\u0002\nyi(xi) + ri(y(x))\n\u0003\n| {z }\nAbsolute and relative pay\n− ϕf 1{τi(xi) < 1}| {z }\nBurnout cost\n\u0011 \f\f\f\f\f x\n#\n.\nUnique, symmetric equilibrium: x∗ = (x∗, . . . , x∗)\nW ∗ ≡Pn\ni=1 ui(x∗\ni , x∗\n−i), Π∗ ≡ π(x∗)\n21"
+  },
+  {
+    "page": 49,
+    "slide": 21,
+    "title": "Utility / profit / equilibrium",
+    "text": "Employee choices and firm outcomes\nEmployee utility\nui(xi, x−i) ≡ E\n\"\nyi(xi) + ri(y(x))\n| {z }\nAbsolute and relative pay\n−\nZ τi(xi)\n0\nxα\ni tα−1 dt\n| {z }\nWork cost\n− ϕw1{τi(xi) < 1}\n| {z }\nBurnout cost\n\f\f\f\f\f x\n#\n.\nFirm profit\nπ(x) ≡ E\n\" nX\ni=1\n\u0010\nvyi(xi)| {z }\nOutput value\n−\n\u0002\nyi(xi) + ri(y(x))\n\u0003\n| {z }\nAbsolute and relative pay\n− ϕf 1{τi(xi) < 1}| {z }\nBurnout cost\n\u0011 \f\f\f\f\f x\n#\n.\nUnique, symmetric equilibrium: x∗ = (x∗, . . . , x∗)\nW ∗ ≡Pn\ni=1 ui(x∗\ni , x∗\n−i), Π∗ ≡ π(x∗)\n21"
+  },
+  {
+    "page": 50,
+    "slide": 22,
+    "title": "Results divider",
+    "text": "Results"
+  },
+  {
+    "page": 51,
+    "slide": 23,
+    "title": "Employee welfare: Proposition 1 / illustration",
+    "text": "1. Employee welfare can fall, then rise\nBetter technology makes each unit of work more valuable.\nDoes competition allow employees to enjoy those gains?\nProposition 1\nWithout burnout (ρ = 0), welfare W ∗ is strictly increasing in θ for\nweak γ and strictly decreasing for strong γ.\nWith burnout, W ∗ strictly decreases on an initial θ interval and\nstrictly increases on a higher interval, where x∗ falls and mean\nburnout time rises.\nSufficient conditions. Fixed γ. For the reversal: sufficiently strong γ, high ρ, and\nsmall employee burnout cost ϕw > 0.\n23"
+  },
+  {
+    "page": 52,
+    "slide": 23,
+    "title": "Employee welfare: Proposition 1 / illustration",
+    "text": "1. Employee welfare can fall, then rise\n1 2 3 4 5\nTechnology quality (µ)\n0.96\n0.97\n0.98\n0.99\nMean burnout time ([¿i(x ¤ )])\n−1.75\n−1.50\n−1.25\n−1.00\n−0.75\n−0.50\nTotal employee welfare (W ¤ )\nMean burnout time Employee welfare\nWelfare can begin rising before burnout improves: numerical example.\n23"
+  },
+  {
+    "page": 53,
+    "slide": 24,
+    "title": "Mechanism question and work-intensity plot / coworker lost output",
+    "text": "Mechanism: rat race vs strategic survival\nHow does work intensity x∗ change with technology quality θ?\n1 2 4 6 8 10\nTechnology quality (µ)\n0.0\n0.5\n1.0\n1.5\n2.0\nEquilibrium work intensity (x ¤ ) Rat race effect\ndominates\nSurvival effect\ndominates\n° = 1 ° = 10\nCoworker j’s lost output: θx[1 − τj(x)]\n24"
+  },
+  {
+    "page": 54,
+    "slide": 24,
+    "title": "Mechanism question and work-intensity plot / coworker lost output",
+    "text": "Mechanism: rat race vs strategic survival\nHow does work intensity x∗ change with technology quality θ?\n1 2 4 6 8 10\nTechnology quality (µ)\n0.0\n0.5\n1.0\n1.5\n2.0\nEquilibrium work intensity (x ¤ ) Rat race effect\ndominates\nSurvival effect\ndominates\n° = 1 ° = 10\nCoworker j’s lost output: θx[1 − τj(x)]\n24"
+  },
+  {
+    "page": 55,
+    "slide": 25,
+    "title": "Employer incentives setup",
+    "text": "Can better work conditions protect employees?\nTechnology θ held fixed\nFlexible work hours and supportive supervisors can help reduce burnout (Moen et\nal., 2016; Kelly and Moen, 2020).\nIn the model, better conditions lower burnout exposure ρ.\nAt a given work intensity, employees remain productive longer.\nWill the employer raise performance expectations?\nγ∗ ∈ argmaxγ≥0 Π∗(γ)\nThe employer can adjust performance incentives.\n25"
+  },
+  {
+    "page": 56,
+    "slide": 26,
+    "title": "Better conditions: Proposition 3 / outcomes / mechanism",
+    "text": "2. Better conditions can increase burnout\nProposition 3: low-exposure case\nWith incentives γ > 0 fixed, lower ρ strictly raises work intensity\nx∗ and mean burnout time E[τi(x∗)].\nWhen the firm chooses γ to maximize profit, lower ρ strictly\nraises γ∗ and x∗, and strictly lowers E[τi(x∗)] and welfare W ∗.\nSufficient conditions. Fixed θ, positive employer burnout cost ϕf , and sufficiently\nsmall ρ > 0.\n26"
+  },
+  {
+    "page": 57,
+    "slide": 26,
+    "title": "Better conditions: Proposition 3 / outcomes / mechanism",
+    "text": "2. Better conditions can increase burnout\n0.01 0.20 0.40 0.60 0.80 1.00\nBurnout exposure (½)\n0.98\n0.99\n1.00Mean burnout time ([¿i(x ¤ )])\n½1 ½2\n0\n2\n4\n6\n8\nTotal employee welfare (W ¤ )\nMean burnout time Employee welfare\n0.0 0.5 1.0 1.5\nWork intensity (x)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\n1.2Marginal return and cost\nx ¤(½2) x ¤(½1)\nMarginal return, ½2\nMarginal burnout cost, ½2\nMarginal return, ½1\nMarginal burnout cost, ½1\nChosen γ, low ρ: moving left can worsen burnout and welfare.\n26"
+  },
+  {
+    "page": 58,
+    "slide": 26,
+    "title": "Better conditions: Proposition 3 / outcomes / mechanism",
+    "text": "2. Better conditions can increase burnout\n0.01 0.20 0.40 0.60 0.80 1.00\nBurnout exposure (½)\n0.98\n0.99\n1.00Mean burnout time ([¿i(x ¤ )])\n½1 ½2\n0\n2\n4\n6\n8\nTotal employee welfare (W ¤ )\nMean burnout time Employee welfare\n0.0 0.5 1.0 1.5\nWork intensity (x)\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\n1.2Marginal return and cost\nx ¤(½2) x ¤(½1)\nMarginal return, ½2\nMarginal burnout cost, ½2\nMarginal return, ½1\nMarginal burnout cost, ½1\nMore work can outweigh lower ρ: cumulative hazard ρ(x∗)α\nα .\n26"
+  },
+  {
+    "page": 59,
+    "slide": 27,
+    "title": "Joint-design setup",
+    "text": "Choosing incentives and mitigation\nDoes a larger wellness budget mean better employee protection?\nChoose incentives γ ≥ 0 and exposure ρ > 0\nProfit\nΠ∗(ρ, γ) − nC(ρ)\nSocial welfare: includes employee welfare\nΠ∗(ρ, γ) + W ∗(ρ, γ) − nC(ρ)\nLower exposure requires more mitigation spending.\n27"
+  },
+  {
+    "page": 60,
+    "slide": 28,
+    "title": "Mitigation spending: Proposition 4 / spending crossover / burnout comparison",
+    "text": "3. Less spending can mean less burnout\nProposition 4\nWith incentives and exposure chosen jointly, the\nsocial-welfare-maximizing design (S) spends less on mitigation\nand uses weaker incentives than the profit-maximizing design\n(F ), and has higher mean burnout time.\nC(ρS) < C (ρF), γ S < γ F , E[τ S\ni ] > E[τ F\ni ].\nSufficient conditions. Sufficiently low θ, large employee burnout cost ϕw, small\npositive employer burnout cost ϕf , and the paper’s mitigation-cost assumption.\n28"
+  },
+  {
+    "page": 61,
+    "slide": 28,
+    "title": "Mitigation spending: Proposition 4 / spending crossover / burnout comparison",
+    "text": "3. Less spending can mean less burnout\n1 2 3 4 5\nTechnology quality (µ)\n0.0\n0.5\n1.0\n1.5\n2.0Mitigation spending (b=½ ´)\n1 2 3 4 5\nTechnology quality (µ)\n0.2\n0.4\n0.6\n0.8\n1.0Mean burnout time ([¿i(x ¤ )])\nProfit-maximizing Social\nSocial-welfare-maximizing firm\nspends less\non mitigation\nspends more\non mitigation\n28"
+  },
+  {
+    "page": 62,
+    "slide": 28,
+    "title": "Mitigation spending: Proposition 4 / spending crossover / burnout comparison",
+    "text": "3. Less spending can mean less burnout\n1 2 3 4 5\nTechnology quality (µ)\n0.0\n0.5\n1.0\n1.5\n2.0Mitigation spending (b=½ ´)\n1 2 3 4 5\nTechnology quality (µ)\n0.2\n0.4\n0.6\n0.8\n1.0Mean burnout time ([¿i(x ¤ )])\nProfit-maximizing Social\nSocial-welfare-maximizing firm\nspends less\non mitigation\nspends more\non mitigation\n28"
+  },
+  {
+    "page": 63,
+    "slide": 29,
+    "title": "Closing implications, three points revealed in order",
+    "text": "Implications\n– Consider looser ranking quotas or more weight on collaboration.\nPayPal dropped individual ratings to reduce stress (PayPal, 2022).\n– Keep performance incentives fixed as work conditions improve.\nWork redesign: more control and clearer goals (Kelly and Moen, 2020).\n– With modest technology gains, less competition may be more welfare-efficient\nthan more wellness spending.\nIndividual wellness programs can overlook broader work conditions (Croft\net al., 2024).\n29"
+  },
+  {
+    "page": 64,
+    "slide": 29,
+    "title": "Closing implications, three points revealed in order",
+    "text": "Implications\n– Consider looser ranking quotas or more weight on collaboration.\nPayPal dropped individual ratings to reduce stress (PayPal, 2022).\n– Keep performance incentives fixed as work conditions improve.\nWork redesign: more control and clearer goals (Kelly and Moen, 2020).\n– With modest technology gains, less competition may be more welfare-efficient\nthan more wellness spending.\nIndividual wellness programs can overlook broader work conditions (Croft\net al., 2024).\n29"
+  },
+  {
+    "page": 65,
+    "slide": 29,
+    "title": "Closing implications, three points revealed in order",
+    "text": "Implications\n– Consider looser ranking quotas or more weight on collaboration.\nPayPal dropped individual ratings to reduce stress (PayPal, 2022).\n– Keep performance incentives fixed as work conditions improve.\nWork redesign: more control and clearer goals (Kelly and Moen, 2020).\n– With modest technology gains, less competition may be more welfare-efficient\nthan more wellness spending.\nIndividual wellness programs can overlook broader work conditions (Croft\net al., 2024).\n29"
+  }
+]
