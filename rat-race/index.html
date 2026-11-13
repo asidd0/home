@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>The Rat Race at Work — Auyon Siddiq</title>
+  <link rel="stylesheet" href="presentation.css">
+  <script type="module" src="presentation.js"></script>
+</head>
+<body>
+  <header class="toolbar">
+    <div class="talk-heading">
+      <h1>The Rat Race at Work</h1>
+      <p>Technology and Burnout <span aria-hidden="true">·</span> Auyon Siddiq</p>
+    </div>
+    <nav class="actions" aria-label="Presentation controls">
+      <a class="button secondary" href="rat-race-talk.pdf" download>Download PDF</a>
+      <button id="help" class="secondary" type="button" aria-label="Keyboard and clicker controls" aria-haspopup="dialog">Controls</button>
+      <button id="fullscreen" class="primary" type="button" aria-pressed="false">Present</button>
+    </nav>
+  </header>
+  <main id="stage" tabindex="-1" aria-label="Slide presentation">
+    <div id="canvas-host" aria-hidden="true"></div>
+    <div id="slide-text" class="sr-only"></div>
+    <p id="status" role="status" aria-live="polite">Loading slides…</p>
+    <noscript><p class="fallback">JavaScript is needed for presentation controls. <a href="rat-race-talk.pdf">Open the PDF instead.</a></p></noscript>
+  </main>
+  <footer class="control-bar">
+    <div class="slide-info">
+      <span id="counter" aria-live="polite">29 slides · 65 steps</span>
+      <span id="slide-title">The Rat Race at Work</span>
+    </div>
+    <p class="clicker-hint">Choose Present, then use your clicker’s next and back buttons.</p>
+    <div class="navigation">
+      <button id="blackout" class="secondary" type="button" aria-pressed="false" title="Blank screen (B or .)">Blank</button>
+      <button id="previous" type="button" aria-label="Previous step" title="Previous step (Page Up or left arrow)" disabled>←</button>
+      <button id="next" type="button" aria-label="Next step" title="Next step (Page Down or right arrow)" disabled>→</button>
+    </div>
+    <progress id="progress" max="65" value="0" aria-label="Presentation progress"></progress>
+  </footer>
+  <button id="exit-presentation" type="button" aria-label="Exit presentation" title="Exit presentation (Esc)">Exit</button>
+  <dialog id="help-dialog" aria-labelledby="help-title">
+    <div class="dialog-heading"><h2 id="help-title">Presentation controls</h2><button id="close-help" type="button" aria-label="Close controls">×</button></div>
+    <p>Connect your clicker, choose <strong>Present</strong>, and keep this browser tab in focus. Each forward press advances one reveal, just like the original slides.</p>
+    <dl class="shortcuts">
+      <dt>Next reveal</dt><dd>Page Down, →, ↓, Space, Enter</dd>
+      <dt>Previous reveal</dt><dd>Page Up, ←, ↑, Shift + Space, Backspace</dd>
+      <dt>First / last page</dt><dd>Home / End</dd>
+      <dt>Full screen</dt><dd>F or F5</dd>
+      <dt>Blank / restore screen</dt><dd>B or period (.)</dd>
+      <dt>Exit full screen</dt><dd>Esc</dd>
+    </dl>
+    <p class="help-note">Most USB and Bluetooth presentation remotes send these keys. If yours uses custom controls, set its next/back buttons to Page Down / Page Up.</p>
+    <p><a href="rat-race-talk.pdf" download>Download the PDF</a> for an offline backup.</p>
+  </dialog>
+</body>
+</html>
